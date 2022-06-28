@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
-import { Navbar, Header, MyExperience } from "./components";
+import { Navbar, Header, Experience } from "./components";
 import { Container } from "@mui/system";
-import { AboutMe } from "./components/AboutMe";
-import { MyService } from "./components/MyService";
+import { About } from "./components/About";
+import { MyService } from "./components/Service";
 import { Portfolio } from "./components/Portfolio";
 import { Testimonials } from "./components/Testimonials";
 import { Contact } from "./components/Contact";
@@ -13,12 +13,12 @@ function App() {
       <Navbar />
       <Container>
         <Header />
-        <AboutMe/>
-        <MyExperience/>
-        <MyService/>
-        <Portfolio/>
-        <Testimonials/>
-        <Contact/>
+        <About />
+        <Experience />
+        <MyService />
+        <Portfolio />
+        <Testimonials />
+        <Contact />
       </Container>
     </div>
   );

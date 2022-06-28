@@ -1,6 +1,4 @@
 import { Typography,styled } from '@mui/material';
-import React from 'react'
-
 
 const StyledTypography:any = styled(Typography)(({ theme }) => ({
     color:'#fff',

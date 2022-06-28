@@ -36,6 +36,13 @@ const theme= createTheme({
                 }
             }
 
+        },
+        MuiOutlinedInput:{
+            styleOverrides:{
+                root:{
+                    border:'1px solid #4db5ff'
+                }
+            }
         }
     },
 })

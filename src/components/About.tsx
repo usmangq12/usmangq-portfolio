@@ -3,7 +3,7 @@ import { Grid, Card, Button, Box } from "@mui/material";
 
 import { Image, Heading } from "../shared";
 
-export const AboutMe = () => {
+export const About = () => {
   return (
     <Grid container>
       <Grid

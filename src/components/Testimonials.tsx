@@ -48,43 +48,37 @@ export const Testimonials = () => {
         }}
         modules={[Pagination]}
         className="mySwiper"
-      > {data.map((imges)=>
-        <SwiperSlide>
-           
-          <Card sx={{ borderRadius: "1rem", p: 4,mt:12 }}>
-            <Avatar
-              sx={{ backgroundColor: "#4db5ff", p: 0.7, mx: "auto" }}
-              aria-label="recipe"
-            >
-              <Image
-                sx={{ borderRadius: "2rem" }}
-                src={imges.img}
-              ></Image>
-            </Avatar>
-            <CardContent>
-              <Heading
-                sx={{
-                  color: "#fff",
-                  fontSize: "1.2rem",
-                  fontWeight: "700",
-                  textAlign: "center",
-                }}
+      >
+        {" "}
+        {data.map((imges) => (
+          <SwiperSlide>
+            <Card sx={{ borderRadius: "1rem", p: 4, mt: 12 }}>
+              <Avatar
+                sx={{ backgroundColor: "#4db5ff", p: 0.7, mx: "auto" }}
+                aria-label="recipe"
               >
-                A
-              </Heading>
-              <Heading sx={{ fontSize: ".8rem", fontWeight: "300", mt: 0.5 }}>
-                Lorem ipsum dolor sit amet, id lacus consectetur adipiscing
-                elit. Vivamus egestas, luctus eni
-              </Heading>
-            </CardContent>
-          </Card>
-         
-        </SwiperSlide>
-         )}
-       
+                <Image sx={{ borderRadius: "2rem" }} src={imges.img}></Image>
+              </Avatar>
+              <CardContent>
+                <Heading
+                  sx={{
+                    color: "#fff",
+                    fontSize: "1.2rem",
+                    fontWeight: "700",
+                    textAlign: "center",
+                  }}
+                >
+                  A
+                </Heading>
+                <Heading sx={{ fontSize: ".8rem", fontWeight: "300", mt: 0.5 }}>
+                  Lorem ipsum dolor sit amet, id lacus consectetur adipiscing
+                  elit. Vivamus egestas, luctus eni
+                </Heading>
+              </CardContent>
+            </Card>
+          </SwiperSlide>
+        ))}
       </Swiper>
-    
-      
     </Grid>
   );
 };

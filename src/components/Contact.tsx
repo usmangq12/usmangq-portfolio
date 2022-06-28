@@ -1,7 +1,6 @@
-import { Grid, Card, Button, CardContent } from "@mui/material";
-import { display } from "@mui/system";
-import React from "react";
+import { Grid, Card, Button, CardContent,TextField,styled } from "@mui/material";
 import { Heading } from "../shared";
+
 const contact = [
   { name: "Email", contactDetail: "ahmadzulfiqar142@gamil.com" },
   { name: "Whatsapp", contactDetail: "03007310142" },
@@ -66,7 +65,9 @@ export const Contact = () => {
             ))}
           </Grid>
         </Grid>
-        <Grid xs={6}>ffffff</Grid>
+        <Grid xs={6}>
+        <TextField sx={{borderColor:'#4db5ff',color:'#fff'}} fullWidth placeholder="Full name" id="fullWidth" />
+          </Grid>
       </Grid>
     </Grid>
   );

@@ -1,19 +1,19 @@
 import React from "react";
-import { Grid, Card, CardContent,} from "@mui/material";
+import { Grid, Card, CardContent } from "@mui/material";
 import { Heading } from "../shared";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
-const frondendLanguage = [
+const frontendLanguages = [
   "HTML",
   "CSS",
   "SASS",
   "Bootstrap",
   "JavaScript",
-  " React JS",
+  "React.js",
 ];
 
-const backendLanguage = ["Node JS", "PHP", "Python", "MongoDb", "MySQL"];
-export const MyExperience = () => {
+const backendLanguages = ["Node JS", "PHP", "Python", "MongoDb", "MySQL"];
+export const Experience = () => {
   return (
     <Grid container direction={"column"}>
       <Heading
@@ -21,7 +21,6 @@ export const MyExperience = () => {
           textAlign: "center",
           fontSize: "1rem",
           fontWeight: "700",
-        
         }}
       >
         What Skills I Have
@@ -53,7 +52,7 @@ export const MyExperience = () => {
                 Frontend Development
               </Heading>
               <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
-                {frondendLanguage.map((frontendData) => (
+                {frontendLanguages.map((frontendData) => (
                   <Grid
                     sx={{ display: "flex", alignItems: "baseline", mb: 2 }}
                     xs={6}
@@ -88,7 +87,7 @@ export const MyExperience = () => {
                 Frontend Development
               </Heading>
               <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
-                {backendLanguage.map((backend) => (
+                {backendLanguages.map((backend) => (
                   <Grid
                     sx={{ display: "flex", alignItems: "baseline", mb: 2 }}
                     xs={6}
