@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Navbar, Header, Experience } from "./components";
+import { Navbar, Header, Experience, Footer } from "./components";
 import { Container } from "@mui/system";
 import { About } from "./components/About";
 import { MyService } from "./components/Service";
@@ -20,6 +20,7 @@ function App() {
         <Testimonials />
         <Contact />
       </Container>
+      <Footer />
     </div>
   );
 }

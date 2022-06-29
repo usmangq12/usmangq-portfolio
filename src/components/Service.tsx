@@ -1,16 +1,8 @@
 import React from "react";
-import { Grid, Card, CardContent, CardHeader, Collapse } from "@mui/material";
+import { Grid, Card, CardContent, CardHeader } from "@mui/material";
 import { Heading } from "../shared";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-const sevices = [
-  "Lorem ipsum dolor sit amet, id lacus consectetur adipiscing elit. Vivamus egestas, luctus eni",
-  "Lorem ipsum dolor sit amet, id lacus consectetur adipiscing elit. Vivamus egestas, luctus eni",
-  "Lorem ipsum dolor sit amet, id lacus consectetur adipiscing elit. Vivamus egestas, luctus eni",
-  "Lorem ipsum dolor sit amet, id lacus consectetur adipiscing elit. Vivamus egestas, luctus eni",
-  "Lorem ipsum dolor sit amet, id lacus consectetur adipiscing elit. Vivamus egestas, luctus eni",
-  " Lorem ipsum dolor sit amet, id lacus consectetur adipiscing elit. Vivamus egestas, luctus eni",
-];
-const backendLanguage = ["Node JS", "PHP", "Python", "MongoDb", "MySQL"];
+import { services } from "../constants";
 
 export const MyService = () => {
   return (
@@ -22,7 +14,7 @@ export const MyService = () => {
           fontWeight: "700",
         }}
       >
-       What I Offer
+        What I Offer
       </Heading>
       <Heading
         sx={{
@@ -33,7 +25,7 @@ export const MyService = () => {
         }}
         variant="h3"
       >
-       My Service
+        My Service
       </Heading>
       <Grid sx={{ display: "flex", justifyContent: "center", mt: 12 }} gap={6}>
         <Grid xs={4.25} sx={{ display: "flex", justifyContent: "center" }}>
@@ -55,7 +47,7 @@ export const MyService = () => {
             />
             <CardContent>
               <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
-                {sevices.map((servicesData) => (
+                {services.map((servicesData) => (
                   <Grid
                     sx={{ display: "flex", alignItems: "baseline", mb: 2 }}
                     xs={12}
@@ -91,7 +83,7 @@ export const MyService = () => {
             />
             <CardContent>
               <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
-                {sevices.map((servicesData) => (
+                {services.map((servicesData) => (
                   <Grid
                     sx={{ display: "flex", alignItems: "baseline", mb: 2 }}
                     xs={12}
@@ -125,7 +117,7 @@ export const MyService = () => {
             />
             <CardContent>
               <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
-                {sevices.map((servicesData) => (
+                {services.map((servicesData) => (
                   <Grid
                     sx={{ display: "flex", alignItems: "baseline", mb: 2 }}
                     xs={12}

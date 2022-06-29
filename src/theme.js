@@ -40,7 +40,14 @@ const theme= createTheme({
         MuiOutlinedInput:{
             styleOverrides:{
                 root:{
-                    border:'1px solid #4db5ff'
+                    border:'1px solid #4db5ff',
+                    color:'#fff',
+                    borderRadius:'15px',
+                    height:'50px',
+                    '&.Mui-focused':{
+                        border:'1px solid #fff'
+                    }
+
                 }
             }
         }

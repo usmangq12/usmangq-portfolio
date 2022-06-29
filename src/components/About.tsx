@@ -121,7 +121,12 @@ export const About = () => {
             </Grid>
             <Button
               variant="contained"
-              sx={{ mt: 4, background: "4db5ff", borderRadius: "10px" }}
+              sx={{
+                background: "#4db5ff",
+                borderRadius: "10px",
+
+                mt: 4,
+              }}
             >
               Let's Talk
             </Button>

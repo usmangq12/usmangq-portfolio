@@ -2,17 +2,8 @@ import React from "react";
 import { Grid, Card, CardContent } from "@mui/material";
 import { Heading } from "../shared";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { frontendLanguages, backendLanguages } from "../constants";
 
-const frontendLanguages = [
-  "HTML",
-  "CSS",
-  "SASS",
-  "Bootstrap",
-  "JavaScript",
-  "React.js",
-];
-
-const backendLanguages = ["Node JS", "PHP", "Python", "MongoDb", "MySQL"];
 export const Experience = () => {
   return (
     <Grid container direction={"column"}>

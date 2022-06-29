@@ -1,11 +1,16 @@
-import { Grid, Card, Button, CardContent,TextField,styled } from "@mui/material";
+import {
+  Grid,
+  Card,
+  Button,
+  CardContent,
+  TextField,
+  TextareaAutosize,
+  Link,
+} from "@mui/material";
+import CallMadeIcon from "@mui/icons-material/CallMade";
 import { Heading } from "../shared";
+import { contactsMethod } from "../constants";
 
-const contact = [
-  { name: "Email", contactDetail: "ahmadzulfiqar142@gamil.com" },
-  { name: "Whatsapp", contactDetail: "03007310142" },
-  { name: "Email", contactDetail: "03007310142" },
-];
 export const Contact = () => {
   return (
     <Grid container direction={"column"}>
@@ -31,13 +36,12 @@ export const Contact = () => {
       >
         Contact
       </Heading>
-      <Grid sx={{ display: "flex" }}>
+      <Grid sx={{ display: "flex", mt: 12 }}>
         <Grid
           xs={6}
           sx={{
             display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           <Grid
@@ -48,26 +52,101 @@ export const Contact = () => {
             }}
             gap={4}
           >
-            {contact.map((contactInfo) => (
-              <Card sx={{ borderRadius: "2rem", p: 4 }}>
+            {contactsMethod.map((contactInfo) => (
+              <Card
+                sx={{
+                  borderRadius: "1.5rem",
+                  p: 2.5,
+                }}
+              >
                 <CardContent>
-                  <Grid>
-                    <Heading sx={{ fontSize: "1.2rem", fontWeight: "700" }}>
+                  <Grid sx={{ textAlign: "center" }}>
+                    <Heading
+                      sx={{ fontSize: "1.2rem", fontWeight: "700", mb: 1.5 }}
+                    >
                       {contactInfo.name}
                     </Heading>
 
-                    <Heading sx={{ fontSize: ".8rem", fontWeight: "700" }}>
+                    <Heading
+                      sx={{ fontSize: ".8rem", fontWeight: "700", mb: 1.5 }}
+                    >
                       {contactInfo.contactDetail}
                     </Heading>
+                    <Link
+                      href={contactInfo.path}
+                      underline="none"
+                      sx={{
+                        fontSize: "16px",
+                        fontWeight: "700",
+                        color: "#4db5ff",
+                      }}
+                    >
+                      Send Message
+                      <CallMadeIcon sx={{ ml: "2px" }} />
+                    </Link>
                   </Grid>
                 </CardContent>
               </Card>
             ))}
           </Grid>
         </Grid>
-        <Grid xs={6}>
-        <TextField sx={{borderColor:'#4db5ff',color:'#fff'}} fullWidth placeholder="Full name" id="fullWidth" />
+        <Grid
+          xs={6}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Grid
+            xs={7}
+            gap={3}
+            sx={{ display: "flex", flexDirection: "column", pt: 3.5 }}
+          >
+            <TextField
+              sx={{
+                borderColor: "#4db5ff",
+                color: "#fff",
+                width: "500px",
+                borderRadius: 2,
+              }}
+              placeholder="Your Full Name"
+            />
+            <TextField
+              sx={{
+                borderColor: "#4db5ff",
+                color: "#fff",
+                width: "500px",
+                borderRadius: 2,
+              }}
+              placeholder="Your Email"
+            />
+            <TextareaAutosize
+              cols={30}
+              minRows={10}
+              placeholder="Your Message"
+              style={{
+                width: 470,
+                borderRadius: "15px",
+                backgroundColor: "#1f1f38",
+                color: "#fff",
+                border: "1px solid #4db5ff",
+                resize: "none",
+                padding: "16px",
+              }}
+            />
+            <Button
+              variant="contained"
+              sx={{
+                background: "#4db5ff",
+                borderRadius: "10px",
+                width: "200px",
+                padding: "12px",
+              }}
+            >
+              Send Message
+            </Button>
           </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );
