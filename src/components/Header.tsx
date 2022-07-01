@@ -62,18 +62,46 @@ export const Header = () => {
           </Heading>
         </Grid>
       </Grid>
-      <Grid sx={{ display: "flex", mt: 12, width: "100%", flexWrap: "wrap" }}>
+      <Grid
+        sx={{
+          display: "flex",
+          mt: { xs: 5, sm: 12 },
+          width: "100%",
+          flexWrap: "wrap",
+        }}
+      >
         <Grid xs={12} sm={4} sx={{ textAlign: { xs: "center", sm: "left" } }}>
-          <Heading sx={{ color: "#4db5ff" }}>Design For</Heading>
-          <Heading sx={{ fontSize: "26px" }}>Website</Heading>
+          <Heading
+            sx={{ color: "#4db5ff", fontSize: { xs: "16px", sm: "20px" } }}
+          >
+            Design For
+          </Heading>
+          <Heading sx={{ fontSize: { xs: "16px", sm: "26px" } }}>
+            Website
+          </Heading>
         </Grid>
         <Grid xs={12} sm={4} sx={{ textAlign: "center" }}>
-          <Heading sx={{ color: "#4db5ff" }}>Phone</Heading>
-          <Heading sx={{ fontSize: "26px" }}>03007310142</Heading>
+          <Heading
+            sx={{ color: "#4db5ff", fontSize: { xs: "16px", sm: "20px" } }}
+          >
+            Phone
+          </Heading>
+          <Heading sx={{ fontSize: { xs: "16px", sm: "26px" } }}>
+            03007310142
+          </Heading>
         </Grid>
         <Grid xs={12} sm={4} sx={{ textAlign: { xs: "center", sm: "right" } }}>
-          <Heading sx={{ color: "#4db5ff" }}>Drop your Message</Heading>
-          <Heading sx={{ fontSize: "26px", textDecoration: "underline" }}>
+          <Heading
+            sx={{ color: "#4db5ff", fontSize: { xs: "16px", sm: "20px" } }}
+          >
+            Drop your Message
+          </Heading>
+          <Heading
+            sx={{
+              textDecoration: "underline",
+              fontSize: { xs: "12px", sm: "26px" },
+            }}
+          >
             ahmadzulfiqar142@gamil.com
           </Heading>
         </Grid>

@@ -28,9 +28,21 @@ export const Experience = () => {
         My Experience
       </Heading>
 
-      <Grid sx={{ display: "flex", justifyContent: "center", mt: 12 }} gap={6}>
-        <Grid xs={4.25} sx={{ display: "flex", justifyContent: "center" }}>
-          <Card sx={{ borderRadius: "2rem", p: 4 }}>
+      <Grid
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          mt: { xs: 4, sm: 12 },
+        }}
+        gap={6}
+      >
+        <Grid
+          xs={12}
+          sm={4.25}
+          sx={{ display: "flex", justifyContent: "center" }}
+        >
+          <Card sx={{ borderRadius: "2rem", p: { xs: 0, lg: 4 } }}>
             <CardContent>
               <Heading
                 sx={{
@@ -42,7 +54,7 @@ export const Experience = () => {
               >
                 Frontend Development
               </Heading>
-              <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
+              <Grid sx={{ display: "flex", flexWrap: "wrap", mt: 2 }}>
                 {frontendLanguages.map((frontendData) => (
                   <Grid
                     sx={{ display: "flex", alignItems: "baseline", mb: 2 }}
@@ -53,7 +65,6 @@ export const Experience = () => {
                       <Heading sx={{ fontSize: "1.2rem", fontWeight: "700" }}>
                         {frontendData}
                       </Heading>
-
                       <Heading sx={{ fontSize: ".8rem", fontWeight: "300" }}>
                         Experienced
                       </Heading>
@@ -64,8 +75,13 @@ export const Experience = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid xs={4.25} sx={{ display: "flex", justifyContent: "center" }}>
-          <Card sx={{ borderRadius: "2rem", p: 4 }}>
+
+        <Grid
+          xs={12}
+          sm={4.25}
+          sx={{ display: "flex", justifyContent: "center" }}
+        >
+          <Card sx={{ borderRadius: "2rem", p: { xs: 0, lg: 4 } }}>
             <CardContent>
               <Heading
                 sx={{
@@ -75,9 +91,9 @@ export const Experience = () => {
                   textAlign: "center",
                 }}
               >
-                Frontend Development
+                Backend Development
               </Heading>
-              <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
+              <Grid sx={{ display: "flex", flexWrap: "wrap", mt: 2 }}>
                 {backendLanguages.map((backend) => (
                   <Grid
                     sx={{ display: "flex", alignItems: "baseline", mb: 2 }}

@@ -37,10 +37,16 @@ export const About = () => {
           About Me
         </Heading>
       </Grid>
-      <Grid sx={{ display: "flex", mt: 12 }}>
-        <Grid item xs={6} sx={{ display: "flex", justifyContent: "center" }}>
+      <Grid sx={{ display: "flex", mt: { xs: 4, sm: 12 }, flexWrap: "wrap" }}>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          sx={{ display: "flex", justifyContent: "center" }}
+        >
           <Card
             sx={{
+              display: { xs: "none", sm: "block" },
               maxWidth: 345,
               position: "relative",
               overflow: "inherit",
@@ -66,6 +72,7 @@ export const About = () => {
               src="https://webneel.com/wallpaper/sites/default/files/images/08-2018/3-nature-wallpaper-mountain.jpg"
               alt="green iguana"
               sx={{
+                display: { xs: "none", sm: "block" },
                 borderRadius: "2rem",
                 transition: "all .3s",
                 transform: "rotate(10deg)",
@@ -75,40 +82,47 @@ export const About = () => {
           </Card>
         </Grid>
         <Grid
-          xs={6}
+          xs={12}
+          sm={6}
           sx={{
             display: "flex",
             justifyContent: "center",
           }}
         >
           <Grid xs={10}>
-            <Grid sx={{ display: "flex", gap: 4 }}>
-              <Box
+            <Grid
+              sx={{
+                display: "flex",
+                gap: 4,
+                // justifyContent: { xs: "center", sm: "center" },
+              }}
+            >
+              <Grid
                 sx={{
-                  width: "113px",
-                  height: "113px",
+                  width: { xs: "70px", sm: "113px" },
+                  height: { xs: "70px", sm: "113px" },
                   backgroundColor: "#2c2c6c;",
                   borderRadius: "10px",
                 }}
-              ></Box>
-              <Box
+              ></Grid>
+              <Grid
                 sx={{
-                  width: "113px",
-                  height: "113px",
+                  width: { xs: "70px", sm: "113px" },
+                  height: { xs: "70px", sm: "113px" },
                   backgroundColor: "#2c2c6c;",
                   borderRadius: "10px",
                 }}
-              ></Box>
-              <Box
+              ></Grid>
+              <Grid
                 sx={{
-                  width: "113px",
-                  height: "113px",
+                  width: { xs: "70px", sm: "113px" },
+                  height: { xs: "70px", sm: "113px" },
                   backgroundColor: "#2c2c6c;",
                   borderRadius: "10px",
                 }}
-              ></Box>
+              ></Grid>
             </Grid>
-            <Grid xs={10}>
+            <Grid xs={12} sm={10}>
               <Heading
                 variant="body2"
                 sx={{ fontSize: "16px", lineHeight: "unset", mt: 4 }}

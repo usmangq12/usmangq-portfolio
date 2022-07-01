@@ -31,7 +31,7 @@ export const Portfolio = () => {
         }}
         variant="h3"
       >
-        My Service
+        Portfolio
       </Heading>
 
       <Grid
@@ -42,7 +42,7 @@ export const Portfolio = () => {
       >
         {images.map((img) => (
           <Grid
-            gridColumn="span 4"
+            gridColumn={{ xs: "span 12", sm: "span 6", md: "span 4" }}
             sx={{ display: "flex", justifyContent: "center" }}
           >
             <Card

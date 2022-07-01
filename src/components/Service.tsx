@@ -27,8 +27,27 @@ export const MyService = () => {
       >
         My Service
       </Heading>
-      <Grid sx={{ display: "flex", justifyContent: "center", mt: 12 }} gap={6}>
-        <Grid xs={4.25} sx={{ display: "flex", justifyContent: "center" }}>
+      <Grid
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: { xs: "wrap", md: "nowrap" },
+
+          mt: { xs: 4, sm: 12 },
+        }}
+        // gap={{ xs: 0, md: 5 }}
+        gap={6}
+      >
+        <Grid
+          xs={12}
+          sm={6}
+          md={4}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            // p: { xs: 2, md: 0 }
+          }}
+        >
           <Card
             sx={{
               borderBottomLeftRadius: "2rem",
@@ -64,7 +83,15 @@ export const MyService = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid xs={4.25} sx={{ display: "flex", justifyContent: "center" }}>
+        <Grid
+          xs={12}
+          sm={6}
+          md={4}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <Card
             sx={{
               borderBottomLeftRadius: "2rem",
@@ -100,7 +127,15 @@ export const MyService = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid xs={4.25} sx={{ display: "flex", justifyContent: "center" }}>
+        <Grid
+          xs={12}
+          sm={6}
+          md={4}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <Card
             sx={{
               borderBottomLeftRadius: "2rem",

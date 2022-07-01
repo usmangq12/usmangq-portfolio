@@ -18,6 +18,8 @@ export const Footer = () => {
             alignItems: "center",
           }}
           gap={2}
+          xs={12}
+          sm={12}
         >
           <Heading
             sx={{
@@ -28,7 +30,7 @@ export const Footer = () => {
           >
             DevNodes
           </Heading>
-          <Grid>
+          <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
             {navItems.map((item) => (
               <Button
                 key={item}

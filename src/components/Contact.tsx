@@ -36,16 +36,19 @@ export const Contact = () => {
       >
         Contact
       </Heading>
-      <Grid sx={{ display: "flex", mt: 12 }}>
+      <Grid sx={{ display: "flex", mt: 12, flexWrap: "wrap" }}>
         <Grid
-          xs={6}
+          xs={12}
+          sm={6}
           sx={{
             display: "flex",
             justifyContent: "center",
           }}
         >
           <Grid
-            xs={7}
+            xs={12}
+            sm={11}
+            md={7}
             sx={{
               display: "flex",
               flexDirection: "column",
@@ -66,7 +69,6 @@ export const Contact = () => {
                     >
                       {contactInfo.name}
                     </Heading>
-
                     <Heading
                       sx={{ fontSize: ".8rem", fontWeight: "700", mb: 1.5 }}
                     >
@@ -91,14 +93,17 @@ export const Contact = () => {
           </Grid>
         </Grid>
         <Grid
-          xs={6}
+          xs={12}
+          sm={6}
           sx={{
             display: "flex",
             justifyContent: "center",
           }}
         >
           <Grid
-            xs={7}
+            xs={12}
+            sm={11}
+            md={9}
             gap={3}
             sx={{ display: "flex", flexDirection: "column", pt: 3.5 }}
           >
@@ -106,7 +111,7 @@ export const Contact = () => {
               sx={{
                 borderColor: "#4db5ff",
                 color: "#fff",
-                width: "500px",
+
                 borderRadius: 2,
               }}
               placeholder="Your Full Name"
@@ -115,7 +120,6 @@ export const Contact = () => {
               sx={{
                 borderColor: "#4db5ff",
                 color: "#fff",
-                width: "500px",
                 borderRadius: 2,
               }}
               placeholder="Your Email"
@@ -125,7 +129,7 @@ export const Contact = () => {
               minRows={10}
               placeholder="Your Message"
               style={{
-                width: 470,
+                // width: 470,
                 borderRadius: "15px",
                 backgroundColor: "#1f1f38",
                 color: "#fff",
