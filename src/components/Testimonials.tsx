@@ -1,25 +1,14 @@
 import { Grid, Card, CardContent, Avatar } from "@mui/material";
-import React from "react";
 import { Heading, Image } from "../shared";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { testimonialsItem } from "../constants";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
-const data = [
-  {
-    img: "https://play-lh.googleusercontent.com/5BgUBYo-maFTSwVBaqebt1wULoe3jyCX0bU1lvmXWI4rM2FnrKO4vl5eK2MpsiiU0K0",
-  },
-  {
-    img: "https://play-lh.googleusercontent.com/5BgUBYo-maFTSwVBaqebt1wULoe3jyCX0bU1lvmXWI4rM2FnrKO4vl5eK2MpsiiU0K0",
-  },
-  {
-    img: "https://play-lh.googleusercontent.com/5BgUBYo-maFTSwVBaqebt1wULoe3jyCX0bU1lvmXWI4rM2FnrKO4vl5eK2MpsiiU0K0",
-  },
-];
 
 export const Testimonials = () => {
   return (
-    <Grid container direction={"column"}>
+    <Grid container direction={"column"} id="TESTIMONIALS">
       <Heading
         sx={{
           textAlign: "center",
@@ -49,8 +38,7 @@ export const Testimonials = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {" "}
-        {data.map((imges) => (
+        {testimonialsItem.map((imges) => (
           <SwiperSlide>
             <Card sx={{ borderRadius: "1rem", p: 4, mt: 12 }}>
               <Avatar

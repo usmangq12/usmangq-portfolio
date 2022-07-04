@@ -1,11 +1,9 @@
 import React from "react";
 import { Grid, Card, Button, Box } from "@mui/material";
-
 import { Image, Heading } from "../shared";
-
 export const About = () => {
   return (
-    <Grid container>
+    <Grid container id="ABOUT">
       <Grid
         sx={{
           display: "flex",
@@ -94,7 +92,6 @@ export const About = () => {
               sx={{
                 display: "flex",
                 gap: 4,
-                // justifyContent: { xs: "center", sm: "center" },
               }}
             >
               <Grid

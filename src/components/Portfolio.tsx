@@ -12,7 +12,7 @@ import { images } from "../constants";
 
 export const Portfolio = () => {
   return (
-    <Grid container direction={"column"}>
+    <Grid container direction={"column"} id={"PORTFOLIO"}>
       <Heading
         sx={{
           textAlign: "center",
@@ -35,15 +35,19 @@ export const Portfolio = () => {
       </Heading>
 
       <Grid
-        display="grid"
-        gridTemplateColumns="repeat(12, 1fr)"
-        gap={5}
-        sx={{ mt: 12 }}
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          mt: { xs: 4, sm: 12 },
+        }}
       >
         {images.map((img) => (
           <Grid
-            gridColumn={{ xs: "span 12", sm: "span 6", md: "span 4" }}
-            sx={{ display: "flex", justifyContent: "center" }}
+            xs={12}
+            sm={6}
+            md={4}
+            sx={{ display: "flex", justifyContent: "center", p: 3 }}
           >
             <Card
               sx={{

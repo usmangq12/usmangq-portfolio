@@ -13,7 +13,7 @@ import { contactsMethod } from "../constants";
 
 export const Contact = () => {
   return (
-    <Grid container direction={"column"}>
+    <Grid container direction={"column"} id="CONTACT US">
       <Heading
         sx={{
           display: "block",
@@ -129,7 +129,6 @@ export const Contact = () => {
               minRows={10}
               placeholder="Your Message"
               style={{
-                // width: 470,
                 borderRadius: "15px",
                 backgroundColor: "#1f1f38",
                 color: "#fff",

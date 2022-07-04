@@ -6,7 +6,7 @@ import { frontendLanguages, backendLanguages } from "../constants";
 
 export const Experience = () => {
   return (
-    <Grid container direction={"column"}>
+    <Grid container direction={"column"} id="EXPERIENCES">
       <Heading
         sx={{
           textAlign: "center",
@@ -33,14 +33,14 @@ export const Experience = () => {
           display: "flex",
           justifyContent: "center",
           flexWrap: "wrap",
-          mt: { xs: 4, sm: 12 },
+          mt: { xs: 4, sm: 11 },
         }}
-        gap={6}
+        gap={1}
       >
         <Grid
           xs={12}
           sm={4.25}
-          sx={{ display: "flex", justifyContent: "center" }}
+          sx={{ display: "flex", justifyContent: "center", p: 2 }}
         >
           <Card sx={{ borderRadius: "2rem", p: { xs: 0, lg: 4 } }}>
             <CardContent>
@@ -62,7 +62,12 @@ export const Experience = () => {
                   >
                     <CheckCircleIcon sx={{ color: "#4db5ff", mr: 1.5 }} />
                     <Grid>
-                      <Heading sx={{ fontSize: "1.2rem", fontWeight: "700" }}>
+                      <Heading
+                        sx={{
+                          fontSize: { xs: ".8rem", sm: "1.2rem" },
+                          fontWeight: "700",
+                        }}
+                      >
                         {frontendData}
                       </Heading>
                       <Heading sx={{ fontSize: ".8rem", fontWeight: "300" }}>
@@ -79,7 +84,7 @@ export const Experience = () => {
         <Grid
           xs={12}
           sm={4.25}
-          sx={{ display: "flex", justifyContent: "center" }}
+          sx={{ display: "flex", justifyContent: "center", p: 2 }}
         >
           <Card sx={{ borderRadius: "2rem", p: { xs: 0, lg: 4 } }}>
             <CardContent>
@@ -101,7 +106,12 @@ export const Experience = () => {
                   >
                     <CheckCircleIcon sx={{ color: "#4db5ff", mr: 1.5 }} />
                     <Grid>
-                      <Heading sx={{ fontSize: "1.2rem", fontWeight: "700" }}>
+                      <Heading
+                        sx={{
+                          fontSize: { xs: ".8rem", sm: "1.2rem" },
+                          fontWeight: "700",
+                        }}
+                      >
                         {backend}
                       </Heading>
                       <Heading sx={{ fontSize: ".8rem", fontWeight: "300" }}>

@@ -49,4 +49,8 @@ const theme = createTheme({
     },
   },
 });
+// [theme.breakpoints.down("md")]: {
+//   margin: "10px auto 70px",
+// },
+
 export default theme;

@@ -1,10 +1,11 @@
 export const navItems = [
-  "HOME",
-  "ABOUT",
-  "SERVICE",
-  "PORTFOLIO",
-  "TESTIMONIALS",
-  "CONTACT US",
+  { name: "HOME" },
+  { name: "ABOUT" },
+  { name: "EXPERIENCES" },
+  { name: "SERVICE" },
+  { name: "PORTFOLIO" },
+  { name: "TESTIMONIALS" },
+  { name: "CONTACT US" },
 ];
 export const services = [
   "Lorem ipsum dolor sit amet, id lacus consectetur adipiscing elit. Vivamus egestas, luctus eni",
@@ -70,5 +71,17 @@ export const contactsMethod = [
     name: "Telegram",
     contactDetail: "03007310142",
     path: "https://api.whatsapp.com/send?phone+2348138900164",
+  },
+];
+
+export const testimonialsItem = [
+  {
+    img: "https://play-lh.googleusercontent.com/5BgUBYo-maFTSwVBaqebt1wULoe3jyCX0bU1lvmXWI4rM2FnrKO4vl5eK2MpsiiU0K0",
+  },
+  {
+    img: "https://play-lh.googleusercontent.com/5BgUBYo-maFTSwVBaqebt1wULoe3jyCX0bU1lvmXWI4rM2FnrKO4vl5eK2MpsiiU0K0",
+  },
+  {
+    img: "https://play-lh.googleusercontent.com/5BgUBYo-maFTSwVBaqebt1wULoe3jyCX0bU1lvmXWI4rM2FnrKO4vl5eK2MpsiiU0K0",
   },
 ];

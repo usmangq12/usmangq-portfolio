@@ -1,14 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
-  font-family: "Kdam Thmor Pro,sans-serif";
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   background: #1f1f38;
 }
-
-/* .css-11b3ww9-MuiPaper-root-MuiAppBar-root {
-  position: unset !important;
-  
-} */
 .css-11b3ww9-MuiPaper-root-MuiAppBar-root {
   box-shadow: unset !important ;
+}
+.css-1r7kz78-MuiModal-root-MuiDrawer-root .MuiDrawer-paper {
+  background-color: #1f1f38;
+  color: #fff;
 }
 
 body {
@@ -18,8 +20,8 @@ body {
 
 .swiper {
   width: 350px;
+  max-width: 100%;
   height: 100%;
-
 }
 .swiper-slide img {
   display: block;

@@ -2,13 +2,13 @@ import {
   AppBar,
   IconButton,
   Toolbar,
-  Button,
   Grid,
   Container,
   Drawer,
   Box,
   Divider,
   Typography,
+  Link,
 } from "@mui/material/";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Heading } from "../shared";
@@ -31,23 +31,32 @@ export const Navbar = (props: Props) => {
         DevNode
       </Typography>
       <Divider />
-      {navItems.map((item) => (
-        <Button
-          key={item}
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "black",
-            fontWeight: "700",
-            fontSize: "15px",
-            textAlign: "center",
-          }}
-        >
-          {item}
-        </Button>
-      ))}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+        }}
+        gap={4}
+      >
+        {navItems.map((item) => (
+          <Link
+            href={`#${item.name}`}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#fff",
+              fontWeight: "700",
+              fontSize: "15px",
+              textAlign: "center",
+            }}
+          >
+            {item.name}
+          </Link>
+        ))}
+      </Box>
     </Box>
   );
   const container =
@@ -73,15 +82,23 @@ export const Navbar = (props: Props) => {
             <Heading sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
               DevNode
             </Heading>
-            <Grid sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((item) => (
-                <Button
-                  key={item}
-                  sx={{ color: "#fff", fontWeight: "700", fontSize: "15px" }}
-                >
-                  {item}
-                </Button>
-              ))}
+            <Grid>
+              <Grid sx={{ display: { xs: "none", sm: "block" } }}>
+                {navItems.map((item) => (
+                  <Link
+                    href={`#${item.name}`}
+                    underline="none"
+                    sx={{
+                      color: "#fff",
+                      fontWeight: "700",
+                      fontSize: "15px",
+                      m: 1,
+                    }}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </Grid>
             </Grid>
           </Container>
         </Toolbar>
@@ -93,7 +110,7 @@ export const Navbar = (props: Props) => {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "none" },

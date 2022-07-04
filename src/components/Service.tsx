@@ -3,10 +3,9 @@ import { Grid, Card, CardContent, CardHeader } from "@mui/material";
 import { Heading } from "../shared";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { services } from "../constants";
-
 export const MyService = () => {
   return (
-    <Grid container direction={"column"}>
+    <Grid container direction={"column"} id="SERVICE">
       <Heading
         sx={{
           textAlign: "center",
@@ -31,12 +30,10 @@ export const MyService = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          flexWrap: { xs: "wrap", md: "nowrap" },
+          flexWrap: "wrap",
 
           mt: { xs: 4, sm: 12 },
         }}
-        // gap={{ xs: 0, md: 5 }}
-        gap={6}
       >
         <Grid
           xs={12}
@@ -45,7 +42,7 @@ export const MyService = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            // p: { xs: 2, md: 0 }
+            p: "20px",
           }}
         >
           <Card
@@ -90,6 +87,7 @@ export const MyService = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
+            p: "20px",
           }}
         >
           <Card
@@ -134,6 +132,7 @@ export const MyService = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
+            p: "20px",
           }}
         >
           <Card

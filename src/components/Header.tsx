@@ -3,7 +3,7 @@ import { Heading, Image } from "../shared";
 
 export const Header = () => {
   return (
-    <Grid container pt={{ xs: 10, sm: 20 }}>
+    <Grid container pt={{ xs: 10, sm: 20 }} id={"HOME"}>
       <Grid
         item
         sx={{
@@ -70,7 +70,12 @@ export const Header = () => {
           flexWrap: "wrap",
         }}
       >
-        <Grid xs={12} sm={4} sx={{ textAlign: { xs: "center", sm: "left" } }}>
+        <Grid
+          xs={12}
+          sm={6}
+          md={4}
+          sx={{ textAlign: { xs: "center", sm: "left" } }}
+        >
           <Heading
             sx={{ color: "#4db5ff", fontSize: { xs: "16px", sm: "20px" } }}
           >
@@ -80,7 +85,7 @@ export const Header = () => {
             Website
           </Heading>
         </Grid>
-        <Grid xs={12} sm={4} sx={{ textAlign: "center" }}>
+        <Grid xs={12} sm={6} md={4} sx={{ textAlign: "center" }}>
           <Heading
             sx={{ color: "#4db5ff", fontSize: { xs: "16px", sm: "20px" } }}
           >
@@ -90,7 +95,12 @@ export const Header = () => {
             03007310142
           </Heading>
         </Grid>
-        <Grid xs={12} sm={4} sx={{ textAlign: { xs: "center", sm: "right" } }}>
+        <Grid
+          xs={12}
+          sm={6}
+          md={4}
+          sx={{ textAlign: { xs: "center", sm: "right" } }}
+        >
           <Heading
             sx={{ color: "#4db5ff", fontSize: { xs: "16px", sm: "20px" } }}
           >
@@ -99,7 +109,7 @@ export const Header = () => {
           <Heading
             sx={{
               textDecoration: "underline",
-              fontSize: { xs: "12px", sm: "26px" },
+              fontSize: { xs: "12px", sm: "20px", md: "26px" },
             }}
           >
             ahmadzulfiqar142@gamil.com
