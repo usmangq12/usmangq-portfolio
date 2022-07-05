@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import { Heading, Image } from "../shared";
+import { Profile } from "../assets/imges";
 
 export const Header = () => {
   return (
@@ -22,10 +23,18 @@ export const Header = () => {
             px: { xs: 2, sm: 0 },
           }}
         >
-          <Image
-            sx={{ width: { xs: "300px", sm: "auto" } }}
-            src="https://preview.colorlib.com/theme/calvin/assets/img/hero/xempolye.png.pagespeed.ic.zBM4C3aZP5.webp"
-          />
+          <Grid sx={{ borderRadius: "50%", border: "3px solid #fff", p: 1.2 }}>
+            <Image
+              sx={{
+                width: {
+                  xs: "300px",
+                  sm: "auto",
+                  borderRadius: "50%",
+                },
+              }}
+              src={Profile}
+            />
+          </Grid>
         </Grid>
         <Grid
           xs={12}
@@ -45,8 +54,8 @@ export const Header = () => {
             component="div"
             variant="h5"
           >
-            My name is Calvin. <br />
-            Digital Product Designer
+            My name is Muhammad Usman. <br />
+            Web Develpore
           </Heading>
           <Heading
             sx={{
@@ -58,7 +67,7 @@ export const Header = () => {
             component="div"
             variant="h5"
           >
-            Head of design at Calvino
+            Head of design at Muhammad Usman
           </Heading>
         </Grid>
       </Grid>
@@ -92,7 +101,7 @@ export const Header = () => {
             Phone
           </Heading>
           <Heading sx={{ fontSize: { xs: "16px", sm: "26px" } }}>
-            03007310142
+            +92 311 4942040
           </Heading>
         </Grid>
         <Grid
@@ -112,7 +121,7 @@ export const Header = () => {
               fontSize: { xs: "12px", sm: "20px", md: "26px" },
             }}
           >
-            ahmadzulfiqar142@gamil.com
+            usmangq12@gmail.com
           </Heading>
         </Grid>
       </Grid>

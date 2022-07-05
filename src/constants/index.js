@@ -19,6 +19,10 @@ export const frontendLanguages = [
   "HTML",
   "CSS",
   "SASS",
+  " Chakra UI",
+  " D3.js",
+  "Tailwind",
+  "MUI",
   "Bootstrap",
   "JavaScript",
   "React.js",
@@ -30,47 +34,53 @@ export const backendLanguages = [
   "MongoDb",
   "MySQL",
 ];
-export const images = [
+export const portfolioDetail = [
   {
     img_poster: "https://rococo-babka-760a17.netlify.app/images/login.jpg",
     text: "Login and Registration Form",
+    path: "https://github.com/usmangq12",
   },
   {
     img_poster: "https://rococo-babka-760a17.netlify.app/images/fylo.jpg",
     text: "Fylo Landing Page",
+    path: "https://github.com/usmangq12",
   },
   {
     img_poster: "https://rococo-babka-760a17.netlify.app/images/mist.jpg",
     text: "Mist Garden",
+    path: "https://github.com/usmangq12",
   },
   {
     img_poster: "https://rococo-babka-760a17.netlify.app/images/weather.jpg",
     text: "Web Weather Application",
+    path: "https://github.com/usmangq12",
   },
   {
     img_poster: "https://rococo-babka-760a17.netlify.app/images/note.jpg",
     text: "Note Application",
+    path: "https://github.com/usmangq12",
   },
   {
     img_poster: "https://rococo-babka-760a17.netlify.app/images/filterable.jpg",
     text: "Note Application",
+    path: "https://github.com/usmangq12",
   },
 ];
 export const contactsMethod = [
   {
     name: "Email",
-    contactDetail: "ahmadzulfiqar142@gamil.com",
-    path: "mailto:ajiboyeabiodun001@gmail.com",
+    contactDetail: "usmangq12@gmail.com",
+    path: "mailto:usmangq12@gmail.com",
   },
   {
     name: "Whatsapp",
-    contactDetail: "03007310142",
+    contactDetail: "+92 311 4942040",
     path: "https://api.whatsapp.com/send?phone+2348138900164",
   },
   {
-    name: "Telegram",
-    contactDetail: "03007310142",
-    path: "https://api.whatsapp.com/send?phone+2348138900164",
+    name: "Skype",
+    contactDetail: "+92 311 4942040",
+    path: "https://join.skype.com/invite/MDJ44XPKrkCa",
   },
 ];
 

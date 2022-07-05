@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { Heading, Image } from "../shared";
 import CallMadeIcon from "@mui/icons-material/CallMade";
-import { images } from "../constants";
+import { portfolioDetail } from "../constants";
 
 export const Portfolio = () => {
   return (
@@ -42,7 +42,7 @@ export const Portfolio = () => {
           mt: { xs: 4, sm: 12 },
         }}
       >
-        {images.map((img) => (
+        {portfolioDetail.map((img) => (
           <Grid
             xs={12}
             sm={6}
@@ -92,16 +92,18 @@ export const Portfolio = () => {
                     mb: 5,
                   }}
                 >
-                  <Button
-                    variant="contained"
+                  <Link
+                    href={img.path}
+                    underline="none"
                     sx={{
                       background: "#4db5ff",
                       borderRadius: "8px",
+                      color: "#fff",
                       p: "9px 32px",
                     }}
                   >
                     GitHub
-                  </Button>
+                  </Link>
                   <Link
                     href="#"
                     underline="none"

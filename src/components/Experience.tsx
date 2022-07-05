@@ -3,6 +3,11 @@ import { Grid, Card, CardContent } from "@mui/material";
 import { Heading } from "../shared";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { frontendLanguages, backendLanguages } from "../constants";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export const Experience = () => {
   return (
@@ -27,102 +32,134 @@ export const Experience = () => {
       >
         My Experience
       </Heading>
-
       <Grid
         sx={{
-          display: "flex",
-          justifyContent: "center",
-          flexWrap: "wrap",
           mt: { xs: 4, sm: 11 },
         }}
         gap={1}
       >
-        <Grid
-          xs={12}
-          sm={4.25}
-          sx={{ display: "flex", justifyContent: "center", p: 2 }}
-        >
-          <Card sx={{ borderRadius: "2rem", p: { xs: 0, lg: 4 } }}>
-            <CardContent>
+        <Grid xs={12} sx={{ p: 2 }}>
+          <Accordion sx={{ backgroundColor: "#2c2c6c" }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
               <Heading
                 sx={{
                   color: "#4db5ff",
-                  fontSize: "1.2rem",
+                  fontSize: "1.5rem",
                   fontWeight: "700",
                   textAlign: "center",
                 }}
               >
                 Frontend Development
               </Heading>
-              <Grid sx={{ display: "flex", flexWrap: "wrap", mt: 2 }}>
-                {frontendLanguages.map((frontendData) => (
-                  <Grid
-                    sx={{ display: "flex", alignItems: "baseline", mb: 2 }}
-                    xs={6}
-                  >
-                    <CheckCircleIcon sx={{ color: "#4db5ff", mr: 1.5 }} />
-                    <Grid>
-                      <Heading
+            </AccordionSummary>
+            <AccordionDetails>
+              <Card
+                sx={{
+                  borderRadius: "2rem",
+                  p: { xs: 0, lg: 4 },
+                  boxShadow: "unset",
+                }}
+              >
+                <CardContent>
+                  <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
+                    {frontendLanguages.map((frontendData) => (
+                      <Grid
                         sx={{
-                          fontSize: { xs: ".8rem", sm: "1.2rem" },
-                          fontWeight: "700",
+                          display: "flex",
+                          alignItems: "baseline",
+                          flexWrap: "wrap",
+                          mb: 2,
                         }}
+                        xs={6}
+                        sm={4}
+                        md={3}
                       >
-                        {frontendData}
-                      </Heading>
-                      <Heading sx={{ fontSize: ".8rem", fontWeight: "300" }}>
-                        Experienced
-                      </Heading>
-                    </Grid>
+                        <CheckCircleIcon sx={{ color: "#4db5ff", mr: 1.5 }} />
+                        <Grid>
+                          <Heading
+                            sx={{
+                              fontSize: { xs: ".8rem", sm: "1.2rem" },
+                              fontWeight: "700",
+                            }}
+                          >
+                            {frontendData}
+                          </Heading>
+                          <Heading
+                            sx={{ fontSize: ".8rem", fontWeight: "300" }}
+                          >
+                            Experienced
+                          </Heading>
+                        </Grid>
+                      </Grid>
+                    ))}
                   </Grid>
-                ))}
-              </Grid>
-            </CardContent>
-          </Card>
+                </CardContent>
+              </Card>
+            </AccordionDetails>
+          </Accordion>
         </Grid>
-
-        <Grid
-          xs={12}
-          sm={4.25}
-          sx={{ display: "flex", justifyContent: "center", p: 2 }}
-        >
-          <Card sx={{ borderRadius: "2rem", p: { xs: 0, lg: 4 } }}>
-            <CardContent>
+        <Grid xs={12} sx={{ p: 2 }}>
+          <Accordion sx={{ backgroundColor: "#2c2c6c" }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+            >
               <Heading
                 sx={{
                   color: "#4db5ff",
-                  fontSize: "1.2rem",
+                  fontSize: "1.5rem",
                   fontWeight: "700",
                   textAlign: "center",
                 }}
               >
                 Backend Development
               </Heading>
-              <Grid sx={{ display: "flex", flexWrap: "wrap", mt: 2 }}>
-                {backendLanguages.map((backend) => (
-                  <Grid
-                    sx={{ display: "flex", alignItems: "baseline", mb: 2 }}
-                    xs={6}
-                  >
-                    <CheckCircleIcon sx={{ color: "#4db5ff", mr: 1.5 }} />
-                    <Grid>
-                      <Heading
-                        sx={{
-                          fontSize: { xs: ".8rem", sm: "1.2rem" },
-                          fontWeight: "700",
-                        }}
+            </AccordionSummary>
+            <AccordionDetails>
+              <Card
+                sx={{
+                  borderRadius: "2rem",
+                  p: { xs: 0, lg: 4 },
+                  boxShadow: "unset",
+                }}
+              >
+                <CardContent>
+                  <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
+                    {backendLanguages.map((backend) => (
+                      <Grid
+                        sx={{ display: "flex", alignItems: "baseline", mb: 2 }}
+                        xs={6}
+                        sm={4}
+                        md={3}
                       >
-                        {backend}
-                      </Heading>
-                      <Heading sx={{ fontSize: ".8rem", fontWeight: "300" }}>
-                        Experienced
-                      </Heading>
-                    </Grid>
+                        <CheckCircleIcon sx={{ color: "#4db5ff", mr: 1.5 }} />
+                        <Grid>
+                          <Heading
+                            sx={{
+                              fontSize: { xs: ".8rem", sm: "1.2rem" },
+                              fontWeight: "700",
+                            }}
+                          >
+                            {backend}
+                          </Heading>
+                          <Heading
+                            sx={{ fontSize: ".8rem", fontWeight: "300" }}
+                          >
+                            Experienced
+                          </Heading>
+                        </Grid>
+                      </Grid>
+                    ))}
                   </Grid>
-                ))}
-              </Grid>
-            </CardContent>
-          </Card>
+                </CardContent>
+              </Card>
+            </AccordionDetails>
+          </Accordion>
         </Grid>
       </Grid>
     </Grid>

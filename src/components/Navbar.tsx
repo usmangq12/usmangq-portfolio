@@ -4,34 +4,35 @@ import {
   Toolbar,
   Grid,
   Container,
-  Drawer,
-  Box,
   Divider,
   Typography,
   Link,
+  Drawer,
 } from "@mui/material/";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Heading } from "../shared";
 import { navItems } from "../constants";
 import { useState } from "react";
+// import { Drawer } from "../shared/Drawer";
+
 interface Props {
   window?: () => Window;
 }
 const drawerWidth = 240;
 export const Navbar = (props: Props) => {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openDrawer, setOpenDrawer] = useState(false);
 
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+    setOpenDrawer(!openDrawer);
   };
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        DevNode
-      </Typography>
+  const drawerData = (
+    <Grid onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+      <Heading sx={{ my: 2, fontWeight: "700", fontSize: "23px" }}>
+        Usman-gq
+      </Heading>
       <Divider />
-      <Box
+      <Grid
         sx={{
           display: "flex",
           justifyContent: "center",
@@ -56,8 +57,8 @@ export const Navbar = (props: Props) => {
             {item.name}
           </Link>
         ))}
-      </Box>
-    </Box>
+      </Grid>
+    </Grid>
   );
   const container =
     window !== undefined ? () => window().document.body : undefined;
@@ -79,35 +80,61 @@ export const Navbar = (props: Props) => {
             >
               <MenuIcon />
             </IconButton>
-            <Heading sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
-              DevNode
-            </Heading>
-            <Grid>
-              <Grid sx={{ display: { xs: "none", sm: "block" } }}>
-                {navItems.map((item) => (
-                  <Link
-                    href={`#${item.name}`}
-                    underline="none"
-                    sx={{
-                      color: "#fff",
-                      fontWeight: "700",
-                      fontSize: "15px",
-                      m: 1,
-                    }}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+            <Grid
+              sx={{
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "space-around",
+                width: "100%",
+              }}
+              gap={3}
+            >
+              <Heading
+                sx={{
+                  flexGrow: 1,
+                  display: { xs: "none", sm: "block" },
+                  fontWeight: "700",
+                  fontSize: "2.5rem",
+                }}
+              >
+                Usman-gq
+              </Heading>
+
+              <Grid sx={{ display: { xs: "none", sm: "block" } }} gap={2}>
+                <Grid
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                  }}
+                  // gap={3}
+                >
+                  {navItems.map((item) => (
+                    <Link
+                      href={`#${item.name}`}
+                      underline="none"
+                      sx={{
+                        color: "#fff",
+                        fontWeight: "800",
+                        fontSize: { sm: "10px", md: ".8rem" },
+                        p: 1,
+                      }}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </Grid>
               </Grid>
             </Grid>
           </Container>
         </Toolbar>
       </AppBar>
-      <Box component="nav">
+
+      <Grid component="nav">
         <Drawer
           container={container}
           variant="temporary"
-          open={mobileOpen}
+          open={openDrawer}
           onClose={handleDrawerToggle}
           ModalProps={{
             keepMounted: true,
@@ -120,9 +147,9 @@ export const Navbar = (props: Props) => {
             },
           }}
         >
-          {drawer}
+          {drawerData}
         </Drawer>
-      </Box>
+      </Grid>
     </Grid>
   );
 };
