@@ -23,13 +23,25 @@ export const Header = () => {
             px: { xs: 2, sm: 0 },
           }}
         >
-          <Grid sx={{ borderRadius: "50%", border: "3px solid #fff", p: 1.2 }}>
+          <Grid
+            sx={{
+              borderRadius: "50%",
+              border: "3px solid #fff",
+              p: 1.2,
+              overflow: "hidden",
+            }}
+          >
             <Image
               sx={{
                 width: {
                   xs: "300px",
                   sm: "auto",
                   borderRadius: "50%",
+                  transform: "scale(1)",
+                  transition: "all 0.5s ease",
+                },
+                "&:hover": {
+                  transform: "scale(1.1)",
                 },
               }}
               src={Profile}
@@ -118,7 +130,7 @@ export const Header = () => {
           <Heading
             sx={{
               textDecoration: "underline",
-              fontSize: { xs: "12px", sm: "20px", md: "26px" },
+              fontSize: { xs: "16px", sm: "20px", md: "26px" },
             }}
           >
             usmangq12@gmail.com

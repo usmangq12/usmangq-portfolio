@@ -97,40 +97,25 @@ export const About = () => {
             <Grid
               sx={{
                 display: "flex",
+                justifyContent: { xs: "center", sm: "unset" },
                 gap: 4,
               }}
             >
-              {/* <Grid
-                sx={{
-                  width: { xs: "70px", sm: "113px" },
-                  height: { xs: "70px", sm: "113px" },
-                  backgroundColor: "#2c2c6c;",
-                  borderRadius: "10px",
-                }}
-              ></Grid>
-              <Grid
-                sx={{
-                  width: { xs: "70px", sm: "113px" },
-                  height: { xs: "70px", sm: "113px" },
-                  backgroundColor: "#2c2c6c;",
-                  borderRadius: "10px",
-                }}
-              ></Grid>
-              <Grid
-                sx={{
-                  width: { xs: "70px", sm: "113px" },
-                  height: { xs: "70px", sm: "113px" },
-                  backgroundColor: "#2c2c6c;",
-                  borderRadius: "10px",
-                }}
-              ></Grid> */}
               <Link
                 href="https://github.com/usmangq12"
                 sx={{ color: "#4db5ff" }}
               >
                 <GitHubIcon
                   sx={{
-                    fontSize: "33.3px",
+                    border: "1px solid",
+                    fontSize: "25px",
+                    p: "3px",
+                    "&:hover": {
+                      transform: "scale(1.2)",
+                      transition: "all 0.5s ease",
+                      background: "#4db5ff",
+                      color: "#fff",
+                    },
                   }}
                 />
               </Link>
@@ -140,7 +125,18 @@ export const About = () => {
               >
                 <Image
                   component="img"
-                  sx={{ width: "34px" }}
+                  sx={{
+                    border: "1px solid",
+                    width: "25px",
+                    p: "3px",
+                    "&:hover": {
+                      transform: "scale(1.2)",
+                      transition: "all 0.5s ease",
+                      background: "#4db5ff",
+                      color: "#fff",
+                    },
+                  }}
+                  // sx={{ width: "34px" }}
                   src={Skype}
                 ></Image>
               </Link>
@@ -151,7 +147,15 @@ export const About = () => {
               >
                 <LinkedInIcon
                   sx={{
-                    fontSize: "33.3px",
+                    border: "1px solid",
+                    fontSize: "25px",
+                    p: "3px",
+                    "&:hover": {
+                      transform: "scale(1.2)",
+                      transition: "all 0.5s ease",
+                      background: "#4db5ff",
+                      color: "#fff",
+                    },
                   }}
                 />
               </Link>

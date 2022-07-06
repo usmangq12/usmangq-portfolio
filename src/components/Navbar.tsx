@@ -100,7 +100,6 @@ export const Navbar = (props: Props) => {
               >
                 Usman-gq
               </Heading>
-
               <Grid sx={{ display: { xs: "none", sm: "block" } }} gap={2}>
                 <Grid
                   sx={{

@@ -59,16 +59,38 @@ export const Footer = () => {
             sx={{ color: "#1f1f38" }}
           >
             <TwitterIcon
+              // sx={{
+              //   fontSize: "33.3px",
+              // }}
               sx={{
-                fontSize: "33.3px",
+                border: "1px solid",
+                fontSize: "25px",
+                p: "3px",
+                "&:hover": {
+                  transform: "scale(1.2)",
+                  transition: "all 0.5s ease",
+                  background: "#1f1f38",
+                  color: "#fff",
+                },
               }}
             />
           </Link>
 
           <Link href="https://github.com/usmangq12" sx={{ color: "#1f1f38" }}>
             <GitHubIcon
+              // sx={{
+              //   fontSize: "33.3px",
+              // }}
               sx={{
-                fontSize: "33.3px",
+                border: "1px solid",
+                fontSize: "25px",
+                p: "3px",
+                "&:hover": {
+                  transform: "scale(1.2)",
+                  transition: "all 0.5s ease",
+                  background: "#1f1f38",
+                  color: "#fff",
+                },
               }}
             />
           </Link>
@@ -77,8 +99,19 @@ export const Footer = () => {
             sx={{ color: "#1f1f38" }}
           >
             <InstagramIcon
+              // sx={{
+              //   fontSize: "33.3px",
+              // }}
               sx={{
-                fontSize: "33.3px",
+                border: "1px solid",
+                fontSize: "25px",
+                p: "3px",
+                "&:hover": {
+                  transform: "scale(1.2)",
+                  transition: "all 0.5s ease",
+                  background: "#1f1f38",
+                  color: "#fff",
+                },
               }}
             />
           </Link>
@@ -88,8 +121,19 @@ export const Footer = () => {
             sx={{ color: "#1f1f38" }}
           >
             <LinkedInIcon
+              // sx={{
+              //   fontSize: "33.3px",
+              // }}
               sx={{
-                fontSize: "33.3px",
+                border: "1px solid",
+                fontSize: "25px",
+                p: "3px",
+                "&:hover": {
+                  transform: "scale(1.2)",
+                  transition: "all 0.5s ease",
+                  background: "#1f1f38",
+                  color: "#fff",
+                },
               }}
             />
           </Link>

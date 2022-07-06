@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, Card, CardContent } from "@mui/material";
 import { Heading } from "../shared";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
@@ -6,10 +6,13 @@ import { frontendLanguages, backendLanguages } from "../constants";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export const Experience = () => {
+  const [expanded, setExpanded] = useState("panel1");
+  const handleChange = (panel: any) => (event: any, newExpanded: any) => {
+    setExpanded(newExpanded ? panel : false);
+  };
   return (
     <Grid container direction={"column"} id="EXPERIENCES">
       <Heading
@@ -39,7 +42,11 @@ export const Experience = () => {
         gap={1}
       >
         <Grid xs={12} sx={{ p: 2 }}>
-          <Accordion sx={{ backgroundColor: "#2c2c6c" }}>
+          <Accordion
+            expanded={expanded === "panel1"}
+            onChange={handleChange("panel1")}
+            sx={{ backgroundColor: "#2c2c6c" }}
+          >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
               aria-controls="panel1a-content"
