@@ -67,19 +67,7 @@ export const Header = () => {
             variant="h5"
           >
             My name is Muhammad Usman. <br />
-            Web Develpore
-          </Heading>
-          <Heading
-            sx={{
-              color: "#4db5ff",
-              fontSize: { xs: "15px", sm: "30px" },
-              fontWeight: "400",
-              mt: 3,
-            }}
-            component="div"
-            variant="h5"
-          >
-            Head of design at Muhammad Usman
+            I'm community taught Web Developer
           </Heading>
         </Grid>
       </Grid>
@@ -100,11 +88,9 @@ export const Header = () => {
           <Heading
             sx={{ color: "#4db5ff", fontSize: { xs: "16px", sm: "20px" } }}
           >
-            Design For
+            Code For
           </Heading>
-          <Heading sx={{ fontSize: { xs: "16px", sm: "26px" } }}>
-            Website
-          </Heading>
+          <Heading sx={{ fontSize: { xs: "16px", sm: "26px" } }}>Web</Heading>
         </Grid>
         <Grid xs={12} sm={6} md={4} sx={{ textAlign: "center" }}>
           <Heading

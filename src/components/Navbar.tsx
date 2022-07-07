@@ -12,6 +12,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { Heading } from "../shared";
 import { navItems } from "../constants";
+
 import { useState } from "react";
 // import { Drawer } from "../shared/Drawer";
 
@@ -40,9 +41,9 @@ export const Navbar = (props: Props) => {
         }}
         gap={4}
       >
-        {navItems.map((item) => (
+        {navItems.map((item: string) => (
           <Link
-            href={`#${item.name}`}
+            href={`#${item}`}
             sx={{
               display: "flex",
               flexDirection: "column",
@@ -54,7 +55,7 @@ export const Navbar = (props: Props) => {
               textAlign: "center",
             }}
           >
-            {item.name}
+            {item}
           </Link>
         ))}
       </Grid>
@@ -110,7 +111,7 @@ export const Navbar = (props: Props) => {
                 >
                   {navItems.map((item) => (
                     <Link
-                      href={`#${item.name}`}
+                      href={`#${item}`}
                       underline="none"
                       sx={{
                         color: "#fff",
@@ -119,7 +120,7 @@ export const Navbar = (props: Props) => {
                         p: 1,
                       }}
                     >
-                      {item.name}
+                      {item}
                     </Link>
                   ))}
                 </Grid>

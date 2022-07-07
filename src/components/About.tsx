@@ -6,6 +6,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Skype } from "../assets/imges";
+import { SocialIcons } from "./SocialIcons";
 
 export const About = () => {
   return (
@@ -101,64 +102,9 @@ export const About = () => {
                 gap: 4,
               }}
             >
-              <Link
-                href="https://github.com/usmangq12"
-                sx={{ color: "#4db5ff" }}
-              >
-                <GitHubIcon
-                  sx={{
-                    border: "1px solid",
-                    fontSize: "25px",
-                    p: "3px",
-                    "&:hover": {
-                      transform: "scale(1.2)",
-                      transition: "all 0.5s ease",
-                      background: "#4db5ff",
-                      color: "#fff",
-                    },
-                  }}
-                />
-              </Link>
-              <Link
-                href="https://join.skype.com/invite/MDJ44XPKrkCa"
-                sx={{ color: "#4db5ff" }}
-              >
-                <Image
-                  component="img"
-                  sx={{
-                    border: "1px solid",
-                    width: "25px",
-                    p: "3px",
-                    "&:hover": {
-                      transform: "scale(1.2)",
-                      transition: "all 0.5s ease",
-                      background: "#4db5ff",
-                      color: "#fff",
-                    },
-                  }}
-                  // sx={{ width: "34px" }}
-                  src={Skype}
-                ></Image>
-              </Link>
-
-              <Link
-                href="https://www.linkedin.com/in/muhammad-usman-759b55129"
-                sx={{ color: "#4db5ff" }}
-              >
-                <LinkedInIcon
-                  sx={{
-                    border: "1px solid",
-                    fontSize: "25px",
-                    p: "3px",
-                    "&:hover": {
-                      transform: "scale(1.2)",
-                      transition: "all 0.5s ease",
-                      background: "#4db5ff",
-                      color: "#fff",
-                    },
-                  }}
-                />
-              </Link>
+              <SocialIcons
+                styles={{ background: "#4db5ff", color: "#4db5ff" }}
+              />
             </Grid>
             <Grid xs={12} sm={10}>
               <Heading

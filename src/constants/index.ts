@@ -1,11 +1,17 @@
-export const navItems = [
-  { name: "HOME" },
-  { name: "ABOUT" },
-  { name: "EXPERIENCES" },
-  { name: "SERVICE" },
-  { name: "PORTFOLIO" },
-  { name: "TESTIMONIALS" },
-  { name: "CONTACT US" },
+import TwitterIcon from "@mui/icons-material/Twitter";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { SvgIconComponent } from "@mui/icons-material";
+
+export const navItems: string[] = [
+  "HOME",
+  "ABOUT",
+  "EXPERIENCES",
+  "SERVICE",
+  "PORTFOLIO",
+  "TESTIMONIALS",
+  "CONTACT US",
 ];
 export const services = [
   "Lorem ipsum dolor sit amet, id lacus consectetur adipiscing elit. Vivamus egestas, luctus eni",
@@ -93,5 +99,18 @@ export const testimonialsItem = [
   },
   {
     img: "https://play-lh.googleusercontent.com/5BgUBYo-maFTSwVBaqebt1wULoe3jyCX0bU1lvmXWI4rM2FnrKO4vl5eK2MpsiiU0K0",
+  },
+];
+
+export const links: { href: string; icon: SvgIconComponent }[] = [
+  { href: "https://twitter.com/Muhamma28090557", icon: TwitterIcon },
+  { href: "https://github.com/usmangq12", icon: GitHubIcon },
+  {
+    href: "https://instagram.com/uxmangq?igshid=YmMyMTA2M2Y=",
+    icon: InstagramIcon,
+  },
+  {
+    href: "https://www.linkedin.com/in/muhammad-usman-759b55129",
+    icon: LinkedInIcon,
   },
 ];
