@@ -14,6 +14,7 @@ export const SocialIcons = ({
               border: "1px solid",
               fontSize: "25px",
               borderRadius: "50%",
+
               background: `${
                 styles.background ? styles.background : "#1f1f38"
               }`,
@@ -21,9 +22,7 @@ export const SocialIcons = ({
               "&:hover": {
                 transform: "scale(1.2)",
                 transition: "all 0.5s ease",
-
                 backgroundColor: "#1f1f38",
-
                 color: "#fff",
               },
             }}

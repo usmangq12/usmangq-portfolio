@@ -22,24 +22,21 @@ export const services = [
   "Lorem ipsum dolor sit amet, id lacus consectetur adipiscing elit. Vivamus egestas, luctus eni",
 ];
 export const frontendLanguages = [
-  "HTML",
-  "CSS",
-  "SASS",
-  " Chakra UI",
-  " D3.js",
-  "Tailwind",
-  "MUI",
-  "Bootstrap",
-  "JavaScript",
-  "React.js",
+  { name: "HTML", path: "https://www.w3schools.com/html/" },
+  { name: "CSS", path: "https://www.w3schools.com/css/default.asp" },
+  { name: "SASS", path: "https://sass-lang.com/" },
+  { name: " Chakra UI", path: "https://chakra-ui.com/" },
+  { name: " D3.js", path: "https://d3js.org/" },
+  { name: "Tailwind", path: "https://tailwindcss.com/" },
+  { name: "MUI", path: "https://mui.com/" },
+  {
+    name: "Bootstrap",
+    path: "https://getbootstrap.com/docs/5.0/getting-started/introduction/",
+  },
+  { name: "JavaScript", path: "https://www.w3schools.com/js/default.asp" },
+  { name: "React.js", path: "https://reactjs.org/" },
 ];
-export const backendLanguages = [
-  "Node JS",
-  "PHP",
-  "Python",
-  "MongoDb",
-  "MySQL",
-];
+export const backendLanguages = ["Node JS", "Express", "PostgreSQL"];
 export const portfolioDetail = [
   {
     img_poster: "https://rococo-babka-760a17.netlify.app/images/login.jpg",
