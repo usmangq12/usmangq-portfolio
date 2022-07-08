@@ -1,9 +1,4 @@
 import { Grid, BottomNavigation, Button, Link } from "@mui/material";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { navItems } from "../constants";
 
 import { Heading } from "../shared";
