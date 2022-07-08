@@ -1,11 +1,7 @@
 import React from "react";
 import { Grid, Card, Button, Link } from "@mui/material";
 import { Image, Heading } from "../shared";
-import { ProfilePic } from "../assets/imges";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import { Skype } from "../assets/imges";
+import { Profilepicture } from "../assets/imges";
 import { SocialIcons } from "./SocialIcons";
 
 export const About = () => {
@@ -74,7 +70,7 @@ export const About = () => {
               component="img"
               width="100%"
               height="325"
-              src={ProfilePic}
+              src={Profilepicture}
               alt="green iguana"
               sx={{
                 display: { xs: "none", sm: "block" },
