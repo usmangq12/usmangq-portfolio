@@ -5,17 +5,13 @@ import {
   Grid,
   Container,
   Divider,
-  Typography,
   Link,
   Drawer,
 } from "@mui/material/";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Heading } from "../shared";
 import { navItems } from "../constants";
-
 import { useState } from "react";
-// import { Drawer } from "../shared/Drawer";
-
 interface Props {
   window?: () => Window;
 }
@@ -43,6 +39,7 @@ export const Navbar = (props: Props) => {
       >
         {navItems.map((item: string) => (
           <Link
+            underline="none"
             href={`#${item}`}
             sx={{
               display: "flex",
