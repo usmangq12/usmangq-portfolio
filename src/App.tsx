@@ -12,6 +12,7 @@ import {
 } from "./components";
 
 import { Container } from "@mui/system";
+import { Heatmap } from "./components/Heatmap";
 
 function App() {
   return (
@@ -23,8 +24,8 @@ function App() {
         <Experience />
         <MyService />
         <Portfolio />
-
         <Testimonials />
+        <Heatmap />
         <Contact />
       </Container>
       <Footer />

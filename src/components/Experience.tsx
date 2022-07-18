@@ -134,21 +134,27 @@ export const Experience = () => {
                   <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
                     {backendLanguages.map((backend) => (
                       <Grid
-                        sx={{ display: "flex", alignItems: "baseline", mb: 2 }}
+                        sx={{
+                          display: "flex",
+                          alignItems: "baseline",
+                          mb: 2,
+                        }}
                         xs={6}
                         sm={4}
                         md={3}
                       >
                         <CheckCircleIcon sx={{ color: "#4db5ff", mr: 1.5 }} />
                         <Grid>
-                          <Heading
-                            sx={{
-                              fontSize: { xs: ".8rem", sm: "1.2rem" },
-                              fontWeight: "700",
-                            }}
-                          >
-                            {backend}
-                          </Heading>
+                          <Link href={backend.path} underline="none">
+                            <Heading
+                              sx={{
+                                fontSize: { xs: ".8rem", sm: "1.2rem" },
+                                fontWeight: "700",
+                              }}
+                            >
+                              {backend.name}
+                            </Heading>
+                          </Link>
                           <Heading
                             sx={{ fontSize: ".8rem", fontWeight: "300" }}
                           >
