@@ -1,4 +1,3 @@
-import { data } from "../constants";
 import { Heading } from "../shared";
 import { Grid, Typography } from "@mui/material";
 

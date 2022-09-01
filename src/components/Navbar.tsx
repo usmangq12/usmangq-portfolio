@@ -93,7 +93,7 @@ export const Navbar = (props: Props) => {
                   flexGrow: 1,
                   display: { xs: "none", sm: "block" },
                   fontWeight: "700",
-                  fontSize: "2.5rem",
+                  fontSize: { sm: "23px", md: "2.5rem" },
                 }}
               >
                 Usman-gq
