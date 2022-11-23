@@ -3,7 +3,7 @@ html {
 }
 body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  background: #1f1f38;
+  background: rgba(10, 25, 47, 0.85);
 }
 .css-11b3ww9-MuiPaper-root-MuiAppBar-root {
   box-shadow: unset !important ;

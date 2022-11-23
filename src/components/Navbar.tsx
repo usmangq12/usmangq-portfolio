@@ -62,8 +62,11 @@ export const Navbar = (props: Props) => {
     window !== undefined ? () => window().document.body : undefined;
   return (
     <Grid>
-      <AppBar component="nav">
-        <Toolbar sx={{ backgroundColor: "#1f1f38", p: 2 }}>
+      <AppBar
+        component="nav"
+        sx={{ backgroundColor: "rgba(10, 25, 47, 0.85)", p: 2 }}
+      >
+        <Toolbar>
           <Container
             sx={{
               display: "flex",

@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Card, Button, Link } from "@mui/material";
+import { Grid, Card, Link } from "@mui/material";
 import { Image, Heading } from "../shared";
 import { Profilepicture } from "../assets/imges";
 import { SocialIcons } from "./SocialIcons";
@@ -107,10 +107,11 @@ export const About = () => {
                 variant="body2"
                 sx={{ fontSize: "16px", lineHeight: "unset", mt: 4 }}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ea
-                aspernatur libero facere rerum a error temporibus earum
-                accusamus! Dignissimos voluptates magni quae officiis quo magnam
-                cupiditate nobis adipisci culpa.
+                I’m a community-taught developer with 4 plus years of
+                experience. I love reading and enhancing my knowledge day by
+                day, and love to solve complex problems. I’m always ready for
+                new challenges which keep me motivated to move on in the coding
+                field at another level.
               </Heading>
             </Grid>
             <Grid sx={{ mt: 4 }}>

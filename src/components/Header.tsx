@@ -1,34 +1,8 @@
-import { useEffect, useRef } from "react";
-import { Grid, Container, Box } from "@mui/material";
-import Typed from "typed.js";
+import { Grid, Container, Box, Link } from "@mui/material";
 import { Heading, Image } from "../shared";
-import { Profile, Backgroundimage } from "../assets/imges";
+import { Profile } from "../assets/imges";
 
 export const Header = () => {
-  const text = ["Muhammad USMAN", " Web Developer"];
-  const divRef: any = useRef();
-  useEffect(() => {
-    const options = {
-      strings: text,
-      stringsElement: "#typed-string",
-      typeSpeed: 50,
-      showCursor: true,
-      backSpeed: 20,
-      smartBackspace: false,
-      shuffle: true,
-      startDelay: 500,
-      backDelay: 1000,
-      loop: true,
-      loopCount: Infinity,
-    };
-
-    const typed = new Typed(divRef.current, options);
-
-    return () => {
-      typed.destroy();
-    };
-  }, [text]);
-
   return (
     <Grid
       container
@@ -39,7 +13,7 @@ export const Header = () => {
       sx={{
         position: "relative",
         zIndex: "1",
-        backgroundImage: `url(${Backgroundimage})`,
+        backgroundColor: "rgba(10, 25, 47, 0.85)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -49,7 +23,6 @@ export const Header = () => {
           position: "absolute",
           top: 0,
           left: 0,
-          background: "black",
           opacity: ".6",
           zIndex: "-1",
           width: "100%",
@@ -111,20 +84,73 @@ export const Header = () => {
           >
             <Heading
               sx={{
-                color: "#fff",
+                color: "#4db5ff",
+                fontSize: { sm: "23px", md: "18px" },
+                fontWeight: "300",
+              }}
+              component="div"
+              variant="h5"
+            >
+              <span>Hi, my name is</span>
+            </Heading>
+            <Heading
+              sx={{
+                color: "#ccd6f6",
                 fontSize: { sm: "33px", md: "53px" },
                 fontWeight: "400",
               }}
               component="div"
               variant="h5"
             >
-              <span>I am&nbsp;</span>
-
-              <span ref={divRef} />
+              Muhammad USMAN.
+            </Heading>
+            <Heading
+              sx={{
+                color: "#8892b0",
+                fontSize: { sm: "33px", md: "53px" },
+                fontWeight: "400",
+              }}
+              component="div"
+              variant="h5"
+            >
+              I build things for the web.
+            </Heading>
+            <Grid sx={{ textAlign: "center" }}></Grid>
+            <Heading
+              sx={{
+                color: "#8892b0",
+                fontSize: { sm: "33px", md: "23px" },
+                fontWeight: "400",
+                display: "inline-block",
+              }}
+              component="div"
+              variant="h5"
+            >
+              I’m a software engineer with 4 plus years of experience in React
+              with Typescript. Currently, I’m building ride sharing application
+              at
+              <Link
+                underline="none"
+                href="https://www.sharemobility.com/"
+                sx={{
+                  display: "flex",
+                  marginRight: 3,
+                  float: "right",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#8892b0",
+                  fontWeight: "700",
+                  fontSize: { sm: "33px", md: "23px" },
+                  textAlign: "center",
+                }}
+              >
+                Share-Mobility.
+              </Link>
             </Heading>
           </Grid>
         </Grid>
-        <Grid
+        {/* <Grid
           xs={12}
           sx={{
             display: "flex",
@@ -168,7 +194,7 @@ export const Header = () => {
               usmangq12@gmail.com
             </Heading>
           </Grid>
-        </Grid>
+        </Grid> */}
       </Container>
     </Grid>
   );

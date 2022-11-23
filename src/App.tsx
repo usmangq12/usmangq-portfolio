@@ -1,35 +1,26 @@
-import "./App.css";
+import { Grid, Container } from "@mui/material";
 import {
   Navbar,
   Header,
   Experience,
   Footer,
   About,
-  MyService,
   Portfolio,
-  Testimonials,
-  Contact,
 } from "./components";
-
-import { Container } from "@mui/system";
-import { Heatmap } from "./components/Heatmap";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <Grid className="App">
       <Navbar />
       <Header />
-      <Container>
+      <Container sx={{ backgroundColor: "rgba(10, 25, 47, 0.85)" }}>
         <About />
         <Experience />
-        <MyService />
         <Portfolio />
-        <Testimonials />
-        <Heatmap />
-        <Contact />
       </Container>
       <Footer />
-    </div>
+    </Grid>
   );
 }
 
