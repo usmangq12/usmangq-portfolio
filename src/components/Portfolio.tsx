@@ -17,7 +17,7 @@ export const Portfolio = () => {
       </Heading>
       <Heading
         sx={{
-          color: "#4db5ff",
+          color: "secondary.main",
           textAlign: "center",
           fontSize: "1.7rem",
           fontWeight: "700",
@@ -89,9 +89,9 @@ export const Portfolio = () => {
                     href={img.path}
                     underline="none"
                     sx={{
-                      background: "#4db5ff",
+                      background: "#0a192f",
                       borderRadius: "8px",
-                      color: "#fff",
+                      color: "info.main",
                       p: "9px 32px",
                     }}
                   >
@@ -102,7 +102,7 @@ export const Portfolio = () => {
                     underline="none"
                     sx={{
                       fontSize: "16px",
-                      color: "#4db5ff",
+                      color: "#0a192f",
                       mb: 1,
                       ml: 2,
                     }}

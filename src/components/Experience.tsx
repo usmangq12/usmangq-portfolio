@@ -22,7 +22,7 @@ export const Experience = () => {
       </Heading>
       <Heading
         sx={{
-          color: "#4db5ff",
+          color: "secondary.main",
           textAlign: "center",
           fontSize: "1.7rem",
           fontWeight: "700",
@@ -38,15 +38,15 @@ export const Experience = () => {
         gap={1}
       >
         <Grid xs={12} sx={{ p: 2 }}>
-          <Accordion sx={{ backgroundColor: "#2c2c6c" }}>
+          <Accordion sx={{ backgroundColor: "secondary.main" }}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "info.main" }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
               <Heading
                 sx={{
-                  color: "#4db5ff",
+                  color: "info.main",
                   fontSize: "1.5rem",
                   fontWeight: "700",
                   textAlign: "center",
@@ -77,7 +77,7 @@ export const Experience = () => {
                         sm={4}
                         md={3}
                       >
-                        <CheckCircleIcon sx={{ color: "#4db5ff", mr: 1.5 }} />
+                        <CheckCircleIcon sx={{ color: "info.main", mr: 1.5 }} />
                         <Grid>
                           <Link href={frontendData.path} underline="none">
                             <Heading
@@ -105,15 +105,15 @@ export const Experience = () => {
           </Accordion>
         </Grid>
         <Grid xs={12} sx={{ p: 2 }}>
-          <Accordion sx={{ backgroundColor: "#2c2c6c" }}>
+          <Accordion sx={{ backgroundColor: "secondary.main" }}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "info.main" }} />}
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
               <Heading
                 sx={{
-                  color: "#4db5ff",
+                  color: "info.main",
                   fontSize: "1.5rem",
                   fontWeight: "700",
                   textAlign: "center",
@@ -143,7 +143,7 @@ export const Experience = () => {
                         sm={4}
                         md={3}
                       >
-                        <CheckCircleIcon sx={{ color: "#4db5ff", mr: 1.5 }} />
+                        <CheckCircleIcon sx={{ color: "info.main", mr: 1.5 }} />
                         <Grid>
                           <Link href={backend.path} underline="none">
                             <Heading

@@ -9,8 +9,7 @@ export const navItems: string[] = [
   "ABOUT",
   "EXPERIENCES",
   "PORTFOLIO",
-  "TESTIMONIALS",
-  "CONTACT US",
+  "Resume",
 ];
 
 export const frontendLanguages = [

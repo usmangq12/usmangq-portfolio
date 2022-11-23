@@ -1,22 +1,6 @@
 html {
   scroll-behavior: smooth;
 }
-body {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  background: rgba(10, 25, 47, 0.85);
-}
-.css-11b3ww9-MuiPaper-root-MuiAppBar-root {
-  box-shadow: unset !important ;
-}
-.css-1r7kz78-MuiModal-root-MuiDrawer-root .MuiDrawer-paper {
-  background-color: #1f1f38;
-  color: #fff;
-}
-
-body {
-  position: relative;
-  height: 100%;
-}
 
 .swiper {
   width: 350px;

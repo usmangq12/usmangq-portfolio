@@ -1,10 +1,31 @@
 import { createTheme } from "@mui/material";
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#0a182e",
+    },
+    secondary: {
+      main: "#4db5ff",
+    },
+    info: {
+      main: "#FFFFFF",
+    },
+  },
+
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          margin: 0,
+          padding: "0 !important",
+          background: "rgba(10, 25, 47, 1)",
+        },
+      },
+    },
     MuiCard: {
       styleOverrides: {
         root: {
-          backgroundColor: "#2c2c6c",
+          backgroundColor: "#4DB5FF",
         },
       },
     },
@@ -30,6 +51,15 @@ const theme = createTheme({
           "& .MuiCardHeader-title": {
             fontSize: "1rem",
             fontWeight: "900",
+          },
+        },
+      },
+    },
+    MuiDrawer: {
+      styleOverrides: {
+        root: {
+          "& .MuiDrawer-paper": {
+            background: "rgba(10, 25, 47, 1)",
           },
         },
       },

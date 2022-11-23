@@ -28,7 +28,7 @@ export const About = () => {
         <Heading
           sx={{
             display: "block",
-            color: "#4db5ff",
+            color: "secondary.main",
             textAlign: "center",
             fontSize: "1.7rem",
             fontWeight: "700",
@@ -59,7 +59,7 @@ export const About = () => {
                 position: "absolute",
                 top: "0",
                 left: "0",
-                bgcolor: "#4db5ff",
+                bgcolor: "secondary.main",
                 width: "100%",
                 height: "100%",
                 borderRadius: "2rem",
@@ -99,7 +99,7 @@ export const About = () => {
               }}
             >
               <SocialIcons
-                styles={{ background: "#4db5ff", color: "#4db5ff" }}
+                styles={{ background: "#4db5ff", color: "secondary.main" }}
               />
             </Grid>
             <Grid xs={12} sm={10}>
@@ -118,10 +118,10 @@ export const About = () => {
               <Link
                 href="https://join.skype.com/invite/MDJ44XPKrkCa"
                 underline="none"
+                bgcolor="secondary.main"
                 sx={{
-                  background: "#4db5ff",
                   borderRadius: "8px",
-                  color: "#fff",
+                  color: "info.main",
                   p: "9px 32px",
                 }}
               >

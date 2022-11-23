@@ -12,7 +12,7 @@ export const SocialIcons = ({
           <Icon
             sx={{
               border: "1px solid",
-              fontSize: "25px",
+              fontSize: "40px",
               borderRadius: "50%",
 
               background: `${

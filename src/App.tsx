@@ -14,7 +14,7 @@ function App() {
     <Grid className="App">
       <Navbar />
       <Header />
-      <Container sx={{ backgroundColor: "rgba(10, 25, 47, 0.85)" }}>
+      <Container>
         <About />
         <Experience />
         <Portfolio />
