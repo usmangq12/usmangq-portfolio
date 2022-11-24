@@ -6,6 +6,7 @@ import { SvgIconComponent } from "@mui/icons-material";
 
 export const navItems: string[] = [
   "HOME",
+  "WORK",
   "ABOUT",
   "EXPERIENCES",
   "PORTFOLIO",
@@ -108,4 +109,19 @@ export const links: { href: string; icon: SvgIconComponent }[] = [
     href: "https://www.linkedin.com/in/muhammad-usman-759b55129",
     icon: LinkedInIcon,
   },
+];
+export const ShareMobilityContent = [
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+];
+export const scoutContent = [
+  "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+  "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+  "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+];
+export const staryContent = [
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
 ];

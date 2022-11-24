@@ -6,6 +6,8 @@ import {
   Footer,
   About,
   Portfolio,
+  Resume,
+  Work,
 } from "./components";
 import "./App.css";
 
@@ -14,10 +16,13 @@ function App() {
     <Grid className="App">
       <Navbar />
       <Header />
+
       <Container>
+        <Work />
         <About />
         <Experience />
         <Portfolio />
+        <Resume />
       </Container>
       <Footer />
     </Grid>

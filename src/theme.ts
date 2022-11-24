@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material";
+const defaultTheme = createTheme();
 const theme = createTheme({
   palette: {
     primary: {
@@ -40,7 +41,10 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           "&.MuiGrid-container": {
-            margin: "15px auto 100px",
+            margin: "15px auto 120px",
+            [defaultTheme.breakpoints.down("sm")]: {
+              margin: "15px auto 70px",
+            },
           },
         },
       },
@@ -71,8 +75,23 @@ const theme = createTheme({
           color: "#fff",
           borderRadius: "15px",
           height: "50px",
-          "&.Mui-focused": {
+          "& .Mui-focused": {
             border: "1px solid #fff",
+          },
+        },
+      },
+    },
+    MuiTabs: {
+      styleOverrides: {
+        root: {
+          "& .MuiTabs-flexContainer": {
+            display: "flex",
+            flexDirection: "column",
+            [defaultTheme.breakpoints.down("sm")]: {
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+            },
           },
         },
       },

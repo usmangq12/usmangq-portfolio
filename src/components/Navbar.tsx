@@ -16,6 +16,7 @@ import { Logo } from "../assets/imges";
 interface Props {
   window?: () => Window;
 }
+
 const drawerWidth = 240;
 export const Navbar = (props: Props) => {
   const { window } = props;
@@ -24,6 +25,7 @@ export const Navbar = (props: Props) => {
   const handleDrawerToggle = () => {
     setOpenDrawer(!openDrawer);
   };
+
   const drawerData = (
     <Grid onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Grid
@@ -46,6 +48,7 @@ export const Navbar = (props: Props) => {
       </Grid>
 
       <Grid
+        item
         sx={{
           display: "flex",
           justifyContent: "center",
@@ -54,8 +57,9 @@ export const Navbar = (props: Props) => {
         }}
         gap={4}
       >
-        {navItems.map((item: string) => (
+        {navItems.map((item, index) => (
           <Link
+            key={index}
             underline="none"
             href={`#${item}`}
             sx={{
@@ -78,10 +82,10 @@ export const Navbar = (props: Props) => {
   const container =
     window !== undefined ? () => window().document.body : undefined;
   return (
-    <Grid>
+    <Grid container>
       <AppBar
         component="nav"
-        sx={{ backgroundColor: "rgba(10, 25, 47, 0.85)", p: 2 }}
+        sx={{ backgroundColor: "rgba(10, 25, 47, 1)", p: 2 }}
       >
         <Toolbar>
           {/* <Container
@@ -99,6 +103,7 @@ export const Navbar = (props: Props) => {
             <MenuIcon />
           </IconButton>
           <Grid
+            item
             sx={{
               display: "flex",
               flexWrap: "wrap",
@@ -117,15 +122,17 @@ export const Navbar = (props: Props) => {
                 alt="logo"
               ></Image>
             </Grid>
-            <Grid sx={{ display: { xs: "none", sm: "block" } }} gap={2}>
+            <Grid item sx={{ display: { xs: "none", sm: "block" } }} gap={2}>
               <Grid
+                item
                 sx={{
                   display: "flex",
                   flexWrap: "wrap",
                 }}
               >
-                {navItems.map((item) => (
+                {navItems.map((item, index) => (
                   <Link
+                    key={index}
                     href={`#${item}`}
                     underline="none"
                     sx={{
@@ -156,7 +163,7 @@ export const Navbar = (props: Props) => {
         </Toolbar>
       </AppBar>
 
-      <Grid component="nav">
+      <Grid item component="nav">
         <Drawer
           container={container}
           variant="temporary"

@@ -8,7 +8,6 @@ export const Header = () => {
       container
       height={"100vh"}
       alignItems={"center"}
-      pt={{ xs: 10, sm: 20 }}
       id={"HOME"}
       sx={{
         position: "relative",
@@ -130,18 +129,13 @@ export const Header = () => {
               >
                 I’m a software engineer with 4 plus years of experience in React
                 with Typescript. Currently, I’m building ride sharing
-                application at &nbsp;
+                application at&nbsp;
                 <Link
                   underline="none"
                   target="_blank"
                   href="https://www.sharemobility.com/"
                   sx={{
-                    // display: "flex",
-                    marginRight: 3,
-                    // float: "right",
                     flexDirection: "column",
-                    // alignItems: "center",
-                    // justifyContent: "center",
                     color: "secondary.main",
                     fontWeight: "400",
                     fontSize: { sm: "33px", md: "23px" },

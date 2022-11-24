@@ -11,33 +11,30 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 export const Experience = () => {
   return (
     <Grid container direction={"column"} id="EXPERIENCES">
-      <Heading
-        sx={{
-          textAlign: "center",
-          fontSize: "1rem",
-          fontWeight: "700",
-        }}
-      >
-        What Skills I Have
-      </Heading>
-      <Heading
-        sx={{
-          color: "secondary.main",
-          textAlign: "center",
-          fontSize: "1.7rem",
-          fontWeight: "700",
-        }}
-        variant="h3"
-      >
-        My Experience
-      </Heading>
-      <Grid
-        sx={{
-          mt: { xs: 4, sm: 11 },
-        }}
-        gap={1}
-      >
-        <Grid xs={12} sx={{ p: 2 }}>
+      <Grid item mb={{ xs: 4, sm: 12.5 }}>
+        <Heading
+          sx={{
+            textAlign: "center",
+            fontSize: "1rem",
+            fontWeight: "700",
+          }}
+        >
+          What Skills I Have
+        </Heading>
+        <Heading
+          sx={{
+            color: "secondary.main",
+            textAlign: "center",
+            fontSize: "1.7rem",
+            fontWeight: "700",
+          }}
+          variant="h3"
+        >
+          My Experience
+        </Heading>
+      </Grid>
+      <Grid item>
+        <Grid item xs={12} sx={{ p: 2 }}>
           <Accordion sx={{ backgroundColor: "secondary.main" }}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon sx={{ color: "info.main" }} />}
@@ -64,9 +61,11 @@ export const Experience = () => {
                 }}
               >
                 <CardContent>
-                  <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
-                    {frontendLanguages.map((frontendData) => (
+                  <Grid item sx={{ display: "flex", flexWrap: "wrap" }}>
+                    {frontendLanguages.map((frontendData, index) => (
                       <Grid
+                        key={index}
+                        item
                         sx={{
                           display: "flex",
                           alignItems: "baseline",
@@ -78,7 +77,7 @@ export const Experience = () => {
                         md={3}
                       >
                         <CheckCircleIcon sx={{ color: "info.main", mr: 1.5 }} />
-                        <Grid>
+                        <Grid item>
                           <Link href={frontendData.path} underline="none">
                             <Heading
                               sx={{
@@ -104,7 +103,7 @@ export const Experience = () => {
             </AccordionDetails>
           </Accordion>
         </Grid>
-        <Grid xs={12} sx={{ p: 2 }}>
+        <Grid item xs={12} sx={{ p: 2 }}>
           <Accordion sx={{ backgroundColor: "secondary.main" }}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon sx={{ color: "info.main" }} />}
@@ -131,9 +130,11 @@ export const Experience = () => {
                 }}
               >
                 <CardContent>
-                  <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
-                    {backendLanguages.map((backend) => (
+                  <Grid item sx={{ display: "flex", flexWrap: "wrap" }}>
+                    {backendLanguages.map((backend, index) => (
                       <Grid
+                        item
+                        key={index}
                         sx={{
                           display: "flex",
                           alignItems: "baseline",
@@ -144,7 +145,7 @@ export const Experience = () => {
                         md={3}
                       >
                         <CheckCircleIcon sx={{ color: "info.main", mr: 1.5 }} />
-                        <Grid>
+                        <Grid item>
                           <Link href={backend.path} underline="none">
                             <Heading
                               sx={{

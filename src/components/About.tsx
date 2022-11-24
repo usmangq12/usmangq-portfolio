@@ -13,6 +13,7 @@ export const About = () => {
           alignItems: "center",
           flexDirection: "column",
           width: "100%",
+          mb: { xs: 4, sm: 12.5 },
         }}
       >
         <Heading
@@ -38,7 +39,7 @@ export const About = () => {
           About Me
         </Heading>
       </Grid>
-      <Grid sx={{ display: "flex", mt: { xs: 4, sm: 12 }, flexWrap: "wrap" }}>
+      <Grid item sx={{ display: "flex", flexWrap: "wrap" }}>
         <Grid
           item
           xs={12}
@@ -83,6 +84,7 @@ export const About = () => {
           </Card>
         </Grid>
         <Grid
+          item
           xs={12}
           sm={6}
           sx={{
@@ -90,8 +92,9 @@ export const About = () => {
             justifyContent: "center",
           }}
         >
-          <Grid xs={10}>
+          <Grid item xs={10}>
             <Grid
+              item
               sx={{
                 display: "flex",
                 justifyContent: { xs: "center", sm: "unset" },
@@ -102,7 +105,7 @@ export const About = () => {
                 styles={{ background: "#4db5ff", color: "secondary.main" }}
               />
             </Grid>
-            <Grid xs={12} sm={10}>
+            <Grid item xs={12} sm={10}>
               <Heading
                 variant="body2"
                 sx={{ fontSize: "16px", lineHeight: "unset", mt: 4 }}
@@ -114,9 +117,9 @@ export const About = () => {
                 field at another level.
               </Heading>
             </Grid>
-            <Grid sx={{ mt: 4 }}>
+            <Grid item sx={{ mt: 4 }}>
               <Link
-                href="https://join.skype.com/invite/MDJ44XPKrkCa"
+                href="mailto:usmangq12@gmail.com"
                 underline="none"
                 bgcolor="secondary.main"
                 sx={{

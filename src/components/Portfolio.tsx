@@ -6,37 +6,41 @@ import { portfolioDetail } from "../constants";
 export const Portfolio = () => {
   return (
     <Grid container direction={"column"} id={"PORTFOLIO"}>
-      <Heading
-        sx={{
-          textAlign: "center",
-          fontSize: "1rem",
-          fontWeight: "700",
-        }}
-      >
-        What I Offer
-      </Heading>
-      <Heading
-        sx={{
-          color: "secondary.main",
-          textAlign: "center",
-          fontSize: "1.7rem",
-          fontWeight: "700",
-        }}
-        variant="h3"
-      >
-        Portfolio
-      </Heading>
+      <Grid item mb={{ xs: 4, sm: 12.5 }}>
+        <Heading
+          sx={{
+            textAlign: "center",
+            fontSize: "1rem",
+            fontWeight: "700",
+          }}
+        >
+          What I Offer
+        </Heading>
+        <Heading
+          sx={{
+            color: "secondary.main",
+            textAlign: "center",
+            fontSize: "1.7rem",
+            fontWeight: "700",
+          }}
+          variant="h3"
+        >
+          Portfolio
+        </Heading>
+      </Grid>
 
       <Grid
+        item
         sx={{
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          mt: { xs: 4, sm: 12 },
         }}
       >
-        {portfolioDetail.map((img) => (
+        {portfolioDetail.map((img, index) => (
           <Grid
+            key={index}
+            item
             xs={12}
             sm={6}
             md={4}
@@ -61,8 +65,8 @@ export const Portfolio = () => {
                 alt="green iguana"
               ></Image>
               <CardContent>
-                <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
-                  <Grid>
+                <Grid item sx={{ display: "flex", flexWrap: "wrap" }}>
+                  <Grid item>
                     <Heading
                       sx={{
                         fontSize: "19.2px",
@@ -77,6 +81,7 @@ export const Portfolio = () => {
               </CardContent>
               <CardActions>
                 <Grid
+                  item
                   sx={{
                     display: "flex",
                     alignItems: "self-end",
@@ -89,10 +94,18 @@ export const Portfolio = () => {
                     href={img.path}
                     underline="none"
                     sx={{
-                      background: "#0a192f",
+                      backgroundColor: "primary.main",
                       borderRadius: "8px",
+                      border: "1px solid",
+                      borderColor: "primary.main",
                       color: "info.main",
                       p: "9px 32px",
+                      "&:hover": {
+                        backgroundColor: "info.main",
+                        border: "1px solid",
+                        borderColor: "info.main",
+                        color: "primary.main",
+                      },
                     }}
                   >
                     GitHub
@@ -101,10 +114,21 @@ export const Portfolio = () => {
                     href="#"
                     underline="none"
                     sx={{
+                      backgroundColor: "primary.main",
+                      borderRadius: "8px",
                       fontSize: "16px",
-                      color: "#0a192f",
-                      mb: 1,
+                      border: "1px solid",
+                      borderColor: "primary.main",
+                      color: "info.main",
+                      p: "9px 24px",
                       ml: 2,
+                      whiteSpace: "nowrap",
+                      "&:hover": {
+                        backgroundColor: "info.main",
+                        border: "1px solid",
+                        borderColor: "info.main",
+                        color: "primary.main",
+                      },
                     }}
                   >
                     Live Demo

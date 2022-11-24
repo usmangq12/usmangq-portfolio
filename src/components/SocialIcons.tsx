@@ -7,8 +7,8 @@ export const SocialIcons = ({
 }) => {
   return (
     <Grid sx={{ display: "flex", justifyContent: "space-between" }} gap={2}>
-      {links.map(({ href, icon: Icon }) => (
-        <Link href={href} sx={{ color: "#1f1f38" }}>
+      {links.map(({ href, icon: Icon }, index) => (
+        <Link key={index} href={href} sx={{ color: "#1f1f38" }}>
           <Icon
             sx={{
               border: "1px solid",
