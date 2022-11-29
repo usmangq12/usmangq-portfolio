@@ -109,18 +109,3 @@ export const links: { href: string; icon: SvgIconComponent }[] = [
     icon: LinkedInIcon,
   },
 ];
-export const shareMobilityAchievements = [
-  "Helped craft the driving module for Ride-Hailing.",
-  "Created booking rides, rate-ride, referral-reward.",
-  "Built optimized routes system for admin panel using Google Maps API.",
-  "Created auto-response back system based on AI using Twilio.",
-];
-export const geminusAchievements = [
-  "Supervised team of 3 developers engaged in Front-end development.",
-  "Built dashboards to visualize Functional Gas Stations data. Created admin dashboard for municipal corporation system by developing alarm system using MQTT service.",
-  "Created visuals to help identify leaks, pressure drops, and other potential problems.",
-];
-export const curiatoAchievements = [
-  "Developed highly customized charts using D3 to visualize the clinical conditions of the patient.",
-  "Created interactive visuals on PowerBI to express different clinical metrics.",
-];

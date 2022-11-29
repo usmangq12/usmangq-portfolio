@@ -2,15 +2,17 @@ import { Grid, Box, Typography, Tabs, Tab, Link } from "@mui/material";
 import { Heading } from "../shared";
 import { useState } from "react";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import {
-  geminusAchievements,
-  shareMobilityAchievements,
-  curiatoAchievements,
-} from "../constants";
 
-const companies = ["Share Mobility", "Geminus", "Curiato"];
+type IExperiences = {
+  company: string;
+  startDate: string;
+  endDate: string;
+  achievements: string[];
+};
 
-const experiences = [
+const companies: string[] = ["Share Mobility", "Geminus", "Curiato"];
+
+const experiences: IExperiences[] = [
   {
     company: "Share Mobility",
     startDate: "12-12-2020",
