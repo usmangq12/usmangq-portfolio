@@ -2,11 +2,33 @@ import React from "react";
 import { Grid, Card, CardContent, Link } from "@mui/material";
 import { Heading } from "../shared";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { frontendLanguages, backendLanguages } from "../constants";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+//Object array of frontednLanguage
+const frontendLanguages = [
+  { name: "HTML", path: "https://www.w3schools.com/html/" },
+  { name: "CSS", path: "https://www.w3schools.com/css/default.asp" },
+  { name: "SASS", path: "https://sass-lang.com/" },
+  { name: " Chakra UI", path: "https://chakra-ui.com/" },
+  { name: " D3.js", path: "https://d3js.org/" },
+  { name: "Tailwind", path: "https://tailwindcss.com/" },
+  { name: "MUI", path: "https://mui.com/" },
+  {
+    name: "Bootstrap",
+    path: "https://getbootstrap.com/docs/5.0/getting-started/introduction/",
+  },
+  { name: "JavaScript", path: "https://www.w3schools.com/js/default.asp" },
+  { name: "React.js", path: "https://reactjs.org/" },
+];
+//Object array of backendLanguages
+const backendLanguages = [
+  { name: "Node JS", path: "https://nodejs.org/en/" },
+  { name: "Express", path: "https://expressjs.com/" },
+  { name: "PostgreSQL", path: "https://www.postgresql.org/" },
+];
 
 export const Skills = () => {
   return (

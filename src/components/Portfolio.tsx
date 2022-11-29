@@ -1,7 +1,39 @@
 import { Grid, Card, CardContent, CardActions, Link } from "@mui/material";
 import { Heading, Image } from "../shared";
 import CallMadeIcon from "@mui/icons-material/CallMade";
-import { portfolioDetail } from "../constants";
+
+const portfolioDetail = [
+  {
+    img_poster: "https://rococo-babka-760a17.netlify.app/images/login.jpg",
+    text: "Login and Registration Form",
+    path: "https://github.com/usmangq12",
+  },
+  {
+    img_poster: "https://rococo-babka-760a17.netlify.app/images/fylo.jpg",
+    text: "Fylo Landing Page",
+    path: "https://github.com/usmangq12",
+  },
+  {
+    img_poster: "https://rococo-babka-760a17.netlify.app/images/mist.jpg",
+    text: "Mist Garden",
+    path: "https://github.com/usmangq12",
+  },
+  {
+    img_poster: "https://rococo-babka-760a17.netlify.app/images/weather.jpg",
+    text: "Web Weather Application",
+    path: "https://github.com/usmangq12",
+  },
+  {
+    img_poster: "https://rococo-babka-760a17.netlify.app/images/note.jpg",
+    text: "Note Application",
+    path: "https://github.com/usmangq12",
+  },
+  {
+    img_poster: "https://rococo-babka-760a17.netlify.app/images/filterable.jpg",
+    text: "Note Application",
+    path: "https://github.com/usmangq12",
+  },
+];
 
 export const Portfolio = () => {
   return (
@@ -83,6 +115,7 @@ export const Portfolio = () => {
                 >
                   <Link
                     href={img.path}
+                    target="_blank"
                     underline="none"
                     sx={{
                       backgroundColor: "primary.main",

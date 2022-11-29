@@ -8,9 +8,18 @@ import {
 } from "@mui/material/";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Image } from "../shared";
-import { navItems } from "../constants";
 import { useState } from "react";
-import { Logo } from "../assets/imges";
+import { Logo, Pdf } from "../assets/imges";
+import CV from "../assets/documents/CV.pdf";
+import { LinkOff } from "@mui/icons-material";
+
+export const navItems: { item: string; href: ""; target: string }[] = [
+  { item: "HOME", href: "", target: "" },
+  { item: "EXPERIENCES", href: "", target: "" },
+  { item: "ABOUT", href: "", target: "" },
+  { item: "PORTFOLIO", href: "", target: "" },
+  { item: "Resume", href: CV, target: "_blank" },
+];
 interface Props {
   window?: () => Window;
 }
@@ -55,11 +64,11 @@ export const Navbar = (props: Props) => {
         }}
         gap={4}
       >
-        {navItems.map((item, index) => (
+        {navItems.map(({ item, href }, index) => (
           <Link
             key={index}
             underline="none"
-            href={`#${item}`}
+            href={`#${href ? href : item}`}
             sx={{
               display: "flex",
               flexDirection: "column",
@@ -120,27 +129,28 @@ export const Navbar = (props: Props) => {
                   flexWrap: "wrap",
                 }}
               >
-                {navItems.map((item, index) => (
+                {navItems.map(({ item, href, target }, index) => (
                   <Link
-                    key={index}
-                    href={`#${item}`}
+                    key={`nav-item${index}`}
+                    href={href ? href : `#${item}`}
+                    target={target}
                     underline="none"
                     sx={{
                       color: "info.main",
                       fontWeight: "800",
                       fontSize: { sm: "10px", md: ".8rem" },
                       p: 1,
-                      // "&:last-child": {
-                      //   border: "1px solid #4DB5FF",
-                      //   borderRadius: "5px",
-                      //   color: "#4DB5FF",
-                      //   transition: "all 0.5",
-                      //   ml: 1,
-                      //   "&:hover": {
-                      //     backgroundColor: "secondary.main",
-                      //     color: "info.main",
-                      //   },
-                      // },
+                      "&:last-child": {
+                        border: "1px solid #4DB5FF",
+                        borderRadius: "5px",
+                        color: "#4DB5FF",
+                        transition: "all 0.5",
+                        ml: 1,
+                        "&:hover": {
+                          backgroundColor: "secondary.main",
+                          color: "info.main",
+                        },
+                      },
                     }}
                   >
                     {item}

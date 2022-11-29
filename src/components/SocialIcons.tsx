@@ -1,5 +1,23 @@
 import { Grid, Link } from "@mui/material";
-import { links } from "../constants";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { SvgIconComponent } from "@mui/icons-material";
+
+const links: { href: string; icon: SvgIconComponent }[] = [
+  { href: "https://twitter.com/Muhamma28090557", icon: TwitterIcon },
+  { href: "https://github.com/usmangq12", icon: GitHubIcon },
+  {
+    href: "https://instagram.com/uxmangq?igshid=YmMyMTA2M2Y=",
+    icon: InstagramIcon,
+  },
+  {
+    href: "https://www.linkedin.com/in/muhammad-usman-759b55129",
+    icon: LinkedInIcon,
+  },
+];
+
 export const SocialIcons = ({
   styles,
 }: {
@@ -8,7 +26,7 @@ export const SocialIcons = ({
   return (
     <Grid sx={{ display: "flex", justifyContent: "space-between" }} gap={2}>
       {links.map(({ href, icon: Icon }, index) => (
-        <Link key={index} href={href} sx={{ color: "#1f1f38" }}>
+        <Link key={index} href={href} target="_blank" sx={{ color: "#1f1f38" }}>
           <Icon
             sx={{
               border: "1px solid",

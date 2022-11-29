@@ -64,7 +64,7 @@ function TabPanel(props: TabPanelProps) {
     >
       {value === index && (
         <Box>
-          <Typography color="info.main">{children}</Typography>
+          <Heading color="info.main">{children}</Heading>
         </Box>
       )}
     </div>
@@ -86,9 +86,9 @@ export const Experience = () => {
   };
 
   return (
-    <Grid container>
+    <Grid container id={"EXPERIENCES"}>
       <Grid
-        id={"WORK"}
+        item
         sx={{
           display: "flex",
           alignItems: "center",
@@ -117,6 +117,7 @@ export const Experience = () => {
           display: "flex",
           flexWrap: { xs: "wrap", sm: "nowrap" },
           width: "100%",
+          height: "290px",
         }}
       >
         <Grid xs={12} sm={2} item>
@@ -139,6 +140,7 @@ export const Experience = () => {
           >
             {companies.map((companyLabel, index) => (
               <Tab
+                key={index}
                 sx={(theme) => ({
                   color: "info.main",
                   fontWeight: "700",
@@ -156,9 +158,9 @@ export const Experience = () => {
         <Grid ml={{ xs: 0, sm: 6 }} xs={12} sm={10} item>
           {experiences.map(
             ({ company, startDate, endDate, achievements }, index) => (
-              <TabPanel value={value} index={index}>
+              <TabPanel value={value} index={index} key={index}>
                 <Heading mb={2} sx={{ fontSize: "30px", fontWeight: "700" }}>
-                  Enginer&nbsp;
+                  Engineer&nbsp;
                   <Link
                     underline="none"
                     target="_blank"
@@ -177,8 +179,8 @@ export const Experience = () => {
                 <Heading mb={2}>
                   {startDate} - {endDate}
                 </Heading>
-                {achievements.map((item, index) => (
-                  <Grid key={index} item sx={{ display: "flex" }}>
+                {achievements.map((item, i) => (
+                  <Grid key={i} item sx={{ display: "flex" }}>
                     <ArrowRightIcon
                       sx={{ fontSize: "30px", color: "secondary.main" }}
                     />
