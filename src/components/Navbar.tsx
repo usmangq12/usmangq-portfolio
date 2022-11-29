@@ -3,13 +3,11 @@ import {
   IconButton,
   Toolbar,
   Grid,
-  Container,
-  Divider,
   Link,
   Drawer,
 } from "@mui/material/";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Heading, Image } from "../shared";
+import { Image } from "../shared";
 import { navItems } from "../constants";
 import { useState } from "react";
 import { Logo } from "../assets/imges";
@@ -82,17 +80,9 @@ export const Navbar = (props: Props) => {
   const container =
     window !== undefined ? () => window().document.body : undefined;
   return (
-    <Grid container>
-      <AppBar
-        component="nav"
-        sx={{ backgroundColor: "rgba(10, 25, 47, 1)", p: 2 }}
-      >
+    <Grid container my={"0 !important"}>
+      <AppBar component="nav" sx={{ p: 2, boxShadow: "none" }}>
         <Toolbar>
-          {/* <Container
-            sx={{
-              display: "flex",
-            }}
-          > */}
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -140,17 +130,17 @@ export const Navbar = (props: Props) => {
                       fontWeight: "800",
                       fontSize: { sm: "10px", md: ".8rem" },
                       p: 1,
-                      "&:last-child": {
-                        border: "1px solid #4DB5FF",
-                        borderRadius: "5px",
-                        color: "#4DB5FF",
-                        transition: "all 0.5",
-                        ml: 1,
-                        "&:hover": {
-                          backgroundColor: "secondary.main",
-                          color: "info.main",
-                        },
-                      },
+                      // "&:last-child": {
+                      //   border: "1px solid #4DB5FF",
+                      //   borderRadius: "5px",
+                      //   color: "#4DB5FF",
+                      //   transition: "all 0.5",
+                      //   ml: 1,
+                      //   "&:hover": {
+                      //     backgroundColor: "secondary.main",
+                      //     color: "info.main",
+                      //   },
+                      // },
                     }}
                   >
                     {item}
@@ -159,7 +149,6 @@ export const Navbar = (props: Props) => {
               </Grid>
             </Grid>
           </Grid>
-          {/* </Container> */}
         </Toolbar>
       </AppBar>
 

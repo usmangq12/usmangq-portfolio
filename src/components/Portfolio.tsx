@@ -9,15 +9,6 @@ export const Portfolio = () => {
       <Grid item mb={{ xs: 4, sm: 12.5 }}>
         <Heading
           sx={{
-            textAlign: "center",
-            fontSize: "1rem",
-            fontWeight: "700",
-          }}
-        >
-          What I Offer
-        </Heading>
-        <Heading
-          sx={{
             color: "secondary.main",
             textAlign: "center",
             fontSize: "1.7rem",

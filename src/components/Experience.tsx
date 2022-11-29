@@ -1,28 +1,103 @@
-import React from "react";
-import { Grid, Card, CardContent, Link } from "@mui/material";
+import { Grid, Box, Typography, Tabs, Tab, Link } from "@mui/material";
 import { Heading } from "../shared";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { frontendLanguages, backendLanguages } from "../constants";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { useState } from "react";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import {
+  geminusAchievements,
+  shareMobilityAchievements,
+  curiatoAchievements,
+} from "../constants";
+
+const companies = ["Share Mobility", "Geminus", "Curiato"];
+
+const experiences = [
+  {
+    company: "Share Mobility",
+    startDate: "12-12-2020",
+    endDate: "Present",
+    achievements: [
+      "Helped craft the driving module for Ride-Hailing.",
+      "Created booking rides, rate-ride, referral-reward.",
+      "Built optimized routes system for admin panel using Google Maps API.",
+      "Created auto-response back system based on AI using Twilio.",
+    ],
+  },
+  {
+    company: "Geminus",
+    startDate: "12-12-2020",
+    endDate: "12-12-2020",
+    achievements: [
+      "Supervised team of 3 developers engaged in Front-end development.",
+      "Built dashboards to visualize Functional Gas Stations data. Created admin dashboard for municipal corporation system by developing alarm system using MQTT service.",
+      "Created visuals to help identify leaks, pressure drops, and other potential problems.",
+    ],
+  },
+  {
+    company: "Curiato",
+    startDate: "12-12-2020",
+    endDate: "12-12-2020",
+    achievements: [
+      "Developed highly customized charts using D3 to visualize the clinical conditions of the patient.",
+      "Created interactive visuals on PowerBI to express different clinical metrics.",
+    ],
+  },
+];
+
+interface TabPanelProps {
+  children?: React.ReactNode;
+  index: number;
+  value: number;
+}
+
+function TabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box>
+          <Typography color="info.main">{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+function a11yProps(index: number) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
 
 export const Experience = () => {
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
+
   return (
-    <Grid container direction={"column"} id="EXPERIENCES">
-      <Grid item mb={{ xs: 4, sm: 12.5 }}>
+    <Grid container>
+      <Grid
+        id={"WORK"}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+          width: "100%",
+          mb: { xs: 4, sm: 12.5 },
+        }}
+      >
         <Heading
           sx={{
-            textAlign: "center",
-            fontSize: "1rem",
-            fontWeight: "700",
-          }}
-        >
-          What Skills I Have
-        </Heading>
-        <Heading
-          sx={{
+            display: "block",
             color: "secondary.main",
             textAlign: "center",
             fontSize: "1.7rem",
@@ -30,145 +105,171 @@ export const Experience = () => {
           }}
           variant="h3"
         >
-          My Experience
+          Where I've Worked
         </Heading>
       </Grid>
-      <Grid item>
-        <Grid item xs={12} sx={{ p: 2 }}>
-          <Accordion sx={{ backgroundColor: "secondary.main" }}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "info.main" }} />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Heading
-                sx={{
-                  color: "info.main",
-                  fontSize: "1.5rem",
-                  fontWeight: "700",
-                  textAlign: "center",
-                }}
-              >
-                Frontend Development
-              </Heading>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Card
-                sx={{
-                  borderRadius: "2rem",
-                  p: { xs: 0, lg: 4 },
-                  boxShadow: "unset",
-                }}
-              >
-                <CardContent>
-                  <Grid item sx={{ display: "flex", flexWrap: "wrap" }}>
-                    {frontendLanguages.map((frontendData, index) => (
-                      <Grid
-                        key={index}
-                        item
-                        sx={{
-                          display: "flex",
-                          alignItems: "baseline",
-                          flexWrap: "wrap",
-                          mb: 2,
-                        }}
-                        xs={6}
-                        sm={4}
-                        md={3}
-                      >
-                        <CheckCircleIcon sx={{ color: "info.main", mr: 1.5 }} />
-                        <Grid item>
-                          <Link href={frontendData.path} underline="none">
-                            <Heading
-                              sx={{
-                                fontSize: { xs: ".8rem", sm: "1.2rem" },
-                                fontWeight: "700",
-                              }}
-                            >
-                              {frontendData.name}
-                            </Heading>
-                          </Link>
 
-                          <Heading
-                            sx={{ fontSize: ".8rem", fontWeight: "300" }}
-                          >
-                            Experienced
-                          </Heading>
-                        </Grid>
-                      </Grid>
-                    ))}
-                  </Grid>
-                </CardContent>
-              </Card>
-            </AccordionDetails>
-          </Accordion>
-        </Grid>
-        <Grid item xs={12} sx={{ p: 2 }}>
-          <Accordion sx={{ backgroundColor: "secondary.main" }}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "info.main" }} />}
-              aria-controls="panel2a-content"
-              id="panel2a-header"
-            >
-              <Heading
-                sx={{
+      <Grid
+        item
+        sx={{
+          display: "flex",
+          flexWrap: { xs: "wrap", sm: "nowrap" },
+          width: "100%",
+        }}
+      >
+        <Grid xs={12} sm={2} item>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="experience tabs"
+            sx={(theme) => ({
+              display: "flex",
+              flexDirection: "column",
+              "& .Mui-selected": {
+                borderLeft: "4px solid  #4db5ff",
+                color: "#4db5ff !important",
+                [theme.breakpoints.down("sm")]: {
+                  borderLeft: "0",
+                  borderBottom: "4px solid #4db5ff ",
+                },
+              },
+            })}
+          >
+            {companies.map((companyLabel, index) => (
+              <Tab
+                sx={(theme) => ({
                   color: "info.main",
-                  fontSize: "1.5rem",
                   fontWeight: "700",
+                  borderLeft: "4px solid rgba(255, 255, 255, 0.5)",
+                  [theme.breakpoints.down("sm")]: {
+                    borderLeft: "0",
+                  },
+                })}
+                label={companyLabel}
+                {...a11yProps(index)}
+              />
+            ))}
+          </Tabs>
+        </Grid>
+        <Grid ml={{ xs: 0, sm: 6 }} xs={12} sm={10} item>
+          {experiences.map(
+            ({ company, startDate, endDate, achievements }, index) => (
+              <TabPanel value={value} index={index}>
+                <Heading mb={2} sx={{ fontSize: "30px", fontWeight: "700" }}>
+                  Enginer&nbsp;
+                  <Link
+                    underline="none"
+                    target="_blank"
+                    href="https://www.sharemobility.com/"
+                    sx={{
+                      flexDirection: "column",
+                      color: "secondary.main",
+                      fontWeight: "400",
+                      fontSize: { sm: "33px", md: "23px" },
+                      textAlign: "center",
+                    }}
+                  >
+                    @ {company}.
+                  </Link>
+                </Heading>
+                <Heading mb={2}>
+                  {startDate} - {endDate}
+                </Heading>
+                {achievements.map((item, index) => (
+                  <Grid key={index} item sx={{ display: "flex" }}>
+                    <ArrowRightIcon
+                      sx={{ fontSize: "30px", color: "secondary.main" }}
+                    />
+                    <Heading mb={2}>{item}</Heading>
+                  </Grid>
+                ))}
+              </TabPanel>
+            )
+          )}
+          {/* <TabPanel value={value} index={0}>
+            <Heading mb={2} sx={{ fontSize: "30px", fontWeight: "700" }}>
+              Enginer&nbsp;
+              <Link
+                underline="none"
+                target="_blank"
+                href="https://www.sharemobility.com/"
+                sx={{
+                  flexDirection: "column",
+                  color: "secondary.main",
+                  fontWeight: "400",
+                  fontSize: { sm: "33px", md: "23px" },
                   textAlign: "center",
                 }}
               >
-                Backend Development
-              </Heading>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Card
+                @ {company}.
+              </Link>
+            </Heading>
+            <Heading mb={2}>Nov 2022 - Present</Heading>
+            {shareMobilityAchievements.map((item, index) => (
+              <Grid key={index} item sx={{ display: "flex" }}>
+                <ArrowRightIcon
+                  sx={{ fontSize: "30px", color: "secondary.main" }}
+                />
+                <Heading mb={2}>{item}</Heading>
+              </Grid>
+            ))}
+          </TabPanel> */}
+          {/* <TabPanel value={value} index={1}>
+            <Heading mb={2} sx={{ fontSize: "30px", fontWeight: "700" }}>
+              Enginer&nbsp;
+              <Link
+                underline="none"
+                target="_blank"
+                href="https://www.sharemobility.com/"
                 sx={{
-                  borderRadius: "2rem",
-                  p: { xs: 0, lg: 4 },
-                  boxShadow: "unset",
+                  flexDirection: "column",
+                  color: "secondary.main",
+                  fontWeight: "400",
+                  fontSize: { sm: "33px", md: "23px" },
+                  textAlign: "center",
                 }}
               >
-                <CardContent>
-                  <Grid item sx={{ display: "flex", flexWrap: "wrap" }}>
-                    {backendLanguages.map((backend, index) => (
-                      <Grid
-                        item
-                        key={index}
-                        sx={{
-                          display: "flex",
-                          alignItems: "baseline",
-                          mb: 2,
-                        }}
-                        xs={6}
-                        sm={4}
-                        md={3}
-                      >
-                        <CheckCircleIcon sx={{ color: "info.main", mr: 1.5 }} />
-                        <Grid item>
-                          <Link href={backend.path} underline="none">
-                            <Heading
-                              sx={{
-                                fontSize: { xs: ".8rem", sm: "1.2rem" },
-                                fontWeight: "700",
-                              }}
-                            >
-                              {backend.name}
-                            </Heading>
-                          </Link>
-                          <Heading
-                            sx={{ fontSize: ".8rem", fontWeight: "300" }}
-                          >
-                            Experienced
-                          </Heading>
-                        </Grid>
-                      </Grid>
-                    ))}
-                  </Grid>
-                </CardContent>
-              </Card>
-            </AccordionDetails>
-          </Accordion>
+                @ Geminus
+              </Link>
+            </Heading>
+            <Heading mb={2}>Nov 2022 - Present</Heading>
+            {geminusAchievements.map((item, index) => (
+              <Grid key={index} item sx={{ display: "flex" }}>
+                <ArrowRightIcon
+                  sx={{ fontSize: "30px", color: "secondary.main" }}
+                />
+                <Heading mb={2}>{item}</Heading>
+              </Grid>
+            ))}
+          </TabPanel> */}
+          {/* <TabPanel value={value} index={2}>
+            <Heading mb={2} sx={{ fontSize: "30px", fontWeight: "700" }}>
+              Enginer&nbsp;
+              <Link
+                underline="none"
+                target="_blank"
+                href="https://www.sharemobility.com/"
+                sx={{
+                  flexDirection: "column",
+                  color: "secondary.main",
+                  fontWeight: "400",
+                  fontSize: { sm: "33px", md: "23px" },
+                  textAlign: "center",
+                }}
+              >
+                @ Curiato
+              </Link>
+            </Heading>
+            <Heading mb={2}>Nov 2022 - Present</Heading>
+            {curiatoAchievements.map((item, index) => (
+              <Grid key={index} item sx={{ display: "flex" }}>
+                <ArrowRightIcon
+                  sx={{ fontSize: "30px", color: "secondary.main" }}
+                />
+                <Heading mb={2}>{item}</Heading>
+              </Grid>
+            ))}
+          </TabPanel> */}
         </Grid>
       </Grid>
     </Grid>

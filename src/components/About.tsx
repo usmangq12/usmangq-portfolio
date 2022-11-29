@@ -19,16 +19,6 @@ export const About = () => {
         <Heading
           sx={{
             display: "block",
-            textAlign: "center",
-            fontSize: "1rem",
-            fontWeight: "700",
-          }}
-        >
-          Get to know
-        </Heading>
-        <Heading
-          sx={{
-            display: "block",
             color: "secondary.main",
             textAlign: "center",
             fontSize: "1.7rem",

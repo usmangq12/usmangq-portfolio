@@ -2,27 +2,24 @@ import { Grid, Container } from "@mui/material";
 import {
   Navbar,
   Header,
-  Experience,
+  Skills,
   Footer,
   About,
   Portfolio,
-  Resume,
-  Work,
+  Experience,
 } from "./components";
 import "./App.css";
 
 function App() {
   return (
-    <Grid className="App">
+    <Grid>
       <Navbar />
       <Header />
-
       <Container>
-        <Work />
-        <About />
         <Experience />
+        <About />
+        <Skills />
         <Portfolio />
-        <Resume />
       </Container>
       <Footer />
     </Grid>

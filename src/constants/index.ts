@@ -10,7 +10,6 @@ export const navItems: string[] = [
   "ABOUT",
   "EXPERIENCES",
   "PORTFOLIO",
-  "Resume",
 ];
 
 export const frontendLanguages = [
@@ -110,18 +109,18 @@ export const links: { href: string; icon: SvgIconComponent }[] = [
     icon: LinkedInIcon,
   },
 ];
-export const ShareMobilityContent = [
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+export const shareMobilityAchievements = [
+  "Helped craft the driving module for Ride-Hailing.",
+  "Created booking rides, rate-ride, referral-reward.",
+  "Built optimized routes system for admin panel using Google Maps API.",
+  "Created auto-response back system based on AI using Twilio.",
 ];
-export const scoutContent = [
-  "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-  "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-  "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+export const geminusAchievements = [
+  "Supervised team of 3 developers engaged in Front-end development.",
+  "Built dashboards to visualize Functional Gas Stations data. Created admin dashboard for municipal corporation system by developing alarm system using MQTT service.",
+  "Created visuals to help identify leaks, pressure drops, and other potential problems.",
 ];
-export const staryContent = [
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+export const curiatoAchievements = [
+  "Developed highly customized charts using D3 to visualize the clinical conditions of the patient.",
+  "Created interactive visuals on PowerBI to express different clinical metrics.",
 ];
