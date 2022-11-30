@@ -64,7 +64,9 @@ function TabPanel(props: TabPanelProps) {
     >
       {value === index && (
         <Box>
-          <Heading color="info.main">{children}</Heading>
+          <Typography component="span" color="info.main">
+            {children}
+          </Typography>
         </Box>
       )}
     </div>
@@ -117,7 +119,7 @@ export const Experience = () => {
           display: "flex",
           flexWrap: { xs: "wrap", sm: "nowrap" },
           width: "100%",
-          height: "290px",
+          height: { xs: "unset", sm: "290px" },
         }}
       >
         <Grid xs={12} sm={2} item>
@@ -147,6 +149,8 @@ export const Experience = () => {
                   borderLeft: "4px solid rgba(255, 255, 255, 0.5)",
                   [theme.breakpoints.down("sm")]: {
                     borderLeft: "0",
+                    fontWeight: "400",
+                    fontSize: "10px",
                   },
                 })}
                 label={companyLabel}
@@ -159,7 +163,17 @@ export const Experience = () => {
           {experiences.map(
             ({ company, startDate, endDate, achievements }, index) => (
               <TabPanel value={value} index={index} key={index}>
-                <Heading mb={2} sx={{ fontSize: "30px", fontWeight: "700" }}>
+                <Heading
+                  mb={2}
+                  sx={(theme: any) => ({
+                    fontSize: "30px",
+                    fontWeight: "700",
+                    [theme.breakpoints.down("sm")]: {
+                      fontSize: "20px",
+                      mt: 2,
+                    },
+                  })}
+                >
                   Engineer&nbsp;
                   <Link
                     underline="none"

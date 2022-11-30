@@ -26,7 +26,7 @@ const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          backgroundColor: "#4DB5FF",
+          backgroundColor: "#112240",
         },
       },
     },
@@ -43,7 +43,7 @@ const theme = createTheme({
           "&.MuiGrid-container": {
             margin: "15px auto 120px",
             [defaultTheme.breakpoints.down("sm")]: {
-              margin: "15px auto 70px",
+              margin: "40px auto 70px",
             },
           },
         },

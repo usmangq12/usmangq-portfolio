@@ -48,7 +48,7 @@ export const Skills = () => {
       </Grid>
       <Grid item>
         <Grid item xs={12} sx={{ p: 2 }}>
-          <Accordion sx={{ backgroundColor: "secondary.main" }}>
+          <Accordion sx={{ backgroundColor: "#112240" }}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon sx={{ color: "info.main" }} />}
               aria-controls="panel1a-content"
@@ -115,7 +115,7 @@ export const Skills = () => {
           </Accordion>
         </Grid>
         <Grid item xs={12} sx={{ p: 2 }}>
-          <Accordion sx={{ backgroundColor: "secondary.main" }}>
+          <Accordion sx={{ backgroundColor: "#112240" }}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon sx={{ color: "info.main" }} />}
               aria-controls="panel2a-content"
