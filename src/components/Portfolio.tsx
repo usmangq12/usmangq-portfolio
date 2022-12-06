@@ -1,78 +1,77 @@
-import { Grid, Card, CardContent, CardActions, Link } from "@mui/material";
-import { Heading, Image } from "../shared";
-import CallMadeIcon from "@mui/icons-material/CallMade";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import FolderOpenIcon from "@mui/icons-material/FolderOpen";
+import { Grid, Card, Link } from '@mui/material';
+import { Heading } from '../shared';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 const portfolioDetail = [
   {
-    title: "Cart Mall",
+    title: 'Cart Mall',
     description:
-      "Building websites for higher-ed is not for the faint of heart.Unless executed properly.",
-    forntEndLange: "Rect.js",
-    ui: "Material UI",
-    gitHub: "https://github.com/usmangq12/cart-mall",
-    liveDemo: "",
+      'Building websites for higher-ed is not for the faint of heart.Unless executed properly.',
+    forntEndLange: 'Rect.js',
+    ui: 'Material UI',
+    gitHub: 'https://github.com/usmangq12/cart-mall',
+    liveDemo: '',
   },
   {
-    title: "penze",
+    title: 'penze',
     description:
-      "Creating a blogging application where user can create blogs, display them in a grid and on selection displaying blog details.",
-    forntEndLange: "Rect.js",
-    ui: "Material UI",
-    gitHub: "https://github.com/usmangq12/penze",
+      'Creating a blogging application where user can create blogs, display them in a grid and on selection displaying blog details.',
+    forntEndLange: 'Rect.js',
+    ui: 'Material UI',
+    gitHub: 'https://github.com/usmangq12/penze',
   },
   {
-    title: "Personality Teste",
+    title: 'Personality Teste',
     description:
       "A simple human personality test that guesses the user's personality based on survey questions. End result displays user's nature whether as Introvert or Extrovert.",
-    forntEndLange: "Rect.js",
-    ui: "Material UI",
-    gitHub: "https://github.com/usmangq12/personality-test",
-    liveDemo: "",
+    forntEndLange: 'Rect.js',
+    ui: 'Material UI',
+    gitHub: 'https://github.com/usmangq12/personality-test',
+    liveDemo: '',
   },
   {
-    title: "Unlock Power Dreams",
+    title: 'Unlock Power Dreams',
     description:
-      "Creating a unlock your dreams concept of page with web and mobile design responsiveness with the MUI and adding animation to it.",
-    forntEndLange: "Rect.js",
-    ui: "Material UI",
-    gitHub: "https://github.com/usmangq12/Unlock.Power.Dreams",
-    liveDemo: "https://unlock-power-dreams.netlify.app/",
+      'Creating a unlock your dreams concept of page with web and mobile design responsiveness with the MUI and adding animation to it.',
+    forntEndLange: 'Rect.js',
+    ui: 'Material UI',
+    gitHub: 'https://github.com/usmangq12/Unlock.Power.Dreams',
+    liveDemo: 'https://unlock-power-dreams.netlify.app/',
   },
   {
-    title: "Currency Converter",
+    title: 'Currency Converter',
     description:
-      "Currency converter to show the selected currency current rates into USD and EUR.",
-    forntEndLange: "Rect.js",
-    ui: "Material UI",
-    gitHub: "https://github.com/usmangq12/currency-converter",
-    liveDemo: "",
+      'Currency converter to show the selected currency current rates into USD and EUR.',
+    forntEndLange: 'Rect.js',
+    ui: 'Material UI',
+    gitHub: 'https://github.com/usmangq12/currency-converter',
+    liveDemo: '',
   },
   {
-    title: "Games Hub",
+    title: 'Games Hub',
     description:
-      "Building websites for higher-ed is not for the faint of heart.Unless executed properly.",
-    forntEndLange: "Rect.js",
-    ui: "Material UI",
+      'Building websites for higher-ed is not for the faint of heart.Unless executed properly.',
+    forntEndLange: 'Rect.js',
+    ui: 'Material UI',
     gitHub:
-      "Creating multiple games Tic-Tac-Toe Hang-Man and Cards-Game in one...",
-    liveDemo: "",
+      'Creating multiple games Tic-Tac-Toe Hang-Man and Cards-Game in one...',
+    liveDemo: '',
   },
 ];
 
 export const Portfolio = () => {
   return (
-    <Grid container direction={"column"} id={"PORTFOLIO"}>
+    <Grid container direction={'column'} id={'PORTFOLIO'}>
       <Grid item mb={{ xs: 4, sm: 12.5 }}>
         <Heading
           sx={{
-            color: "secondary.main",
-            textAlign: "center",
-            fontSize: "1.7rem",
-            fontWeight: "700",
+            color: 'secondary.main',
+            textAlign: 'center',
+            fontSize: '1.7rem',
+            fontWeight: '700',
           }}
-          variant="h3"
+          variant='h3'
         >
           Portfolio
         </Heading>
@@ -207,59 +206,59 @@ export const Portfolio = () => {
         item
         container
         sx={{
-          justifyContent: "center",
+          justifyContent: 'center',
         }}
       >
         {portfolioDetail.map(
           ({ title, description, forntEndLange, ui, gitHub, liveDemo }) => (
-            <Grid item xs={12} sm={6} md={4} p={2} sx={{ display: "flex" }}>
+            <Grid item xs={12} sm={6} md={4} p={2} sx={{ display: 'flex' }}>
               <Card
                 sx={{
                   p: 3,
-                  display: "flex",
-                  flexDirection: "column",
-                  cursor: "pointer",
-                  transition: "all 0.4s",
-                  "&:hover": {
-                    transform: "translateY(-10px)",
+                  display: 'flex',
+                  flexDirection: 'column',
+                  cursor: 'pointer',
+                  transition: 'all 0.4s',
+                  '&:hover': {
+                    transform: 'translateY(-10px)',
                   },
                 }}
               >
                 <Grid
                   item
                   sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
                     mb: 3,
                   }}
                 >
                   <Grid item>
                     <FolderOpenIcon
-                      sx={{ fontSize: "40px", color: "#4DB5FF" }}
+                      sx={{ fontSize: '40px', color: '#4DB5FF' }}
                     />
                   </Grid>
                   <Grid item>
-                    <Link href={gitHub} target="_blank" underline="none">
+                    <Link href={gitHub} target='_blank' underline='none'>
                       <GitHubIcon
                         sx={{
-                          fontSize: "22px",
-                          color: "#a8b2d1",
-                          "&:hover": { color: "#4DB5FF" },
+                          fontSize: '22px',
+                          color: '#a8b2d1',
+                          '&:hover': { color: '#4DB5FF' },
                         }}
                       />
                     </Link>
                     <Link
                       href={liveDemo}
-                      target="_blank"
+                      target='_blank'
                       ml={2}
-                      underline="none"
+                      underline='none'
                     >
                       <OpenInNewIcon
                         sx={{
-                          fontSize: "22px",
-                          color: "#a8b2d1",
-                          "&:hover": { color: "#4DB5FF" },
+                          fontSize: '22px',
+                          color: '#a8b2d1',
+                          '&:hover': { color: '#4DB5FF' },
                         }}
                       />
                     </Link>
@@ -269,53 +268,53 @@ export const Portfolio = () => {
                 <Grid
                   item
                   sx={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    flexDirection: "column",
-                    height: "100%",
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    flexDirection: 'column',
+                    height: '100%',
                   }}
                 >
                   <Grid item mb={2}>
                     <Heading
                       sx={{
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        lineHeight: "unset",
-                        color: "#ccd6f6",
-                        "&:hover": { color: "#4DB5FF" },
+                        fontSize: '18px',
+                        fontWeight: '600',
+                        lineHeight: 'unset',
+                        color: '#ccd6f6',
+                        '&:hover': { color: '#4DB5FF' },
                       }}
                     >
                       {title}
                     </Heading>
                     <Heading
                       sx={{
-                        fontSize: "17px",
-                        fontWeight: "300",
-                        lineHeight: "unset",
-                        color: "#a8b2d1",
+                        fontSize: '17px',
+                        fontWeight: '300',
+                        lineHeight: 'unset',
+                        color: '#a8b2d1',
                         mt: 1,
                       }}
                     >
                       {description}
                     </Heading>
                   </Grid>
-                  <Grid item display={"flex"} alignItems={"center"} mt={"auto"}>
+                  <Grid item display={'flex'} alignItems={'center'} mt={'auto'}>
                     <Heading
                       sx={{
-                        fontSize: "16px",
-                        fontWeight: "300",
-                        lineHeight: "unset",
-                        color: "#a8b2d1",
+                        fontSize: '16px',
+                        fontWeight: '300',
+                        lineHeight: 'unset',
+                        color: '#a8b2d1',
                       }}
                     >
                       {forntEndLange}
                     </Heading>
                     <Heading
                       sx={{
-                        fontSize: "16px",
-                        fontWeight: "300",
-                        lineHeight: "unset",
-                        color: "#a8b2d1",
+                        fontSize: '16px',
+                        fontWeight: '300',
+                        lineHeight: 'unset',
+                        color: '#a8b2d1',
                         ml: 3,
                       }}
                     >
