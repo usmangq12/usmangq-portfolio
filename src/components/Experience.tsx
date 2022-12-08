@@ -144,7 +144,7 @@ export const Experience = () => {
               <Tab
                 key={index}
                 sx={(theme) => ({
-                  color: "info.main",
+                  color: "info.light",
                   fontWeight: "700",
                   borderLeft: "4px solid rgba(255, 255, 255, 0.5)",
                   [theme.breakpoints.down("sm")]: {
@@ -168,6 +168,7 @@ export const Experience = () => {
                   sx={(theme: any) => ({
                     fontSize: "30px",
                     fontWeight: "700",
+                    color: "info.light",
                     [theme.breakpoints.down("sm")]: {
                       fontSize: "20px",
                       mt: 2,

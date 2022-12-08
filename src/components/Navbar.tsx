@@ -9,9 +9,8 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { Image } from "../shared";
 import { useState } from "react";
-import { Logo, Pdf } from "../assets/imges";
+import { Logo } from "../assets/imges";
 import CV from "../assets/documents/CV.pdf";
-import { LinkOff } from "@mui/icons-material";
 
 export const navItems: { item: string; href: ""; target: string }[] = [
   { item: "HOME", href: "", target: "" },
@@ -74,7 +73,7 @@ export const Navbar = (props: Props) => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              color: "info.main",
+              color: "info.light",
               fontWeight: "700",
               fontSize: "15px",
               textAlign: "center",
@@ -136,7 +135,7 @@ export const Navbar = (props: Props) => {
                     target={target}
                     underline="none"
                     sx={{
-                      color: "info.main",
+                      color: "info.light",
                       fontWeight: "800",
                       fontSize: { sm: "10px", md: ".8rem" },
                       p: 1,
@@ -148,7 +147,7 @@ export const Navbar = (props: Props) => {
                         ml: 1,
                         "&:hover": {
                           backgroundColor: "secondary.main",
-                          color: "info.main",
+                          color: "#fff",
                         },
                       },
                     }}

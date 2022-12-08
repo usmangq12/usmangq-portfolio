@@ -50,7 +50,7 @@ export const About = () => {
                 position: "absolute",
                 top: "0",
                 left: "0",
-                bgcolor: "secondary.main",
+                bgcolor: "#112240",
                 width: "100%",
                 height: "100%",
                 borderRadius: "2rem",
@@ -98,7 +98,12 @@ export const About = () => {
             <Grid item xs={12} sm={10}>
               <Heading
                 variant="body2"
-                sx={{ fontSize: "16px", lineHeight: "unset", mt: 4 }}
+                sx={{
+                  fontSize: "16px",
+                  lineHeight: "unset",
+                  mt: 4,
+                  color: "info.main",
+                }}
               >
                 I’m a community-taught developer with 4 plus years of
                 experience. I love reading and enhancing my knowledge day by
@@ -114,7 +119,7 @@ export const About = () => {
                 bgcolor="secondary.main"
                 sx={{
                   borderRadius: "8px",
-                  color: "info.main",
+                  color: "#fff",
                   p: "9px 32px",
                 }}
               >

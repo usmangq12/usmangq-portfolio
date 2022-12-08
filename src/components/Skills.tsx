@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Card, CardContent, Link } from "@mui/material";
+import { Grid, Card, CardContent } from "@mui/material";
 import { Heading } from "../shared";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Accordion from "@mui/material/Accordion";
@@ -50,19 +50,19 @@ export const Skills = () => {
         <Grid item xs={12} sx={{ p: 2 }}>
           <Accordion sx={{ backgroundColor: "#112240" }}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "info.main" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "info.light" }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
               <Heading
                 sx={{
-                  color: "info.main",
+                  color: "info.light",
                   fontSize: "1.5rem",
                   fontWeight: "700",
                   textAlign: "center",
                 }}
               >
-                Frontend Development
+                Frontend
               </Heading>
             </AccordionSummary>
             <AccordionDetails>
@@ -89,19 +89,26 @@ export const Skills = () => {
                         sm={4}
                         md={3}
                       >
-                        <CheckCircleIcon sx={{ color: "info.main", mr: 1.5 }} />
+                        <CheckCircleIcon
+                          sx={{ color: "info.light", mr: 1.5 }}
+                        />
                         <Grid item>
                           <Heading
                             sx={{
                               fontSize: { xs: ".8rem", sm: "1.2rem" },
                               fontWeight: "700",
+                              color: "info.light",
                             }}
                           >
                             {frontendData.name}
                           </Heading>
 
                           <Heading
-                            sx={{ fontSize: ".8rem", fontWeight: "300" }}
+                            sx={{
+                              fontSize: ".8rem",
+                              fontWeight: "300",
+                              color: "info.main",
+                            }}
                           >
                             Experienced
                           </Heading>
@@ -117,19 +124,19 @@ export const Skills = () => {
         <Grid item xs={12} sx={{ p: 2 }}>
           <Accordion sx={{ backgroundColor: "#112240" }}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "info.main" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "info.light" }} />}
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
               <Heading
                 sx={{
-                  color: "info.main",
+                  color: "info.light",
                   fontSize: "1.5rem",
                   fontWeight: "700",
                   textAlign: "center",
                 }}
               >
-                Backend Development
+                Backend
               </Heading>
             </AccordionSummary>
             <AccordionDetails>
@@ -155,18 +162,25 @@ export const Skills = () => {
                         sm={4}
                         md={3}
                       >
-                        <CheckCircleIcon sx={{ color: "info.main", mr: 1.5 }} />
+                        <CheckCircleIcon
+                          sx={{ color: "info.light", mr: 1.5 }}
+                        />
                         <Grid item>
                           <Heading
                             sx={{
                               fontSize: { xs: ".8rem", sm: "1.2rem" },
                               fontWeight: "700",
+                              color: "info.light",
                             }}
                           >
                             {backend.name}
                           </Heading>
                           <Heading
-                            sx={{ fontSize: ".8rem", fontWeight: "300" }}
+                            sx={{
+                              fontSize: ".8rem",
+                              fontWeight: "300",
+                              color: "info.main",
+                            }}
                           >
                             Experienced
                           </Heading>

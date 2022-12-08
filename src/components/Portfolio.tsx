@@ -1,35 +1,34 @@
-import { Grid, Card, CardContent, CardActions, Link } from "@mui/material";
-import { Heading, Image } from "../shared";
-import CallMadeIcon from "@mui/icons-material/CallMade";
+import { Grid, Card, Link } from "@mui/material";
+import { Heading } from "../shared";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import FolderOpenIcon from "@mui/icons-material/FolderOpen";
 const portfolioDetail = [
+  // {
+  //   title: "Cart Mall",
+  //   description:
+  //     "Building websites for higher-ed is not for the faint of heart.Unless executed properly.",
+  //   forntEndLange: "Rect.js",
+  //   ui: "Material UI",
+  //   gitHub: "https://github.com/usmangq12/cart-mall",
+  //   liveDemo: "",
+  // },
+  // {
+  //   title: "penze",
+  //   description:
+  //     "Creating a blogging application where user can create blogs, display them in a grid and on selection displaying blog details.",
+  //   forntEndLange: "Rect.js",
+  //   ui: "Material UI",
+  //   gitHub: "https://github.com/usmangq12/penze",
+  // },
   {
-    title: "Cart Mall",
-    description:
-      "Building websites for higher-ed is not for the faint of heart.Unless executed properly.",
-    forntEndLange: "Rect.js",
-    ui: "Material UI",
-    gitHub: "https://github.com/usmangq12/cart-mall",
-    liveDemo: "",
-  },
-  {
-    title: "penze",
-    description:
-      "Creating a blogging application where user can create blogs, display them in a grid and on selection displaying blog details.",
-    forntEndLange: "Rect.js",
-    ui: "Material UI",
-    gitHub: "https://github.com/usmangq12/penze",
-  },
-  {
-    title: "Personality Teste",
+    title: "Personality Test",
     description:
       "A simple human personality test that guesses the user's personality based on survey questions. End result displays user's nature whether as Introvert or Extrovert.",
     forntEndLange: "Rect.js",
     ui: "Material UI",
     gitHub: "https://github.com/usmangq12/personality-test",
-    liveDemo: "",
+    liveDemo: "https://personality-test-pd9c.vercel.app/",
   },
   {
     title: "Unlock Power Dreams",
@@ -47,18 +46,18 @@ const portfolioDetail = [
     forntEndLange: "Rect.js",
     ui: "Material UI",
     gitHub: "https://github.com/usmangq12/currency-converter",
-    liveDemo: "",
+    liveDemo: "https://currency-converter-one-ecru.vercel.app/",
   },
-  {
-    title: "Games Hub",
-    description:
-      "Building websites for higher-ed is not for the faint of heart.Unless executed properly.",
-    forntEndLange: "Rect.js",
-    ui: "Material UI",
-    gitHub:
-      "Creating multiple games Tic-Tac-Toe Hang-Man and Cards-Game in one...",
-    liveDemo: "",
-  },
+  // {
+  //   title: "Games Hub",
+  //   description:
+  //     "Building websites for higher-ed is not for the faint of heart.Unless executed properly.",
+  //   forntEndLange: "Rect.js",
+  //   ui: "Material UI",
+  //   gitHub:
+  //     "Creating multiple games Tic-Tac-Toe Hang-Man and Cards-Game in one...",
+  //   liveDemo: "",
+  // },
 ];
 
 export const Portfolio = () => {
@@ -211,8 +210,19 @@ export const Portfolio = () => {
         }}
       >
         {portfolioDetail.map(
-          ({ title, description, forntEndLange, ui, gitHub, liveDemo }) => (
-            <Grid item xs={12} sm={6} md={4} p={2} sx={{ display: "flex" }}>
+          (
+            { title, description, forntEndLange, ui, gitHub, liveDemo },
+            index
+          ) => (
+            <Grid
+              item
+              key={index}
+              xs={12}
+              sm={6}
+              md={4}
+              p={2}
+              sx={{ display: "flex" }}
+            >
               <Card
                 sx={{
                   p: 3,
@@ -244,7 +254,7 @@ export const Portfolio = () => {
                       <GitHubIcon
                         sx={{
                           fontSize: "22px",
-                          color: "#a8b2d1",
+                          color: "info.main",
                           "&:hover": { color: "#4DB5FF" },
                         }}
                       />
@@ -258,7 +268,7 @@ export const Portfolio = () => {
                       <OpenInNewIcon
                         sx={{
                           fontSize: "22px",
-                          color: "#a8b2d1",
+                          color: "info.main",
                           "&:hover": { color: "#4DB5FF" },
                         }}
                       />
@@ -281,7 +291,7 @@ export const Portfolio = () => {
                         fontSize: "18px",
                         fontWeight: "600",
                         lineHeight: "unset",
-                        color: "#ccd6f6",
+                        color: "info.light",
                         "&:hover": { color: "#4DB5FF" },
                       }}
                     >
@@ -292,7 +302,7 @@ export const Portfolio = () => {
                         fontSize: "17px",
                         fontWeight: "300",
                         lineHeight: "unset",
-                        color: "#a8b2d1",
+                        color: "info.main",
                         mt: 1,
                       }}
                     >
@@ -305,7 +315,7 @@ export const Portfolio = () => {
                         fontSize: "16px",
                         fontWeight: "300",
                         lineHeight: "unset",
-                        color: "#a8b2d1",
+                        color: "info.main",
                       }}
                     >
                       {forntEndLange}
@@ -315,7 +325,7 @@ export const Portfolio = () => {
                         fontSize: "16px",
                         fontWeight: "300",
                         lineHeight: "unset",
-                        color: "#a8b2d1",
+                        color: "info.main",
                         ml: 3,
                       }}
                     >
