@@ -3,18 +3,26 @@ import {
   IconButton,
   Toolbar,
   Grid,
-  Container,
-  Divider,
   Link,
   Drawer,
 } from "@mui/material/";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Heading } from "../shared";
-import { navItems } from "../constants";
+import { Image } from "../shared";
 import { useState } from "react";
+import { Logo } from "../assets/imges";
+import CV from "../assets/documents/CV.pdf";
+
+export const navItems: { item: string; href: ""; target: string }[] = [
+  { item: "HOME", href: "", target: "" },
+  { item: "EXPERIENCES", href: "", target: "" },
+  { item: "ABOUT", href: "", target: "" },
+  { item: "PORTFOLIO", href: "", target: "" },
+  { item: "Resume", href: CV, target: "_blank" },
+];
 interface Props {
   window?: () => Window;
 }
+
 const drawerWidth = 240;
 export const Navbar = (props: Props) => {
   const { window } = props;
@@ -23,30 +31,49 @@ export const Navbar = (props: Props) => {
   const handleDrawerToggle = () => {
     setOpenDrawer(!openDrawer);
   };
+
   const drawerData = (
     <Grid onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Heading sx={{ my: 2, fontWeight: "700", fontSize: "23px" }}>
-        Usman-gq
-      </Heading>
-      <Divider />
       <Grid
+        item
+        py={2}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Image
+          component="img"
+          src={Logo}
+          alt="logo"
+          sx={{
+            width: "50px",
+            height: "60px",
+          }}
+        ></Image>
+      </Grid>
+
+      <Grid
+        item
         sx={{
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
+          pt: 3,
         }}
         gap={4}
       >
-        {navItems.map((item: string) => (
+        {navItems.map(({ item, href }, index) => (
           <Link
+            key={index}
             underline="none"
-            href={`#${item}`}
+            href={`#${href ? href : item}`}
             sx={{
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              color: "#fff",
+              color: "info.light",
               fontWeight: "700",
               fontSize: "15px",
               textAlign: "center",
@@ -61,73 +88,80 @@ export const Navbar = (props: Props) => {
   const container =
     window !== undefined ? () => window().document.body : undefined;
   return (
-    <Grid>
-      <AppBar component="nav">
-        <Toolbar sx={{ backgroundColor: "#1f1f38", p: 2 }}>
-          <Container
+    <Grid container my={"0 !important"}>
+      <AppBar component="nav" sx={{ p: 2, boxShadow: "none" }}>
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: "none" } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Grid
+            item
             sx={{
               display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "space-between",
+              width: "100%",
             }}
+            gap={3}
           >
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Grid
-              sx={{
-                display: "flex",
-                flexWrap: "wrap",
-                alignItems: "center",
-                justifyContent: "space-around",
-                width: "100%",
-              }}
-              gap={3}
-            >
-              <Heading
+            <Grid item display={{ xs: "none", sm: "block" }}>
+              <Image
+                width="50px"
+                height="50px"
+                component="img"
+                src={Logo}
+                alt="logo"
+              ></Image>
+            </Grid>
+            <Grid item sx={{ display: { xs: "none", sm: "block" } }} gap={2}>
+              <Grid
+                item
                 sx={{
-                  flexGrow: 1,
-                  display: { xs: "none", sm: "block" },
-                  fontWeight: "700",
-                  fontSize: { sm: "23px", md: "2.5rem" },
+                  display: "flex",
+                  flexWrap: "wrap",
                 }}
               >
-                Usman-gq
-              </Heading>
-              <Grid sx={{ display: { xs: "none", sm: "block" } }} gap={2}>
-                <Grid
-                  sx={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                  }}
-                  // gap={3}
-                >
-                  {navItems.map((item) => (
-                    <Link
-                      href={`#${item}`}
-                      underline="none"
-                      sx={{
-                        color: "#fff",
-                        fontWeight: "800",
-                        fontSize: { sm: "10px", md: ".8rem" },
-                        p: 1,
-                      }}
-                    >
-                      {item}
-                    </Link>
-                  ))}
-                </Grid>
+                {navItems.map(({ item, href, target }, index) => (
+                  <Link
+                    key={`nav-item${index}`}
+                    href={href ? href : `#${item}`}
+                    target={target}
+                    underline="none"
+                    sx={{
+                      color: "info.light",
+                      fontWeight: "800",
+                      fontSize: { sm: "10px", md: ".8rem" },
+                      p: 1,
+                      "&:last-child": {
+                        border: "1px solid #4DB5FF",
+                        borderRadius: "5px",
+                        color: "#4DB5FF",
+                        transition: "all 0.5",
+                        ml: 1,
+                        "&:hover": {
+                          backgroundColor: "secondary.main",
+                          color: "#fff",
+                        },
+                      },
+                    }}
+                  >
+                    {item}
+                  </Link>
+                ))}
               </Grid>
             </Grid>
-          </Container>
+          </Grid>
         </Toolbar>
       </AppBar>
 
-      <Grid component="nav">
+      <Grid item component="nav">
         <Drawer
           container={container}
           variant="temporary"

@@ -1,35 +1,28 @@
-import "./App.css";
+import { Grid, Container } from "@mui/material";
 import {
   Navbar,
   Header,
-  Experience,
+  Skills,
   Footer,
   About,
-  MyService,
   Portfolio,
-  Testimonials,
-  Contact,
+  Experience,
 } from "./components";
-
-import { Container } from "@mui/system";
-import { Heatmap } from "./components/Heatmap";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <Grid>
       <Navbar />
       <Header />
       <Container>
-        <About />
         <Experience />
-        <MyService />
+        <About />
+        <Skills />
         <Portfolio />
-        <Testimonials />
-        <Heatmap />
-        <Contact />
       </Container>
       <Footer />
-    </div>
+    </Grid>
   );
 }
 

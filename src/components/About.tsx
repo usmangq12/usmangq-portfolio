@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Card, Button, Link } from "@mui/material";
+import { Grid, Card, Link } from "@mui/material";
 import { Image, Heading } from "../shared";
 import { Profilepicture } from "../assets/imges";
 import { SocialIcons } from "./SocialIcons";
@@ -13,22 +13,13 @@ export const About = () => {
           alignItems: "center",
           flexDirection: "column",
           width: "100%",
+          mb: { xs: 4, sm: 12.5 },
         }}
       >
         <Heading
           sx={{
             display: "block",
-            textAlign: "center",
-            fontSize: "1rem",
-            fontWeight: "700",
-          }}
-        >
-          Get to know
-        </Heading>
-        <Heading
-          sx={{
-            display: "block",
-            color: "#4db5ff",
+            color: "secondary.main",
             textAlign: "center",
             fontSize: "1.7rem",
             fontWeight: "700",
@@ -38,7 +29,7 @@ export const About = () => {
           About Me
         </Heading>
       </Grid>
-      <Grid sx={{ display: "flex", mt: { xs: 4, sm: 12 }, flexWrap: "wrap" }}>
+      <Grid item sx={{ display: "flex", flexWrap: "wrap" }}>
         <Grid
           item
           xs={12}
@@ -59,7 +50,7 @@ export const About = () => {
                 position: "absolute",
                 top: "0",
                 left: "0",
-                bgcolor: "#4db5ff",
+                bgcolor: "#112240",
                 width: "100%",
                 height: "100%",
                 borderRadius: "2rem",
@@ -83,6 +74,7 @@ export const About = () => {
           </Card>
         </Grid>
         <Grid
+          item
           xs={12}
           sm={6}
           sx={{
@@ -90,8 +82,9 @@ export const About = () => {
             justifyContent: "center",
           }}
         >
-          <Grid xs={10}>
+          <Grid item xs={10}>
             <Grid
+              item
               sx={{
                 display: "flex",
                 justifyContent: { xs: "center", sm: "unset" },
@@ -99,26 +92,32 @@ export const About = () => {
               }}
             >
               <SocialIcons
-                styles={{ background: "#4db5ff", color: "#4db5ff" }}
+                styles={{ background: "#4db5ff", color: "secondary.main" }}
               />
             </Grid>
-            <Grid xs={12} sm={10}>
+            <Grid item xs={12} sm={10}>
               <Heading
                 variant="body2"
-                sx={{ fontSize: "16px", lineHeight: "unset", mt: 4 }}
+                sx={{
+                  fontSize: "16px",
+                  lineHeight: "unset",
+                  mt: 4,
+                  color: "info.main",
+                }}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ea
-                aspernatur libero facere rerum a error temporibus earum
-                accusamus! Dignissimos voluptates magni quae officiis quo magnam
-                cupiditate nobis adipisci culpa.
+                I’m a community-taught developer with 4 plus years of
+                experience. I love reading and enhancing my knowledge day by
+                day, and love to solve complex problems. I’m always ready for
+                new challenges which keep me motivated to move on in the coding
+                field at another level.
               </Heading>
             </Grid>
-            <Grid sx={{ mt: 4 }}>
+            <Grid item sx={{ mt: 4 }}>
               <Link
-                href="https://join.skype.com/invite/MDJ44XPKrkCa"
+                href="mailto:usmangq12@gmail.com"
                 underline="none"
+                bgcolor="secondary.main"
                 sx={{
-                  background: "#4db5ff",
                   borderRadius: "8px",
                   color: "#fff",
                   p: "9px 32px",
