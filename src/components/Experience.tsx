@@ -15,7 +15,7 @@ const companies: string[] = ["Share Mobility", "Geminus", "Curiato"];
 const experiences: IExperiences[] = [
   {
     company: "Share Mobility",
-    startDate: "12-12-2020",
+    startDate: "September 2020",
     endDate: "Present",
     achievements: [
       "Helped craft the driving module for Ride-Hailing.",
@@ -26,8 +26,8 @@ const experiences: IExperiences[] = [
   },
   {
     company: "Geminus",
-    startDate: "12-12-2020",
-    endDate: "12-12-2020",
+    startDate: "July 2019",
+    endDate: "August 2020",
     achievements: [
       "Supervised team of 3 developers engaged in Front-end development.",
       "Built dashboards to visualize Functional Gas Stations data. Created admin dashboard for municipal corporation system by developing alarm system using MQTT service.",
@@ -36,8 +36,8 @@ const experiences: IExperiences[] = [
   },
   {
     company: "Curiato",
-    startDate: "12-12-2020",
-    endDate: "12-12-2020",
+    startDate: "October 2017",
+    endDate: "June 2019",
     achievements: [
       "Developed highly customized charts using D3 to visualize the clinical conditions of the patient.",
       "Created interactive visuals on PowerBI to express different clinical metrics.",
