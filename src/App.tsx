@@ -13,12 +13,11 @@ import "./App.css";
 import { Logo } from "./components/Logo";
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
     setTimeout(() => {
-      loading && setLoading(false);
+      setLoading(false);
     }, 2000);
   }, []);
 

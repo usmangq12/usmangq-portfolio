@@ -21,6 +21,29 @@ const theme = createTheme({
           margin: 0,
           padding: "0 !important",
           background: "rgba(10, 25, 47, 1)",
+          "@-webkit-keyframes svg-text-anim": {
+            "40%": {
+              strokeDashoffset: 0,
+            },
+            "60%": {
+              strokeDashoffset: 0,
+            },
+            "100%": {
+              strokeDashoffset: 0,
+            },
+          },
+          /* Most browsers */
+          " @keyframes svg-text-anim": {
+            "40%": {
+              strokeDashoffset: 0,
+            },
+            " 60%": {
+              strokeDashoffset: 0,
+            },
+            "100%": {
+              strokeDashoffset: 0,
+            },
+          },
         },
       },
     },

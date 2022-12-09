@@ -1,5 +1,5 @@
 import { SvgIcon } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 export const Logo = () => {
   useEffect(() => {
@@ -26,7 +26,7 @@ export const Logo = () => {
         path.style["animation-delay"] = `${i * delay}s`;
       }
     }
-    setTextAnimation(0.1, 3.3, 2, "linear", "#FFFFFF", true);
+    setTextAnimation(0.1, 3.3, 2, "linear", "#4db5ff", true);
   }, []);
 
   return (
