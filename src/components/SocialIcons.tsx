@@ -26,7 +26,7 @@ export const SocialIcons = ({
   return (
     <Grid sx={{ display: "flex", justifyContent: "space-between" }} gap={2}>
       {links.map(({ href, icon: Icon }, index) => (
-        <Link key={index} href={href} target="_blank" sx={{ color: "#1f1f38" }}>
+        <Link key={index} href={href} target="_blank" sx={{ color: "#0a192f" }}>
           <Icon
             sx={{
               border: "1px solid",
@@ -34,13 +34,13 @@ export const SocialIcons = ({
               borderRadius: "50%",
 
               background: `${
-                styles.background ? styles.background : "#1f1f38"
+                styles.background ? styles.background : "#0a192f"
               }`,
               p: "8px",
               "&:hover": {
                 transform: "scale(1.2)",
                 transition: "all 0.5s ease",
-                backgroundColor: "#1f1f38",
+                backgroundColor: "#0a192f",
                 color: "#fff",
               },
             }}

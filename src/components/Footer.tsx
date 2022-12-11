@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <Grid
       sx={{
-        backgroundColor: "#4db5ff",
+        backgroundColor: "#112240",
         p: 1,
         height: "unset !important",
       }}

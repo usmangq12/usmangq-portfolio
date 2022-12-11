@@ -1,7 +1,7 @@
 import { Typography, styled } from "@mui/material";
 
 const StyledTypography: any = styled(Typography)(({ theme }) => ({
-  color: "#fff",
+  color: "info.main",
   fontSize: " 20px",
   fontWeight: 400,
 }));
