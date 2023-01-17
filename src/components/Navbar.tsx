@@ -17,7 +17,7 @@ export const navItems: { item: string; href: string; target: string }[] = [
   { item: "EXPERIENCES", href: "", target: "" },
   { item: "ABOUT", href: "", target: "" },
   { item: "PORTFOLIO", href: "", target: "" },
-  { item: "Resume", href: "https://read.cv/usmangq", target: "" },
+  { item: "Resume", href: "https://read.cv/usmangq", target: "_blank" },
 ];
 interface Props {
   window?: () => Window;
