@@ -12,12 +12,12 @@ import { useState } from "react";
 import { Logo } from "../assets/imges";
 import CV from "../assets/documents/CV.pdf";
 
-export const navItems: { item: string; href: ""; target: string }[] = [
+export const navItems: { item: string; href: string; target: string }[] = [
   { item: "HOME", href: "", target: "" },
   { item: "EXPERIENCES", href: "", target: "" },
   { item: "ABOUT", href: "", target: "" },
   { item: "PORTFOLIO", href: "", target: "" },
-  { item: "Resume", href: CV, target: "_blank" },
+  { item: "Resume", href: "https://read.cv/usmangq", target: "" },
 ];
 interface Props {
   window?: () => Window;
