@@ -10,28 +10,28 @@ type IExperiences = {
   achievements: string[];
 };
 
-const companies: string[] = ["Share Mobility", "Geminus", "Curiato"];
+const companies: string[] = ["AntiSocial Labs", "Share Mobility", "Curiato"];
 
 const experiences: IExperiences[] = [
   {
-    company: "Share Mobility",
+    company: "AntiSocial Labs",
     startDate: "September 2020",
     endDate: "Present",
+    achievements: [
+      "Created antisocialapeclub where users can join the club to sell or buy NFTs.",
+      "Created a school system where students can pay their tuition fee by NEAR account balance and get certified when the course ends.",
+      "Created OmniDAO to show their services and the NFT Suite.",
+    ],
+  },
+  {
+    company: "Share Mobility",
+    startDate: "July 2019",
+    endDate: "August 2020",
     achievements: [
       "Helped craft the driving module for Ride-Hailing.",
       "Created booking rides, rate-ride, referral-reward.",
       "Built optimized routes system for admin panel using Google Maps API.",
       "Created auto-response back system based on AI using Twilio.",
-    ],
-  },
-  {
-    company: "Geminus",
-    startDate: "July 2019",
-    endDate: "August 2020",
-    achievements: [
-      "Supervised team of 3 developers engaged in Front-end development.",
-      "Built dashboards to visualize Functional Gas Stations data. Created admin dashboard for municipal corporation system by developing alarm system using MQTT service.",
-      "Created visuals to help identify leaks, pressure drops, and other potential problems.",
     ],
   },
   {
@@ -144,6 +144,10 @@ export const Experience = () => {
               <Tab
                 key={index}
                 sx={(theme) => ({
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  textAlign: "start",
+                  alignItems: "flex-start",
                   color: "info.light",
                   fontWeight: "700",
                   borderLeft: "4px solid rgba(255, 255, 255, 0.5)",
@@ -179,7 +183,7 @@ export const Experience = () => {
                   <Link
                     underline="none"
                     target="_blank"
-                    href="https://www.sharemobility.com/"
+                    href="https://docs.antisociallabs.io/"
                     sx={{
                       flexDirection: "column",
                       color: "secondary.main",
