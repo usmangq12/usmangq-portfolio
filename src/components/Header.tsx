@@ -133,7 +133,7 @@ export const Header = () => {
                 <Link
                   underline="none"
                   target="_blank"
-                  href="https://www.sharemobility.com/"
+                  href="https://docs.antisociallabs.io/"
                   sx={{
                     flexDirection: "column",
                     color: "secondary.main",
@@ -142,57 +142,12 @@ export const Header = () => {
                     textAlign: "center",
                   }}
                 >
-                  Share-Mobility.
+                  AntiSocial Labs.
                 </Link>
               </Heading>
             </Grid>
           </Grid>
         </Grid>
-        {/* <Grid
-          xs={12}
-          sx={{
-            display: "flex",
-            mt: { xs: 5, sm: 12 },
-            width: "100%",
-            textAlign: "center",
-            justifyContent: { xs: "center", sm: "space-between" },
-            flexDirection: { xs: "column", sm: "unset" },
-          }}
-        >
-          <Grid>
-            <Heading
-              sx={{ color: "#4db5ff", fontSize: { xs: "16px", sm: "20px" } }}
-            >
-              Code For
-            </Heading>
-            <Heading sx={{ fontSize: { xs: "16px", sm: "20px" } }}>Web</Heading>
-          </Grid>
-          <Grid>
-            <Heading
-              sx={{ color: "#4db5ff", fontSize: { xs: "16px", sm: "20px" } }}
-            >
-              Phone
-            </Heading>
-            <Heading sx={{ fontSize: { xs: "16px", sm: "20px" } }}>
-              +92 311 4942040
-            </Heading>
-          </Grid>
-          <Grid>
-            <Heading
-              sx={{ color: "#4db5ff", fontSize: { xs: "16px", sm: "20px" } }}
-            >
-              Drop your Message
-            </Heading>
-            <Heading
-              sx={{
-                textDecoration: "underline",
-                fontSize: { xs: "16px", sm: "20px" },
-              }}
-            >
-              usmangq12@gmail.com
-            </Heading>
-          </Grid>
-        </Grid> */}
       </Container>
     </Grid>
   );
