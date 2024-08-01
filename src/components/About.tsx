@@ -105,7 +105,7 @@ export const About = () => {
                   color: "info.main",
                 }}
               >
-                I’m a community-taught developer with 4 plus years of
+                I’m a community-taught developer with 6 plus years of
                 experience. I love reading and enhancing my knowledge day by
                 day, and love to solve complex problems. I’m always ready for
                 new challenges which keep me motivated to move on in the coding

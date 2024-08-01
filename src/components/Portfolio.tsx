@@ -48,16 +48,34 @@ const portfolioDetail = [
     gitHub: "https://github.com/usmangq12/currency-converter",
     liveDemo: "https://currency-converter-one-ecru.vercel.app/",
   },
-  // {
-  //   title: "Games Hub",
-  //   description:
-  //     "Building websites for higher-ed is not for the faint of heart.Unless executed properly.",
-  //   forntEndLange: "Rect.js",
-  //   ui: "Material UI",
-  //   gitHub:
-  //     "Creating multiple games Tic-Tac-Toe Hang-Man and Cards-Game in one...",
-  //   liveDemo: "",
-  // },
+  {
+    title: "Clinic Dashboard",
+    description:
+      "Clinic dashboard show patient condition  in graphs and also we can see  report of patient in Power Bi ",
+    forntEndLange: "Next.js",
+    // lib: "D3.js",
+    gitHub: "https://github.com/usmangq12/clinic-dashboard",
+    liveDemo: "https://clinic-dashboard-ten.vercel.app/",
+  },
+  {
+    title: "touch-event-example",
+    description:
+      "This project demonstrates handling touch events in a React application. ",
+    forntEndLange: "React.js",
+    Ui: "",
+    gitHub: "https://github.com/usmangq12/touch-event-example",
+    liveDemo: "https://vercel.com/usmangq12s-projects/touch-event-example",
+  },
+  {
+    title: "Unibox",
+    description:
+      "Unibox is a Next.js application that combines emails from both Gmail and Outlook into a single unified inbox. Users can log in with their Google or Microsoft accounts to view and reply to their emails.",
+    forntEndLange: "Next.js",
+    Ui: "shadcn/ui",
+    gitHub: "https://github.com/usmangq12/unibox",
+    liveDemo: "https://unibox-puce.vercel.app/",
+  },
+ 
 ];
 
 export const Portfolio = () => {
