@@ -11,6 +11,7 @@ import {
 import { useEffect, useState } from "react";
 import "./App.css";
 import { Logo } from "./components/Logo";
+import { VideoIntroduction } from "./components/VideoInroduction";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -37,6 +38,7 @@ function App() {
           <Navbar />
           <Header />
           <Container>
+            <VideoIntroduction/>
             <Experience />
             <About />
             <Skills />

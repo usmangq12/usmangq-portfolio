@@ -10,17 +10,32 @@ type IExperiences = {
   achievements: string[];
 };
 
-const companies: string[] = ["AntiSocial Labs", "Share Mobility", "Curiato"];
+const companies: string[] = [
+  "Akvelon",
+  "AntiSocial Labs",
+  "Share Mobility",
+  "Curiato",
+];
 
 const experiences: IExperiences[] = [
   {
+    company: "Akevlon",
+    startDate: "October 2023",
+    endDate: "Running",
+    achievements: ["Working as an front end engineer (accessabilty Engineer)"],
+  },
+  {
     company: "AntiSocial Labs",
     startDate: "September 2020",
-    endDate: "Present",
+    endDate: "September 2021",
     achievements: [
       "Created antisocialapeclub where users can join the club to sell or buy NFTs.",
       "Created a school system where students can pay their tuition fee by NEAR account balance and get certified when the course ends.",
       "Created OmniDAO to show their services and the NFT Suite.",
+      "Created Legaliser which Revolutionizing contract management with AI for efficient, accurate legal documents",
+      "Created HitCoach which transform combat sports training through advanced AI and computer vision",
+      "Created TimeSeal  As a cost-effective, innovative blockchain timestamping solution, TimeSeal offers unparalleled data protection, accuracy, and transparency.",
+      "Relysia Mobile app provides the easiest way to manage the digital assets like as cryptocurrencies etc", //Aug
     ],
   },
   {
@@ -96,6 +111,7 @@ export const Experience = () => {
           alignItems: "center",
           flexDirection: "column",
           width: "100%",
+        
           mb: { xs: 4, sm: 12.5 },
         }}
       >
@@ -119,7 +135,8 @@ export const Experience = () => {
           display: "flex",
           flexWrap: { xs: "wrap", sm: "nowrap" },
           width: "100%",
-          height: { xs: "unset", sm: "290px" },
+       
+          height: "auto",
         }}
       >
         <Grid xs={12} sm={2} item>
