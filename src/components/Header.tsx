@@ -147,7 +147,7 @@ export const Header = () => {
                 <Link
                   underline="none"
                   target="_blank"
-                  href="https://akvelon.com/"
+                  href="https://www.linkedin.com/company/akvelon/mycompany"
                   sx={{
                     color: "secondary.main",
                     fontWeight: "400",

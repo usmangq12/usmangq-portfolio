@@ -5,6 +5,7 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 type IExperiences = {
   company: string;
+  title: string;
   startDate: string;
   endDate: string;
   achievements: string[];
@@ -20,12 +21,24 @@ const companies: string[] = [
 const experiences: IExperiences[] = [
   {
     company: "Akevlon",
+    title: "Software Engineer",
     startDate: "October 2023",
     endDate: "Running",
-    achievements: ["Working as an front end engineer (accessabilty Engineer)"],
+    achievements: [
+      "Working as a Software Engineer",
+      "Successfully implemented a solution for screen reader compatibility in Power BI's filter pane, enabling visually impaired users to navigate and apply filters more efficiently.",
+      "Collaborated with the QA team to resolve keyboard navigation issues in Power BI reports, ensuring users could access all interactive elements without a mouse.",
+      "Enhanced the contrast ratios of visual components, addressing color contrast issues reported by users with visual impairments and adhering to WCAG guidelines.",
+      "Fixed tab order inconsistencies in Power BI dashboards, allowing users to navigate through content logically and improving overall accessibility.",
+      "Addressed issues with focus indicators in Power BI visuals, ensuring that keyboard users could clearly see which element has focus at any given time.",
+      "Improved ARIA (Accessible Rich Internet Applications) labels for Power BI charts, providing better context and descriptions for users relying on assistive technologies.",
+      "Implemented fixes for tooltip accessibility, ensuring that all tooltips were readable by screen readers and could be accessed by keyboard users.",
+      "Enhanced the accessibility of Power BI's workspace dialog’s search bar accessibility by ensuring searched keyword suggestions are announced by NVDA.",
+    ],
   },
   {
     company: "AntiSocial Labs",
+    title: "Senior Frontend Developer",
     startDate: "September 2020",
     endDate: "September 2021",
     achievements: [
@@ -40,22 +53,23 @@ const experiences: IExperiences[] = [
   },
   {
     company: "Share Mobility",
+    title: "Mid-level Senior Frontend Engineer",
     startDate: "July 2019",
     endDate: "August 2020",
     achievements: [
-      "Helped craft the driving module for Ride-Hailing.",
-      "Created booking rides, rate-ride, referral-reward.",
-      "Built optimized routes system for admin panel using Google Maps API.",
-      "Created auto-response back system based on AI using Twilio.",
+      "Contributed to the development of the Ride-Hailing platform's driving module, involving the creation of essential functionalities such as booking rides, rating rides, and establishing a referral reward system.",
+      "Engineered an advanced routes system for the admin panel by integrating the Google Maps API, optimizing route planning and navigation for enhanced efficiency.",
+      "Implemented an intelligent auto-response system powered by AI through Twilio, enabling automated and context-aware interactions to improve user engagement and satisfaction.",
     ],
   },
   {
     company: "Curiato",
+    title: "Frontend Developer",
     startDate: "October 2017",
     endDate: "June 2019",
     achievements: [
-      "Developed highly customized charts using D3 to visualize the clinical conditions of the patient.",
-      "Created interactive visuals on PowerBI to express different clinical metrics.",
+      "Utilized D3.js to develop meticulously tailored charts that effectively visualize the clinical condition of patients, enabling comprehensive understanding of their health status.",
+      "Employed interactive visuals within Power BI to present diverse clinical metrics, enhancing the communication of vital medical information in an engaging and informative manner.",
     ],
   },
 ];
@@ -111,7 +125,7 @@ export const Experience = () => {
           alignItems: "center",
           flexDirection: "column",
           width: "100%",
-        
+
           mb: { xs: 4, sm: 12.5 },
         }}
       >
@@ -135,7 +149,7 @@ export const Experience = () => {
           display: "flex",
           flexWrap: { xs: "wrap", sm: "nowrap" },
           width: "100%",
-       
+
           height: "auto",
         }}
       >
@@ -182,7 +196,7 @@ export const Experience = () => {
         </Grid>
         <Grid ml={{ xs: 0, sm: 6 }} xs={12} sm={10} item>
           {experiences.map(
-            ({ company, startDate, endDate, achievements }, index) => (
+            ({ company, title, startDate, endDate, achievements }, index) => (
               <TabPanel value={value} index={index} key={index}>
                 <Heading
                   mb={2}
@@ -196,7 +210,7 @@ export const Experience = () => {
                     },
                   })}
                 >
-                  Engineer&nbsp;
+                  {title}&nbsp;
                   <Link
                     underline="none"
                     target="_blank"
