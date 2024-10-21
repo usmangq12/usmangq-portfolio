@@ -4,7 +4,6 @@ import { useTheme } from "@mui/material/styles";
 import { Heading, Image } from "../shared";
 import { Profile } from "../assets/imges";
 
-
 export const Header = () => {
   const theme = useTheme();
 
@@ -19,10 +18,10 @@ export const Header = () => {
         zIndex: "1",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        [theme.breakpoints.down('lg')]: {
+        [theme.breakpoints.down("lg")]: {
           // backgroundColor: theme.palette.success.main,
           height: "auto",
-         textAlign: "left",
+          textAlign: "left",
         },
       }}
     >
@@ -45,10 +44,9 @@ export const Header = () => {
             flexWrap: "wrap",
             alignItems: "center",
             width: "100%",
-            [theme.breakpoints.down('lg')]: {
+            [theme.breakpoints.down("lg")]: {
               // backgroundColor: theme.palette.success.main,
-              marginTop: "80px"
-             
+              marginTop: "80px",
             },
           }}
         >
@@ -129,7 +127,7 @@ export const Header = () => {
               component="div"
               variant="h5"
             >
-              I build things for the web.
+              I build web and mobile applications.
             </Heading>
             <Grid item sm={9}>
               <Heading
@@ -142,8 +140,13 @@ export const Header = () => {
                 component="div"
                 variant="h5"
               >
-                With six years of dedicated experience as a software engineer, I have honed my skills in the remote landscape, specializing in both web and mobile application development.
-                Currently, I’m currently working with &nbsp;
+                With over 6 years of frontend development experience, I
+                specialize in React, Next.js, React Native, and D3.js, producing
+                high-quality, maintainable code. I conduct thorough
+                accessibility audits using tools like AXE and screen readers.
+                Passionate about continuous learning, I thrive on solving
+                challenges and enhancing user experiences. Currently, I'm
+                working at &nbsp;
                 <Link
                   underline="none"
                   target="_blank"

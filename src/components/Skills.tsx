@@ -18,7 +18,6 @@ const SkillsArray = [
         path: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       },
       { name: "CSS", path: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
-      { name: "Java", path: "https://www.java.com/" },
     ],
   },
   {
@@ -30,7 +29,6 @@ const SkillsArray = [
       { name: "Zustand", path: "https://zustand-demo.pmnd.rs/" },
       { name: "Next.js", path: "https://nextjs.org/" },
       { name: "Angular", path: "https://angular.io/" },
-      { name: "Vue", path: "https://vuejs.org/" },
       { name: "D3.js", path: "https://d3js.org/" },
       { name: "PowerBI", path: "https://powerbi.microsoft.com/" },
       { name: "Tailwind", path: "https://tailwindcss.com/" },
@@ -83,28 +81,11 @@ const SkillsArray = [
     skills: [
       { name: "Git", path: "https://git-scm.com/" },
       { name: "NEAR", path: "https://near.org/" },
+      { name: "Etherium", path: "https://ethereum.org/en/" },
       { name: "Twilio", path: "https://www.twilio.com/" },
       { name: "Stripe", path: "https://stripe.com/" },
     ],
   },
-  // {
-  //   title: "Other Skills",
-  //   skills: [
-  //     { name: "OO and Functional Programming", path: "#" },
-  //     { name: "CI/CD", path: "#" },
-  //     { name: "TDD", path: "#" },
-  //     { name: "Design Patterns", path: "#" },
-  //     { name: "Agile Development", path: "#" },
-  //     { name: "Clean Architecture", path: "#" },
-  //     { name: "Unit and Integration Testing", path: "#" },
-  //     { name: "AWS Serverless Services Visualizations", path: "#" },
-  //     { name: "Research & Development", path: "#" },
-  //     {
-  //       name: "WCAG 2.1",
-  //       path: "https://www.w3.org/WAI/standards-guidelines/wcag/",
-  //     },
-  //   ],
-  // },
   {
     title: "Development methodologies",
     skills: [
@@ -154,7 +135,7 @@ export const Skills = () => {
                   <Heading
                     sx={{
                       color: "info.light",
-                      fontSize: { xs: "1rem", md: "1.75rem",  },
+                      fontSize: { xs: "1rem", md: "1.75rem" },
 
                       fontWeight: "700",
                       textAlign: "center",
