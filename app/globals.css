@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-white antialiased;
+  }
+
+  ::selection {
+    background-color: #1a56a6;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  /* Very subtle radial glow used behind the hero content. */
+  .hero-radial {
+    background-image: radial-gradient(
+      55% 50% at 15% 25%,
+      rgba(26, 86, 166, 0.12),
+      transparent 70%
+    );
+  }
+
+  /* Faint CRT scanline texture for the terminal card. */
+  .scanlines {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.02) 0px,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  }
+}
+
+/* Global reduced-motion safety net on top of Framer Motion's own handling. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
