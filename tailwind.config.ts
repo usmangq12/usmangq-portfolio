@@ -14,6 +14,9 @@ const config: Config = {
         border: "#1E1E1E",
         accent: {
           DEFAULT: "#1A56A6",
+          // Lighter shade for accent-colored TEXT/icons so it passes WCAG AA
+          // contrast on #0A0A0A (the spec accent #1A56A6 is only ~2.8:1).
+          light: "#4C8FD6",
           glow: "rgba(26, 86, 166, 0.125)",
         },
         secondary: "#888888",

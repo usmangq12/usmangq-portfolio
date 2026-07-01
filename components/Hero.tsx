@@ -65,12 +65,12 @@ export default function Hero() {
 
         <motion.p
           variants={item}
-          className="mt-4 flex min-h-[1.75rem] items-center font-mono text-lg text-accent sm:min-h-[2.25rem] sm:text-2xl"
+          className="mt-4 flex min-h-[1.75rem] items-center font-mono text-lg text-accent-light sm:min-h-[2.25rem] sm:text-2xl"
         >
           <span>{typed}</span>
           <span
             aria-hidden="true"
-            className="ml-1 inline-block h-[1.1em] w-[2px] translate-y-[0.1em] bg-accent animate-blink"
+            className="ml-1 inline-block h-[1.1em] w-[2px] translate-y-[0.1em] animate-blink bg-accent-light"
           />
         </motion.p>
 
@@ -95,7 +95,7 @@ export default function Hero() {
               className="group inline-flex items-center gap-2 rounded-lg border border-transparent px-3 py-2 text-sm text-secondary transition-colors hover:border-border hover:bg-accent-glow hover:text-white"
             >
               <Icon
-                className="h-4 w-4 text-secondary transition-colors group-hover:text-accent"
+                className="h-4 w-4 text-secondary transition-colors group-hover:text-accent-light"
                 aria-hidden="true"
               />
               {label}
