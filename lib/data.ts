@@ -77,7 +77,7 @@ export type ExperienceEntry = {
 
 export const experiences: ExperienceEntry[] = [
   {
-    role: "Infrastructure & Platform Engineer",
+    role: "Senior Full Stack & Infrastructure Engineer",
     company: "PLYAZ",
     companyDescription: "Web3 fan-engagement platform",
     period: "May 2025 – Present",

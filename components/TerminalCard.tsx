@@ -1,6 +1,6 @@
 const session: { cmd: string; output: string }[] = [
   { cmd: "whoami", output: "muhammad-usman" },
-  { cmd: "cat role.txt", output: "Infrastructure & Platform Engineer" },
+  { cmd: "cat role.txt", output: "Senior Full Stack & Infrastructure Engineer" },
   { cmd: "uptime", output: "7+ years" },
   {
     cmd: "ls ./expertise/",

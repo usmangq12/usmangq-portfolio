@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site";
 import { useTypingEffect } from "@/lib/useTypingEffect";
 
 const ROLES = [
-  "Infrastructure & Platform Engineer",
+  "Senior Full Stack & Infrastructure Engineer",
   "Monorepo Architect",
   "CI/CD Specialist",
   "Auth & Security Engineer",
