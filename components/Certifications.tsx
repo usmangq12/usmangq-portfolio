@@ -1,35 +1,43 @@
 "use client";
 
 import { Award } from "lucide-react";
-import { Reveal } from "@/components/ui/reveal";
+import { Reveal, RevealGroup, RevealItem } from "@/components/ui/reveal";
 import { Section } from "@/components/ui/Section";
-import { siteConfig } from "@/lib/site";
+import { certifications } from "@/lib/data";
 
 export default function Certifications() {
   return (
     <Section id="certifications">
-      <Reveal className="mx-auto max-w-md">
-        <div className="rounded-xl border border-accent/40 bg-surface p-8 text-center shadow-glow">
-          <Award
-            className="mx-auto h-10 w-10 text-accent-light"
-            aria-hidden="true"
-          />
-          <h2 className="mt-4 text-xl font-bold text-white">
-            Arbitrum Developer Certified
-          </h2>
-          <p className="mt-2 text-sm text-secondary">
-            Verified profile:{" "}
+      <Reveal>
+        <h2 className="text-2xl font-bold text-white sm:text-3xl">
+          Certifications
+        </h2>
+      </Reveal>
+
+      <RevealGroup className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {certifications.map((cert) => (
+          <RevealItem key={cert.name} className="h-full">
             <a
-              href={siteConfig.links.hackquest}
+              href={cert.credentialUrl}
               target="_blank"
               rel="noreferrer"
-              className="text-accent-light underline-offset-4 hover:underline"
+              className="group flex h-full flex-col gap-3 rounded-xl border border-border bg-surface p-6 transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-glow"
             >
-              hackquest.io/user/437978
+              <Award
+                className="h-6 w-6 text-accent-light"
+                aria-hidden="true"
+              />
+              <div>
+                <h3 className="font-semibold text-white">{cert.name}</h3>
+                <p className="mt-1 text-sm text-secondary">{cert.issuer}</p>
+              </div>
+              <span className="mt-auto break-all text-xs text-accent-light underline-offset-4 group-hover:underline">
+                {cert.credentialLabel}
+              </span>
             </a>
-          </p>
-        </div>
-      </Reveal>
+          </RevealItem>
+        ))}
+      </RevealGroup>
     </Section>
   );
 }

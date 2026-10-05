@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Muhammad Usman",
-  role: "Senior Full Stack & Infrastructure Engineer",
-  title: "Muhammad Usman — Senior Full Stack & Infrastructure Engineer",
+  role: "Senior Full Stack Blockchain & Infrastructure Engineer",
+  title: "Muhammad Usman — Senior Full Stack Blockchain & Infrastructure Engineer",
   description:
-    "Senior Full Stack & Infrastructure Engineer with 7+ years experience. Monorepo architecture, CI/CD, auth systems, security hardening, and developer experience tooling.",
+    "Senior Full Stack Blockchain & Infrastructure Engineer with 7+ years experience. Monorepo architecture, CI/CD, auth systems, security hardening, blockchain platforms, and developer experience tooling.",
   url: "https://usmangq.vercel.app",
   links: {
     github: "https://github.com/usmangq12",

@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site";
 import { useTypingEffect } from "@/lib/useTypingEffect";
 
 const ROLES = [
-  "Senior Full Stack & Infrastructure Engineer",
+  "Senior Full Stack Blockchain & Infrastructure Engineer",
   "Monorepo Architect",
   "CI/CD Specialist",
   "Auth & Security Engineer",
@@ -78,8 +78,11 @@ export default function Hero() {
           variants={item}
           className="mt-5 max-w-2xl text-base text-secondary sm:text-lg"
         >
-          Building the systems that make engineering teams fast, safe, and
-          consistent.
+          I build the infrastructure layer engineering teams stand on —
+          monorepos, CI/CD, auth, security, developer tooling. In the age of
+          AI-assisted development, that&apos;s the layer that matters most:
+          the guardrails that let teams ship fast without shipping broken
+          systems.
         </motion.p>
 
         <motion.div

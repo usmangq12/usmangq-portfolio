@@ -1,9 +1,11 @@
 import BackgroundGraphLazy from "@/components/BackgroundGraphLazy";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Journey from "@/components/Journey";
 import Expertise from "@/components/Expertise";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import Packages from "@/components/Packages";
+import Missions from "@/components/Missions";
 import Skills from "@/components/Skills";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
@@ -15,9 +17,11 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Journey />
         <Expertise />
         <ExperienceTimeline />
         <Packages />
+        <Missions />
         <Skills />
         <Certifications />
         <Contact />

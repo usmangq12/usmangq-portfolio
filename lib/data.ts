@@ -9,6 +9,7 @@ import {
   Workflow,
   Wrench,
 } from "lucide-react";
+import { siteConfig } from "@/lib/site";
 
 export type ExpertiseDomain = {
   icon: LucideIcon;
@@ -69,15 +70,21 @@ export const expertiseDomains: ExpertiseDomain[] = [
 
 export type ExperienceEntry = {
   role: string;
+  // Set only when the title at the start of this tenure differs from the
+  // current one (e.g. a promotion mid-tenure) — Journey uses this for the
+  // entry-point node, everything else uses `role`.
+  startRole?: string;
   company: string;
   companyDescription: string;
   period: string;
   bullets: string[];
+  tags: string[];
 };
 
 export const experiences: ExperienceEntry[] = [
   {
-    role: "Senior Full Stack & Infrastructure Engineer",
+    role: "Senior Full Stack Blockchain & Infrastructure Engineer",
+    startRole: "Senior Blockchain Engineer",
     company: "PLYAZ",
     companyDescription: "Web3 fan-engagement platform",
     period: "May 2025 – Present",
@@ -88,6 +95,7 @@ export const experiences: ExperienceEntry[] = [
       "Architected a provider-agnostic KYC platform (Stripe Identity + Paystack BVN).",
       "Hardened the platform: Cloudflare Turnstile, CSPRNG OTP, SQL injection defense, rate limiting.",
     ],
+    tags: ["Turborepo", "CI/CD", "better-auth", "Security"],
   },
   {
     role: "Software Development Engineer",
@@ -99,6 +107,7 @@ export const experiences: ExperienceEntry[] = [
       "Fixed ARIA labelling, tab order, and focus-indicator regressions.",
       "Established keyboard-only regression testing protocols with QA.",
     ],
+    tags: ["WCAG 2.1", "ARIA", "Power BI"],
   },
   {
     role: "Senior Frontend Developer",
@@ -109,6 +118,7 @@ export const experiences: ExperienceEntry[] = [
       "Built the antisocialapeclub NFT marketplace on NEAR Protocol.",
       "Delivered 4 React Native apps: sports tracker, disaster-response map, food journal, movement journal.",
     ],
+    tags: ["NEAR Protocol", "React Native", "Web3"],
   },
   {
     role: "Middle Frontend Developer",
@@ -120,6 +130,7 @@ export const experiences: ExperienceEntry[] = [
       "Implemented Google Maps route management.",
       "Built a Twilio AI auto-response system.",
     ],
+    tags: ["React", "Google Maps", "Twilio"],
   },
   {
     role: "Frontend Developer",
@@ -130,6 +141,7 @@ export const experiences: ExperienceEntry[] = [
       "Built real-time D3.js patient-condition charts from IoT feeds.",
       "Built Power BI clinical dashboards.",
     ],
+    tags: ["D3.js", "Power BI", "IoT"],
   },
 ];
 
@@ -184,6 +196,66 @@ export const platformPackages: PlatformPackage[] = [
       "Provider-agnostic KYC platform. Stripe Identity + Paystack BVN adapter pattern, HMAC webhook verification, Redis idempotent dedup.",
     tags: ["Stripe Identity", "Paystack", "Redis", "HMAC"],
     badge: "Architecture",
+  },
+];
+
+export type Certification = {
+  name: string;
+  issuer: string;
+  credentialUrl: string;
+  credentialLabel: string;
+};
+
+// Add new entries here as certifications are earned — the section renders
+// as a grid and needs no layout changes to support more.
+export const certifications: Certification[] = [
+  {
+    name: "Arbitrum Developer Certified",
+    issuer: "HackQuest",
+    credentialUrl: siteConfig.links.hackquest,
+    credentialLabel: "hackquest.io/user/437978",
+  },
+];
+
+export type Article = { title: string; url: string };
+
+export type Mission = {
+  title: string;
+  summary: string;
+  tags: string[];
+  // Write-ups about this mission. Leave empty until a real article/series
+  // exists — the UI falls back to "Write-up in progress" rather than a dead link.
+  articles: Article[];
+};
+
+export const missions: Mission[] = [
+  {
+    title: "Monorepo Migration",
+    summary:
+      "Migrated 15+ standalone repos into a single pnpm + Turborepo monorepo — 22 packages, 7 apps — with reusable CI/CD across every package.",
+    tags: ["Turborepo", "pnpm", "GitHub Actions"],
+    articles: [],
+  },
+  {
+    title: "Auth Platform Rebuild",
+    summary:
+      "Led the migration from Clerk to better-auth, adding 2FA/TOTP, OAuth, RBAC, and GDPR controls with zero downtime.",
+    tags: ["better-auth", "OAuth", "RBAC"],
+    articles: [],
+  },
+  {
+    title: "Provider-Agnostic KYC Platform",
+    summary:
+      "Architected identity verification that routes between Stripe Identity and Paystack BVN by region and tier, with HMAC-verified webhooks.",
+    tags: ["Stripe Identity", "Paystack", "Redis"],
+    articles: [],
+  },
+  {
+    title: "Accessibility at Enterprise Scale",
+    summary:
+      "Resolved WCAG 2.1 failures across Power BI dashboards — ARIA labelling, tab order, focus-indicator regressions — and stood up keyboard-only regression testing with QA.",
+    tags: ["WCAG 2.1", "ARIA", "QA"],
+    articles: [],
   },
 ];
 
