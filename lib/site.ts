@@ -10,6 +10,10 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/muhammad-usman-759b55129",
     email: "usmangq12@gmail.com",
     hackquest: "https://hackquest.io/user/437978",
+    devto: "https://dev.to/themoneystoryweb3",
+    x: "https://x.com/Muhamma28090557",
+    youtube: "https://www.youtube.com/@themoneystory.web3",
+    instagram: "https://www.instagram.com/usmangq.engineer",
   },
 } as const;
 

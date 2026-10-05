@@ -1,67 +1,47 @@
-import type { LucideIcon } from "lucide-react";
-import {
-  Activity,
-  Boxes,
-  Cloud,
-  Fingerprint,
-  ScanFace,
-  ShieldCheck,
-  Workflow,
-  Wrench,
-} from "lucide-react";
 import { siteConfig } from "@/lib/site";
 
 export type ExpertiseDomain = {
-  icon: LucideIcon;
   title: string;
   description: string;
 };
 
 export const expertiseDomains: ExpertiseDomain[] = [
   {
-    icon: Boxes,
     title: "Build System",
     description:
       "Turborepo/pnpm monorepo architecture. Build graph design, workspace linking, dependency normalization.",
   },
   {
-    icon: Workflow,
     title: "CI/CD",
     description:
       "Reusable GitHub Actions workflows across 20+ packages. Semantic-release, preview environments, quality gates.",
   },
   {
-    icon: Cloud,
     title: "Cloud & Deployment",
     description:
       "Vercel, Supabase, Docker. Migration-gated startup, PWA cache versioning, multi-environment pipelines.",
   },
   {
-    icon: Fingerprint,
     title: "Auth & Identity",
     description:
       "Stateless session architecture. 2FA/TOTP, OAuth, RBAC, GDPR controls. Clerk to better-auth migration.",
   },
   {
-    icon: ScanFace,
     title: "KYC Platform",
     description:
       "Provider-agnostic identity verification. Stripe Identity and Paystack BVN routing by region and tier.",
   },
   {
-    icon: ShieldCheck,
     title: "Security",
     description:
       "Cloudflare Turnstile, CSPRNG OTP, SQL injection defense, rate limiting, CSP headers, brute-force lockout.",
   },
   {
-    icon: Activity,
     title: "Observability",
     description:
       "Isomorphic logging with browser and Node transports. Typed error framework. Tamper-evident audit logging.",
   },
   {
-    icon: Wrench,
     title: "Developer Experience",
     description:
       "Shared ESLint/TS/Vitest configs, plop code-generation, golden-path templates, translation CLI.",
@@ -256,6 +236,37 @@ export const missions: Mission[] = [
       "Resolved WCAG 2.1 failures across Power BI dashboards — ARIA labelling, tab order, focus-indicator regressions — and stood up keyboard-only regression testing with QA.",
     tags: ["WCAG 2.1", "ARIA", "QA"],
     articles: [],
+  },
+];
+
+export type SocialChannel = {
+  platform: string;
+  handle: string;
+  href: string;
+};
+
+export const socialChannels: SocialChannel[] = [
+  { platform: "GitHub", handle: "usmangq12", href: siteConfig.links.github },
+  {
+    platform: "LinkedIn",
+    handle: "muhammad-usman",
+    href: siteConfig.links.linkedin,
+  },
+  {
+    platform: "dev.to",
+    handle: "@themoneystoryweb3",
+    href: siteConfig.links.devto,
+  },
+  { platform: "X", handle: "@Muhamma28090557", href: siteConfig.links.x },
+  {
+    platform: "YouTube",
+    handle: "@themoneystory.web3",
+    href: siteConfig.links.youtube,
+  },
+  {
+    platform: "Instagram",
+    handle: "@usmangq.engineer",
+    href: siteConfig.links.instagram,
   },
 ];
 

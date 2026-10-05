@@ -1,111 +1,41 @@
-"use client";
-
-import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
 import { siteConfig } from "@/lib/site";
-import { useTypingEffect } from "@/lib/useTypingEffect";
-
-const ROLES = [
-  "Senior Full Stack Blockchain & Infrastructure Engineer",
-  "Monorepo Architect",
-  "CI/CD Specialist",
-  "Auth & Security Engineer",
-];
-
-const socials = [
-  { href: siteConfig.links.github, label: "GitHub", Icon: Github },
-  { href: siteConfig.links.linkedin, label: "LinkedIn", Icon: Linkedin },
-  { href: `mailto:${siteConfig.links.email}`, label: "Email", Icon: Mail },
-];
 
 export default function Hero() {
-  const prefersReduced = useReducedMotion();
-  const typed = useTypingEffect(ROLES, { enabled: !prefersReduced });
-
-  const container: Variants = {
-    hidden: {},
-    show: {
-      transition: { staggerChildren: 0.15 },
-    },
-  };
-
-  const item: Variants = prefersReduced
-    ? { hidden: { opacity: 1, y: 0 }, show: { opacity: 1, y: 0 } }
-    : {
-        hidden: { opacity: 0, y: 14 },
-        show: {
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.55, ease: "easeOut" },
-        },
-      };
-
   return (
-    <section
-      id="home"
-      className="relative isolate flex min-h-screen items-center overflow-hidden"
-    >
-      <div
-        aria-hidden="true"
-        className="hero-radial pointer-events-none absolute inset-0 -z-10"
-      />
+    <section id="top" className="mx-auto max-w-2xl px-6 pb-4 pt-16 sm:pt-24">
+      <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+        {siteConfig.name}
+      </h1>
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="mx-auto w-full max-w-5xl px-6"
-      >
-        <motion.h1
-          variants={item}
-          className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl"
-        >
-          {siteConfig.name}
-        </motion.h1>
+      <p className="mt-3 font-mono text-base text-accent-light sm:text-lg">
+        {siteConfig.role}
+      </p>
 
-        <motion.p
-          variants={item}
-          className="mt-4 flex min-h-[1.75rem] items-center font-mono text-lg text-accent-light sm:min-h-[2.25rem] sm:text-2xl"
-        >
-          <span>{typed}</span>
-          <span
-            aria-hidden="true"
-            className="ml-1 inline-block h-[1.1em] w-[2px] translate-y-[0.1em] animate-blink bg-accent-light"
-          />
-        </motion.p>
-
-        <motion.p
-          variants={item}
-          className="mt-5 max-w-2xl text-base text-secondary sm:text-lg"
-        >
-          I build the infrastructure layer engineering teams stand on —
-          monorepos, CI/CD, auth, security, developer tooling. In the age of
-          AI-assisted development, that&apos;s the layer that matters most:
-          the guardrails that let teams ship fast without shipping broken
-          systems.
-        </motion.p>
-
-        <motion.div
-          variants={item}
-          className="mt-8 flex flex-wrap items-center gap-3"
-        >
-          {socials.map(({ href, label, Icon }) => (
-            <a
-              key={label}
-              href={href}
-              target={href.startsWith("mailto:") ? undefined : "_blank"}
-              rel={href.startsWith("mailto:") ? undefined : "noreferrer"}
-              className="group inline-flex items-center gap-2 rounded-lg border border-transparent px-3 py-2 text-sm text-secondary transition-colors hover:border-border hover:bg-accent-glow hover:text-white"
-            >
-              <Icon
-                className="h-4 w-4 text-secondary transition-colors group-hover:text-accent-light"
-                aria-hidden="true"
-              />
-              {label}
-            </a>
-          ))}
-        </motion.div>
-      </motion.div>
+      <p className="mt-6 max-w-xl text-base leading-relaxed text-secondary sm:text-lg">
+        I build the infrastructure layer engineering teams stand on —
+        monorepos, CI/CD, auth, security, developer tooling. In the age of
+        AI-assisted development, that&apos;s the layer that matters most: the
+        guardrails that let teams ship fast without shipping broken systems.
+        Currently owning engineering infrastructure at{" "}
+        <span className="text-white">PLYAZ</span>, a Web3 fan-engagement
+        platform; previously embedded in{" "}
+        <span className="text-white">Microsoft&apos;s Power BI</span>{" "}
+        accessibility team via Akvelon.{" "}
+        <span className="text-white">Arbitrum Developer Certified.</span> See
+        my{" "}
+        <a href="#experience" className="text-accent-light hover:underline">
+          experience
+        </a>
+        ,{" "}
+        <a href="#skills" className="text-accent-light hover:underline">
+          skills
+        </a>
+        , and{" "}
+        <a href="#missions" className="text-accent-light hover:underline">
+          writing
+        </a>{" "}
+        below.
+      </p>
     </section>
   );
 }
