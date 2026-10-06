@@ -9,15 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0A0A0A",
-        border: "#232323",
+        background: "#181818",
+        foreground: "#EEEEEE",
+        border: "#333333",
         accent: {
-          DEFAULT: "#1A56A6",
-          // Lighter shade for accent-colored TEXT/links so it passes WCAG AA
-          // contrast on #0A0A0A (the spec accent #1A56A6 is only ~2.8:1).
-          light: "#4C8FD6",
+          DEFAULT: "#F9C412",
+          // Link/accent TEXT colour. The yellow reads at ~10:1 on #181818,
+          // so one shade serves both fills and text.
+          light: "#F9C412",
         },
-        secondary: "#888888",
+        // ~8:1 on #181818 — supporting text stays easy to read, not dim.
+        secondary: "#B3B3B3",
       },
       fontFamily: {
         sans: [

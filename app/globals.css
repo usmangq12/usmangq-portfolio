@@ -7,17 +7,35 @@
     color-scheme: dark;
   }
 
+  /* Type scales up with the viewport, so the column and the text grow together. */
   html {
     scroll-behavior: smooth;
+    font-size: 100%;
+  }
+
+  @media (min-width: 600px) {
+    html {
+      font-size: 106.25%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    html {
+      font-size: 112.5%;
+    }
   }
 
   body {
-    @apply bg-background font-sans text-white antialiased;
+    @apply bg-background font-sans leading-[1.6] text-foreground antialiased;
+  }
+
+  h2 {
+    @apply italic;
   }
 
   ::selection {
-    background-color: #1a56a6;
-    color: #ffffff;
+    background-color: #f9c412;
+    color: #181818;
   }
 }
 

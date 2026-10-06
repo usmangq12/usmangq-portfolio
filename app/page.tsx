@@ -15,13 +15,13 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <SocialChannels />
         <ExperienceTimeline />
         <Expertise />
         <Packages />
         <Missions />
         <Skills />
         <Certifications />
-        <SocialChannels />
       </main>
       <Footer />
     </>

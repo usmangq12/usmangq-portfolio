@@ -29,7 +29,7 @@ export const expertiseDomains: ExpertiseDomain[] = [
   {
     title: "KYC Platform",
     description:
-      "Provider-agnostic identity verification. Stripe Identity and Paystack BVN routing by region and tier.",
+      "Provider-agnostic KYC and KYB. Stripe Identity by default, with Sumsub as the fallback where Stripe has no coverage.",
   },
   {
     title: "Security",
@@ -72,7 +72,7 @@ export const experiences: ExperienceEntry[] = [
       "Migrated 15+ repos into a pnpm + Turborepo monorepo (22 packages, 7 apps).",
       "Standardized CI/CD across 20+ packages with reusable GitHub Actions workflows.",
       "Led the Clerk to better-auth migration with 2FA, OAuth, RBAC, and GDPR controls.",
-      "Architected a provider-agnostic KYC platform (Stripe Identity + Paystack BVN).",
+      "Architected provider-agnostic KYC/KYB: Stripe Identity by default, Sumsub fallback by region.",
       "Hardened the platform: Cloudflare Turnstile, CSPRNG OTP, SQL injection defense, rate limiting.",
     ],
     tags: ["Turborepo", "CI/CD", "better-auth", "Security"],
@@ -140,7 +140,7 @@ export const platformPackages: PlatformPackage[] = [
     description:
       "Shared ESLint, TypeScript, Vitest, Vite, and Tailwind configs. One enforced standard across every package.",
     tags: ["ESLint", "TypeScript", "Vitest", "Vite"],
-    badge: "Solo",
+    badge: "Collaborated",
   },
   {
     name: "@plyaz/logger",
@@ -168,14 +168,35 @@ export const platformPackages: PlatformPackage[] = [
     description:
       "TypeScript-parser-to-JSON CLI. 6 locales, 32 locale files kept in lockstep.",
     tags: ["TypeScript", "CLI", "i18n"],
+    badge: "Collaborated",
+  },
+  {
+    name: "@plyaz/core",
+    description:
+      "The platform SDK: domain services, base classes, hooks, NestJS modules, and infrastructure orchestration. Apps stay thin layers on top.",
+    tags: ["TypeScript", "NestJS", "React", "Redis"],
+    badge: "Collaborated",
+  },
+  {
+    name: "@plyaz/verification",
+    description:
+      "KYC and KYB in manual and automatic modes. Stripe Identity by default, Sumsub as the regional fallback. Adapter registry, MRZ validation, sanctions screening, and jurisdiction policy.",
+    tags: ["KYC", "KYB", "Stripe Identity", "Sumsub"],
     badge: "Solo",
   },
   {
-    name: "@plyaz/core (KYC module)",
+    name: "@plyaz/ui",
     description:
-      "Provider-agnostic KYC platform. Stripe Identity + Paystack BVN adapter pattern, HMAC webhook verification, Redis idempotent dedup.",
-    tags: ["Stripe Identity", "Paystack", "Redis", "HMAC"],
-    badge: "Architecture",
+      "The design system plus every presentational component for web and mobile. Props-only components, with data and logic supplied by @plyaz/core hooks.",
+    tags: ["React", "Tailwind CSS", "Radix UI", "Storybook"],
+    badge: "Solo",
+  },
+  {
+    name: "plyaz-skills (AI plugin)",
+    description:
+      "A Claude Code plugin of 22 agent skills with a /ask-plyaz router: grill, design doc, tickets, implement, review. Writes design docs to Confluence and tickets to Jira over MCP.",
+    tags: ["Claude Code", "MCP", "Jira", "Confluence"],
+    badge: "Solo",
   },
 ];
 
@@ -226,8 +247,8 @@ export const missions: Mission[] = [
   {
     title: "Provider-Agnostic KYC Platform",
     summary:
-      "Architected identity verification that routes between Stripe Identity and Paystack BVN by region and tier, with HMAC-verified webhooks.",
-    tags: ["Stripe Identity", "Paystack", "Redis"],
+      "Architected KYC and KYB verification that defaults to Stripe Identity and falls back to Sumsub in regions Stripe doesn't support, with manual review alongside and HMAC-verified webhooks.",
+    tags: ["Stripe Identity", "Sumsub", "Redis"],
     articles: [],
   },
   {
